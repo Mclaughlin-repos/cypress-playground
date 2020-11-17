@@ -58,10 +58,5 @@ npm run pa11y:reporter:json
 ```
 
 ### If you need some help:
-```
 Mike Mclaughlin
-```
-mclaughlin@indeed.com
-```
 michaelmclaughlindesigns@gmail.com
-```
