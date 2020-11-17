@@ -5,8 +5,11 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "cy:gui": "cypress open",
-    "start": "webpack serve --config ./webpack.config.js --mode development"
+    "cy:open": "cypress open",
+    "cy:gui": "start-server-and-test start http://localhost:8080 cy:open",
+    "cy:gui:debug": "DEBUG=cypress:* cypress open",
+    "start": "webpack serve --config ./webpack.config.js --mode development",
+    "build": "webpack --config ./webpack.config.js --mode production"
   },
   "repository": {
     "type": "git",
@@ -27,16 +30,19 @@
     "@babel/node": "^7.12.6",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-react": "^7.12.5",
+    "axe-core": "^4.1.0",
     "babel-loader": "^8.2.1",
-    "cypress": "^4.6.0",
+    "cypress": "^4.12.1",
+    "cypress-axe": "^0.10.0",
+    "cypress-plugin-retries": "^1.5.2",
+    "eslint-plugin-cypress": "^2.11.2",
     "nodemon": "^2.0.6",
+    "start-server-and-test": "^1.11.5",
     "webpack": "^5.4.0",
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "axe-core": "^4.1.0",
-    "cypress-axe": "^0.10.0",
     "dotenv": "^8.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
