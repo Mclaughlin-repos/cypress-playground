@@ -23,7 +23,7 @@
     "pa11y:reporter:json": "pa11y --reporter json http://localhost:8080 > axe/pa11y/report.json"
   },
   "lint-staged": {
-    "src/components/**/*.{js,jsx,ts,tsx}":[
+    "src/components/**/*.{js,jsx,ts,tsx}": [
       "npm run lint:fix"
     ],
     "cypress/**/*.{js,ts}": [
