@@ -1,1 +1,12 @@
-[{"code":"WCAG2AA.Principle3.Guideline3_1.3_1_1.H57.2","type":"error","typeCode":1,"message":"The html element should have a lang or xml:lang attribute which describes the language of the document.","context":"<html><head>\n    <title>Cypress Playg...</html>","selector":"html","runner":"htmlcs","runnerExtras":{}}]
+[
+  {
+    "code": "WCAG2AA.Principle3.Guideline3_1.3_1_1.H57.2",
+    "type": "error",
+    "typeCode": 1,
+    "message": "The html element should have a lang or xml:lang attribute which describes the language of the document.",
+    "context": "<html><head>\n    <title>Cypress Playg...</html>",
+    "selector": "html",
+    "runner": "htmlcs",
+    "runnerExtras": {}
+  }
+]

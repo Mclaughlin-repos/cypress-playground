@@ -26,11 +26,7 @@
         "id": "aria-allowed-attr",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag412"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag412"]
       },
       {
         "description": "Ensures every ARIA button, link and menuitem has an accessible name",
@@ -39,11 +35,7 @@
         "id": "aria-command-name",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag412"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag412"]
       },
       {
         "description": "Ensures aria-hidden elements do not contain focusable elements",
@@ -52,12 +44,7 @@
         "id": "aria-hidden-focus",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.name-role-value",
-          "wcag2a",
-          "wcag412",
-          "wcag131"
-        ]
+        "tags": ["cat.name-role-value", "wcag2a", "wcag412", "wcag131"]
       },
       {
         "description": "Ensures every ARIA input field has an accessible name",
@@ -66,12 +53,7 @@
         "id": "aria-input-field-name",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag412",
-          "ACT"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag412", "ACT"]
       },
       {
         "description": "Ensures every ARIA meter node has an accessible name",
@@ -80,11 +62,7 @@
         "id": "aria-meter-name",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag111"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag111"]
       },
       {
         "description": "Ensures every ARIA progressbar node has an accessible name",
@@ -93,11 +71,7 @@
         "id": "aria-progressbar-name",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag111"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag111"]
       },
       {
         "description": "Ensures elements with ARIA roles have all required ARIA attributes",
@@ -106,11 +80,7 @@
         "id": "aria-required-attr",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag412"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag412"]
       },
       {
         "description": "Ensures elements with an ARIA role that require child roles contain them",
@@ -119,11 +89,7 @@
         "id": "aria-required-children",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag131"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag131"]
       },
       {
         "description": "Ensures elements with an ARIA role that require parent roles are contained by them",
@@ -132,11 +98,7 @@
         "id": "aria-required-parent",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag131"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag131"]
       },
       {
         "description": "Ensure aria-roledescription is only used on elements with an implicit or explicit role",
@@ -145,11 +107,7 @@
         "id": "aria-roledescription",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag412"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag412"]
       },
       {
         "description": "Ensures all elements with a role attribute use a valid value",
@@ -158,11 +116,7 @@
         "id": "aria-roles",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag412"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag412"]
       },
       {
         "description": "Ensures every ARIA toggle field has an accessible name",
@@ -171,12 +125,7 @@
         "id": "aria-toggle-field-name",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag412",
-          "ACT"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag412", "ACT"]
       },
       {
         "description": "Ensures every ARIA tooltip node has an accessible name",
@@ -185,11 +134,7 @@
         "id": "aria-tooltip-name",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag412"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag412"]
       },
       {
         "description": "Ensures all ARIA attributes have valid values",
@@ -198,11 +143,7 @@
         "id": "aria-valid-attr-value",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag412"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag412"]
       },
       {
         "description": "Ensures attributes that begin with aria- are valid ARIA attributes",
@@ -211,11 +152,7 @@
         "id": "aria-valid-attr",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag412"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag412"]
       },
       {
         "description": "Ensures <audio> elements have captions",
@@ -285,11 +222,7 @@
         "id": "definition-list",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.structure",
-          "wcag2a",
-          "wcag131"
-        ]
+        "tags": ["cat.structure", "wcag2a", "wcag131"]
       },
       {
         "description": "Ensures <dt> and <dd> elements are contained by a <dl>",
@@ -298,11 +231,7 @@
         "id": "dlitem",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.structure",
-          "wcag2a",
-          "wcag131"
-        ]
+        "tags": ["cat.structure", "wcag2a", "wcag131"]
       },
       {
         "description": "Ensures every id attribute value of active elements is unique",
@@ -311,11 +240,7 @@
         "id": "duplicate-id-active",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.parsing",
-          "wcag2a",
-          "wcag411"
-        ]
+        "tags": ["cat.parsing", "wcag2a", "wcag411"]
       },
       {
         "description": "Ensures every id attribute value used in ARIA and in labels is unique",
@@ -324,11 +249,7 @@
         "id": "duplicate-id-aria",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.parsing",
-          "wcag2a",
-          "wcag411"
-        ]
+        "tags": ["cat.parsing", "wcag2a", "wcag411"]
       },
       {
         "description": "Ensures form field does not have multiple label elements",
@@ -337,11 +258,7 @@
         "id": "form-field-multiple-labels",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.forms",
-          "wcag2a",
-          "wcag332"
-        ]
+        "tags": ["cat.forms", "wcag2a", "wcag332"]
       },
       {
         "description": "Ensures <iframe> and <frame> elements contain a non-empty title attribute",
@@ -366,12 +283,7 @@
         "id": "html-lang-valid",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.language",
-          "wcag2a",
-          "wcag311",
-          "ACT"
-        ]
+        "tags": ["cat.language", "wcag2a", "wcag311", "ACT"]
       },
       {
         "description": "Ensure that HTML elements with both valid lang and xml:lang attributes agree on the base language of the page",
@@ -380,12 +292,7 @@
         "id": "html-xml-lang-mismatch",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.language",
-          "wcag2a",
-          "wcag311",
-          "ACT"
-        ]
+        "tags": ["cat.language", "wcag2a", "wcag311", "ACT"]
       },
       {
         "description": "Ensures <img> elements have alternate text or a role of none or presentation",
@@ -475,11 +382,7 @@
         "id": "list",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.structure",
-          "wcag2a",
-          "wcag131"
-        ]
+        "tags": ["cat.structure", "wcag2a", "wcag131"]
       },
       {
         "description": "Ensures <li> elements are used semantically",
@@ -488,11 +391,7 @@
         "id": "listitem",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.structure",
-          "wcag2a",
-          "wcag131"
-        ]
+        "tags": ["cat.structure", "wcag2a", "wcag131"]
       },
       {
         "description": "Ensures <marquee> elements are not used",
@@ -501,11 +400,7 @@
         "id": "marquee",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.parsing",
-          "wcag2a",
-          "wcag222"
-        ]
+        "tags": ["cat.parsing", "wcag2a", "wcag222"]
       },
       {
         "description": "Ensures <meta http-equiv=\"refresh\"> is not used",
@@ -561,11 +456,7 @@
         "id": "scrollable-region-focusable",
         "impact": null,
         "nodes": [],
-        "tags": [
-          "cat.keyboard",
-          "wcag2a",
-          "wcag211"
-        ]
+        "tags": ["cat.keyboard", "wcag2a", "wcag211"]
       },
       {
         "description": "Ensures select element has an accessible name",
@@ -684,16 +575,10 @@
             "html": "<body>\n    <section id=\"app\"><h1>React with Webpack and Babel</h1></section>\n    <script src=\"./bundle.js\"></script>\n  \n</body>",
             "impact": null,
             "none": [],
-            "target": [
-              "body"
-            ]
+            "target": ["body"]
           }
         ],
-        "tags": [
-          "cat.aria",
-          "wcag2a",
-          "wcag412"
-        ]
+        "tags": ["cat.aria", "wcag2a", "wcag412"]
       },
       {
         "description": "Ensures each HTML document contains a non-empty <title> element",
@@ -716,17 +601,10 @@
             "html": "<html class=\"deque-axe-is-ready\">",
             "impact": null,
             "none": [],
-            "target": [
-              "html"
-            ]
+            "target": ["html"]
           }
         ],
-        "tags": [
-          "cat.text-alternatives",
-          "wcag2a",
-          "wcag242",
-          "ACT"
-        ]
+        "tags": ["cat.text-alternatives", "wcag2a", "wcag242", "ACT"]
       },
       {
         "description": "Ensures every id attribute value is unique",
@@ -749,16 +627,10 @@
             "html": "<section id=\"app\"><h1>React with Webpack and Babel</h1></section>",
             "impact": null,
             "none": [],
-            "target": [
-              "#app"
-            ]
+            "target": ["#app"]
           }
         ],
-        "tags": [
-          "cat.parsing",
-          "wcag2a",
-          "wcag411"
-        ]
+        "tags": ["cat.parsing", "wcag2a", "wcag411"]
       }
     ],
     "testEngine": {
@@ -780,9 +652,7 @@
       "reporter": "v1",
       "runOnly": {
         "type": "tag",
-        "values": [
-          "wcag2a"
-        ]
+        "values": ["wcag2a"]
       }
     },
     "url": "http://localhost:8080/",
@@ -811,17 +681,10 @@
             "html": "<html class=\"deque-axe-is-ready\">",
             "impact": "serious",
             "none": [],
-            "target": [
-              "html"
-            ]
+            "target": ["html"]
           }
         ],
-        "tags": [
-          "cat.language",
-          "wcag2a",
-          "wcag311",
-          "ACT"
-        ]
+        "tags": ["cat.language", "wcag2a", "wcag311", "ACT"]
       }
     ]
   }
