@@ -9,6 +9,7 @@
     "sourceMap": true,
     "target": "es5",
     "skipLibCheck": true,
+    "types": ["node", "cypress", "webpack-env"]
   },
   "include": [
     "src/components/index.tsx",

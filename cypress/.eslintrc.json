@@ -1,8 +1,14 @@
 {
   "root": true,
-  "plugins": ["cypress"],
+  "plugins": [
+    "cypress",
+    "prettier"
+  ],
   "extends": [
     "plugins:cypress/recommended",
     "prettier"
-  ]
+  ],
+  "rules": {
+    "prettier/prettier": "error"
+  }
 }

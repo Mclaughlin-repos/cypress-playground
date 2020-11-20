@@ -12,5 +12,9 @@
   "requestTimeout": 30000,
   "responseTimeout": 30000,
   "screenShotOnRunFailure": true,
-  "trashAssetsBeforeRuns": true
+  "trashAssetsBeforeRuns": true,
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporter-config.json"
+  }
 }
