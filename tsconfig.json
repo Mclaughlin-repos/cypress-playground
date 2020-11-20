@@ -10,5 +10,8 @@
     "target": "es5",
     "skipLibCheck": true,
   },
-  "include": ["src/components/index.tsx"]
+  "include": [
+    "src/components/index.tsx",
+    "cypress/**/*.ts."
+  ]
 }

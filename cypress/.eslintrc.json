@@ -1,9 +1,0 @@
-{
-  "root": true,
-  "plugins": ["cypress"],
-  "extends": [
-    "plugins:cypress/recommended",
-    "plugin:cypress/recommended",
-    "prettier"
-  ]
-}
