@@ -14,8 +14,7 @@ const App = (props: HelloWorldProps) => (
             id="label-container"
             className="Label-container"
             dataCy="label-container"
-            htmlFor=""
-        >
+            htmlFor="">
             This is a label
         </LabelContainer>
     </section>
