@@ -88,5 +88,10 @@
     ],
         "jsx-a11y/no-autofocus": "error",
         "jsx-a11y/aria-role": "error"
+  },
+  "settings": {
+        "react": {
+            "version": "detect"
+    }
   }
 }
