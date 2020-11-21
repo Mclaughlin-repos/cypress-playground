@@ -13,7 +13,7 @@
   ],
   // 0 = off, 1 = warn, 2 = error
   "rules": {
-    "no-console": 1, // means error
-    "prettier/prettier": 2
+    "no-console": 1, // means warn
+    "prettier/prettier": 2 // means error
   }
 }
