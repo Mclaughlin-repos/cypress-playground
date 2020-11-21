@@ -119,6 +119,9 @@
     }
   },
   "lint-staged": {
-    "*.tsx": "eslint --cache --fix"
+    "./src/*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint src/*.tsx --fix-dry-run"
+    ]
   }
 }
