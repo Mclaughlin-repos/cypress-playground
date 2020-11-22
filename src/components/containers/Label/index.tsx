@@ -1,23 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const LabelContainer: React.FC<{
+const Label: React.FC<{
     className?: string;
     id: string;
     children?: React.ReactNode;
     dataCy: string;
-    htmlFor: string;
+    htmlFor?: string;
 }> = ({ id, dataCy, children, className, htmlFor }) => {
     return (
-        <Label id={id} className={className} htmlFor={htmlFor} data-cy={dataCy}>
+        <LabelContainer id={id} className={className} htmlFor={htmlFor} data-cy={dataCy}>
             {children}
-        </Label>
+        </LabelContainer>
     );
 };
 
-const Label = styled.label`
+const LabelContainer = styled.label`
     border: 1px solid red;
     font-size: 1rem;
 `;
 
-export default LabelContainer;
+export default Label;
