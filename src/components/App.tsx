@@ -40,7 +40,7 @@ const App = (props: HelloWorldProps) => (
                     <LabelContainer
                         id="email-label-container"
                         className="Email-label-container"
-                        dataCy="eamil-label-container"
+                        dataCy="email-label-container"
                         htmlFor="email-input">
                         Email
                     </LabelContainer>
@@ -51,10 +51,7 @@ const App = (props: HelloWorldProps) => (
                         dataCy="email-input"
                     />
                 </Div>
-                <Div
-                    id="button-container"
-                    className="Div Button-container"
-                    dataCy="button-container">
+                <Div id="button-container" className="Div Button-container" dataCy="button-div">
                     <Button
                         id="submit-button"
                         name="submit-button"
