@@ -10,7 +10,32 @@ Running cypress spins up a browser and executes the tests defined in the cypress
 
 More documentation [here.](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell)
 
-## NPM script Commands
+## What you need to do before you start...
+
+Install PA11Y globally onto your computer. Pa11y is your automated accessibility testing pal. It runs accessibility tests on your pages via the command line or Node.js, so you can automate your testing process:
+Go to `https://pa11y.org/` to get more info, go to the GitHub `https://github.com/pa11y/pa11y` to learn more about the repo itself (You will need node.js so if you don't have node...run this command to install node `$brew install node` before you continue.) Then run this command in terminal/console
+
+```
+npm install -g pa11y
+```
+
+Clone the repo...then, save it somewhere on your computer where you'll remember its location. (I use my Documents folder):
+
+```
+git clone https://github.com/michael-mclaughlin/cypress-playground.git
+```
+
+Open your editor/IDE and bring the whole project into your editor. After that, use these commands (in order they are listed) to change directories into the project folder and install the node_modules with NPM. These 2 commands will provide you with all the necessary dependencies .etc that are needed to run the project. (See the `package.json` at the root level of the application to learn what packages are being used for this projects. See more about `npm install` here: `https://docs.npmjs.com/cli/v6/commands/npm-install`)
+
+```
+cd <directory where you stored the repo>/cypress-playground
+```
+
+```
+npm install
+```
+
+## NPM script Commands - (After following the above steps...)
 
 To start your the application run:
 
@@ -18,11 +43,40 @@ To start your the application run:
 npm run start
 ```
 
-To build the dist folder run (not necessary for users to do this but if you HAVE to...):
+After starting the application, you should see logs that look similar to this:
+
+```
+> cypress-playground@1.0.0 start /Users/<your user name goes here>/indeed/cypress-playground
+> webpack serve --config ./webpack.config.js --mode development
+
+ℹ ｢wds｣: Project is running at http://localhost:8080/
+ℹ ｢wds｣: webpack output is served from undefined
+ℹ ｢wds｣: Content not from webpack is served from /Users/nmarshall/indeed/cypress-playground/dist
+ℹ ｢atl｣: Using typescript@4.1.2 from typescript
+ℹ ｢atl｣: Using tsconfig.json from /Users/nmarshall/indeed/cypress-playground/tsconfig.json
+ℹ ｢atl｣: Checking started in a separate process...
+ℹ ｢atl｣: Time: 27ms
+
+```
+
+-   The project will run on `http://localhost:8080`
+-   Open a new browser window and copy and paste the above URL into the browser then, hit the enter to see the project load.
+
+You should see this message on the screen with a white background and Black text:
+
+```
+Hi Neil! Welcome to the Cypress Playground now using Typescript!
+This is where you will learn how to use AXE-CORE and PA11Y to work with components.
+```
+
+Run this last setup command (below)...to build the `dist` folder
 
 ```
 npm run build
 ```
+
+Now you are ready to start playing with Cypress/ AXE-Core/ PA11Y!
+The next commands show you how to play with each on your own. Happy Learning!
 
 ## Cypress/AXE-Core/Cypress AXE commands
 
