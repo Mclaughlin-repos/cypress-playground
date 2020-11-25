@@ -16,8 +16,8 @@ const Label: React.FC<{
 };
 
 const LabelContainer = styled.label`
-    border: 1px solid red;
     font-size: 1rem;
+    padding: 0.25rem 0;
 `;
 
 export default Label;

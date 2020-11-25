@@ -1,4 +1,4 @@
-context("Initial Accessibility (A11Y)", () => {
+context("Form Acessibility (A11Y)", () => {
   const input = '[data-cy="first-input"]';
   const label = '[data-cy="label-container"]';
   it('passes "Accessiblity A11Y" tests', () => {
