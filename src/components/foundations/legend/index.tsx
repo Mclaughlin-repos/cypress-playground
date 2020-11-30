@@ -15,7 +15,7 @@ const Legend: React.FC<{
 };
 
 const LegendContainer = styled.legend`
-    background-color: darkGreen;
+    background-color: brown;
     padding: 0.25rem;
     color: #ffffff;
     font-size: 1.25rem;

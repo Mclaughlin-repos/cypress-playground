@@ -36,6 +36,86 @@ const App = (props: HelloWorldProps) => (
                     </LabelContainer>
                     <Input id="name-input" className="Name-input" type="text" dataCy="name-input" />
                 </Div>
+                <Div id="address-div" className="Div Address-div" dataCy="address-div">
+                    <LabelContainer
+                        id="address-label-container"
+                        className="Address-label-container"
+                        dataCy="address-label-container"
+                        htmlFor="address-input">
+                        Address
+                    </LabelContainer>
+                    <Input
+                        id="address-input"
+                        className="Address-input"
+                        type="text"
+                        dataCy="address-input"
+                    />
+                </Div>
+                <Div id="address2-div" className="Div Address2-div" dataCy="address2-div">
+                    <LabelContainer
+                        id="address2-label-container"
+                        className="Address2-label-container"
+                        dataCy="address2-label-container"
+                        htmlFor="address2-input">
+                        Address 2
+                    </LabelContainer>
+                    <Input
+                        id="address2-input"
+                        className="Address2-input"
+                        type="text"
+                        dataCy="address2-input"
+                    />
+                </Div>
+                <Div id="city-div" className="Div City-div" dataCy="city-div">
+                    <LabelContainer
+                        id="city-label-container"
+                        className="city-label-container"
+                        dataCy="city-label-container"
+                        htmlFor="city-input">
+                        City
+                    </LabelContainer>
+                    <Input id="city-input" className="city-input" type="text" dataCy="city-input" />
+                </Div>
+                <Div id="state-div" className="Div state-div" dataCy="state-div">
+                    <LabelContainer
+                        id="state-label-container"
+                        className="state-label-container"
+                        dataCy="state-label-container"
+                        htmlFor="state-input">
+                        State
+                    </LabelContainer>
+                    <Input
+                        id="state-input"
+                        className="state-input"
+                        type="text"
+                        dataCy="state-input"
+                    />
+                </Div>
+                <Div id="zip-div" className="Div Zip-div" dataCy="zip-div">
+                    <LabelContainer
+                        id="zip-label-container"
+                        className="zip-label-container"
+                        dataCy="zip-label-container"
+                        htmlFor="zip-input">
+                        Zip Code
+                    </LabelContainer>
+                    <Input id="zip-input" className="zip-input" type="text" dataCy="zip-input" />
+                </Div>
+                <Div id="phone-div" className="Div Phone-div" dataCy="phone-div">
+                    <LabelContainer
+                        id="phone-label-container"
+                        className="phone-label-container"
+                        dataCy="phone-label-container"
+                        htmlFor="phone-input">
+                        Phone Number
+                    </LabelContainer>
+                    <Input
+                        id="phone-input"
+                        className="phone-input"
+                        type="text"
+                        dataCy="phone-input"
+                    />
+                </Div>
                 <Div id="email-div" className="Div" dataCy="email-div">
                     <LabelContainer
                         id="email-label-container"
@@ -53,15 +133,6 @@ const App = (props: HelloWorldProps) => (
                 </Div>
                 <Div id="button-container" className="Div Button-container" dataCy="button-div">
                     <Button
-                        id="submit-button"
-                        name="submit-button"
-                        className="Submit-button"
-                        value="submit"
-                        buttonType="submit"
-                        dataCy="submit-button">
-                        Submit
-                    </Button>
-                    <Button
                         id="reset-button"
                         name="reset-button"
                         className="Reset-button"
@@ -69,6 +140,15 @@ const App = (props: HelloWorldProps) => (
                         buttonType="reset"
                         dataCy="reset-button">
                         Clear
+                    </Button>
+                    <Button
+                        id="submit-button"
+                        name="submit-button"
+                        className="Submit-button"
+                        value="submit"
+                        buttonType="submit"
+                        dataCy="submit-button">
+                        Submit
                     </Button>
                 </Div>
             </Fieldset>
@@ -78,6 +158,31 @@ const App = (props: HelloWorldProps) => (
 
 const AppContainer = styled.section`
     font-family: Helvetica, sans-serif;
+    & .Button-container {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        & .Submit-button {
+            width: 12rem;
+            transition: 200ms ease-in-out;
+            &:hover {
+                background-color: Brown;
+                border: 2px solid black;
+            }
+        }
+        & .Reset-button {
+            transition: 200ms ease-in-out;
+            width: 5rem;
+            background-color: transparent;
+            color: darkGreen;
+            border: 2px solid darkGreen;
+            &:hover {
+                background-color: Brown;
+                border: 2px solid black;
+                color: #ffffff;
+            }
+        }
+    }
 `;
 
 export default App;
