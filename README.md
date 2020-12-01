@@ -13,7 +13,7 @@ More documentation [here.](https://docs.cypress.io/guides/overview/why-cypress.h
 ## What you need to do before you start...
 
 Install PA11Y globally onto your computer. Pa11y is your automated accessibility testing pal. It runs accessibility tests on your pages via the command line or Node.js, so you can automate your testing process:
-Go to `https://pa11y.org/` to get more info, go to the GitHub `https://github.com/pa11y/pa11y` to learn more about the repo itself (You will need node.js so if you don't have node...run this command to install node `$brew install node` before you continue.) Then run this command in terminal/console
+Go to `https://pa11y.org/` to get more info, go to the GitHub `https://github.com/pa11y/pa11y` to learn more about the repo itself (You will need node.js so if you don't have node...run this command to install node `$brew install node` before you continue. If you don't have Homebrew installed...go to `https://docs.brew.sh/Installation` to install then run the `$brew install node` command and follow the steps accordingly...) Then run this command in terminal/console
 
 ```
 npm install -g pa11y
@@ -25,7 +25,9 @@ Clone the repo...then, save it somewhere on your computer where you'll remember 
 git clone https://github.com/michael-mclaughlin/cypress-playground.git
 ```
 
-Open your editor/IDE and bring the whole project into your editor. After that, use these commands (in order they are listed) to change directories into the project folder and install the node_modules with NPM. These 2 commands will provide you with all the necessary dependencies .etc that are needed to run the project. (See the `package.json` at the root level of the application to learn what packages are being used for this projects. See more about `npm install` here: `https://docs.npmjs.com/cli/v6/commands/npm-install`)
+Open your editor/IDE and bring the whole project into your editor.
+After that, use these commands (in order they are listed) to change directories into the project folder and install the node_modules with NPM.
+These 2 commands will provide you with all the necessary dependencies .etc that are needed to run the project. (See the `package.json` at the root level of the application to learn what packages are being used for this projects. See more about `npm install` here: `https://docs.npmjs.com/cli/v6/commands/npm-install`)
 
 ```
 cd <directory where you stored the repo>/cypress-playground
@@ -65,7 +67,7 @@ After starting the application, you should see logs that look similar to this:
 You should see this message on the screen with a white background and Black text:
 
 ```
-Hi Neil! Welcome to the Cypress Playground now using Typescript!
+Hi Ya'll! Welcome to the Cypress Playground now using Cypress, AXE-CORE, PA11Y, Typescript and React!
 This is where you will learn how to use AXE-CORE and PA11Y to work with components.
 ```
 
