@@ -7,6 +7,7 @@ import Fieldset from './containers/Fieldset/index';
 import Legend from './foundations/Legend/index';
 import Div from './containers/Div/index';
 import Section from './containers/Section/index';
+import Header from './containers/Header/index';
 import Button from './foundations/Button/index';
 import H1 from './foundations/H1/index';
 import H2 from './foundations/H2/index';
@@ -20,10 +21,18 @@ export interface HelloWorldProps {
 }
 const App = (props: HelloWorldProps) => (
     <AppContainer>
-        <h1>
-            Hi {props.userName}! Welcome to the cypress playground now using {props.lang}!
-        </h1>
-        <h2>This is where you will learn how to use AXE-CORE and PA11Y with components</h2>
+        <Header
+            id="app-header-container"
+            className="App-header-container"
+            dataCy="app-header-container">
+            <H1 id="app-heading-1" className="App-heading-1" dataCy="app-heading-1">
+                Hi {props.userName}! Welcome to the Cypress Playground now using {props.lang}!
+            </H1>
+        </Header>
+        <H2 id="app-heading-2" className="App-heading-2" dataCy="app-heading-2">
+            This is where you will learn how to use Cypress, AXE-CORE and PA11Y to learn how to work
+            with components and pages.
+        </H2>
 
         <Form action="" method="post" id="form" className="Form" dataCy="form">
             <Fieldset
