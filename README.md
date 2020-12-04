@@ -25,16 +25,39 @@ Clone the repo...then, save it somewhere on your computer where you'll remember 
 git clone https://github.com/michael-mclaughlin/cypress-playground.git
 ```
 
+You will need an `ACCESS_TOKEN` before you can do anything with the repo. Contact Mike Mclaughlin through:
+
+```
+Indeed's slack account:  @mclaughlin
+Work email - mclaughlin@indeed.com
+Personal email - michaelmclaughlindesigns@gmail.com
+```
+
+Save that access token somewhere that is safely secure. Once the access token is used you'll never see it again. (If you would like a `NEW` access token then contact `Mike Mclaughlin` through the channels listed above.)
+
+Clone the `HTTPS` version, you will be asked for your username and password (If you are not asked for the `username and password` after you run the `git clone...`, you will be asked when you run your `npm install` command):
+
+```
+username = the username you used to be granted access to the repo
+password = the ACCESS_TOKEN that was given to you
+```
+
+After you input the `ACCESS_TOKEN` into the password of your terminal, the install of the the `node_modules` folder with assets will complete. (If you don't see the node_modules within your editor that's okay. You can open the folder through your computer file folder structure and see that the folder and contents are there)
+
 Open your editor/IDE and bring the whole project into your editor.
 After that, use these commands (in order they are listed) to change directories into the project folder and install the node_modules with NPM.
 These 2 commands will provide you with all the necessary dependencies .etc that are needed to run the project. (See the `package.json` at the root level of the application to learn what packages are being used for this projects. See more about `npm install` here: `https://docs.npmjs.com/cli/v6/commands/npm-install`)
 
 ```
+
 cd <directory where you stored the repo>/cypress-playground
+
 ```
 
 ```
+
 npm install
+
 ```
 
 ## NPM script Commands - (After following the above steps...)
@@ -42,12 +65,15 @@ npm install
 To start your the application run:
 
 ```
+
 npm run start
+
 ```
 
 After starting the application, you should see logs that look similar to this:
 
 ```
+
 > cypress-playground@1.0.0 start /Users/<your user name goes here>/indeed/cypress-playground
 > webpack serve --config ./webpack.config.js --mode development
 
@@ -67,14 +93,18 @@ After starting the application, you should see logs that look similar to this:
 You should see this message on the screen with a white background and Black text:
 
 ```
+
 Hi Ya'll! Welcome to the Cypress Playground now using Cypress, AXE-CORE, PA11Y, Typescript and React!
 This is where you will learn how to use AXE-CORE and PA11Y to work with components.
+
 ```
 
 Run this last setup command (below)...to build the `dist` folder
 
 ```
+
 npm run build
+
 ```
 
 Now you are ready to start playing with Cypress/ AXE-Core/ PA11Y!
@@ -82,32 +112,40 @@ The next commands show you how to play with each on your own. Happy Learning!
 
 ## Cypress/AXE-Core/Cypress AXE commands
 
-### All cy commands must be run when you are within the cypress folder
+### All cy commands must be run when you are within the `Cypress` folder
 
 ### The app MUST be loaded into a browser window before running cy commands
 
 To open the cypress gui:
 
 ```
+
 npm run cy:open
+
 ```
 
 To run the cypress gui in DEBUG mode run:
 
 ```
+
 npm run cy:debug
+
 ```
 
 To run the cypress with AXE in the gui run:
 
 ```
+
 npm run cy:axe
+
 ```
 
 To run the cypress with AXE on a specific page:
 
 ```
+
 npm run cy:axe:webpage
+
 ```
 
 ## PA11Y commands
@@ -119,28 +157,40 @@ npm run cy:axe:webpage
 To run PA11Y on the app:
 
 ```
+
 npm run pa11y
+
 ```
 
 To run PA11Y with section 508 rules (fallback...not preferred):
 
 ```
+
 npm run pa11y:508
+
 ```
 
 To run PA11Y with AXE rules (preferred):
 
 ```
+
 npm run pa11y:axe
+
 ```
 
 To run PA11Y with AXE rules and report it to a .json file:
 
 ```
+
 npm run pa11y:reporter:json
+
 ```
 
 ### If you need some help:
 
 Mike Mclaughlin
 michaelmclaughlindesigns@gmail.com
+
+```
+
+```
