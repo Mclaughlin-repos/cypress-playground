@@ -19,12 +19,6 @@ Go to `https://pa11y.org/` to get more info, go to the GitHub `https://github.co
 npm install -g pa11y
 ```
 
-Clone the repo...then, save it somewhere on your computer where you'll remember its location. (I use my Documents folder):
-
-```
-git clone https://github.com/michael-mclaughlin/cypress-playground.git
-```
-
 You will need an `ACCESS_TOKEN` before you can do anything with the repo. Contact Mike Mclaughlin through:
 
 ```
@@ -33,16 +27,22 @@ Work email - mclaughlin@indeed.com
 Personal email - michaelmclaughlindesigns@gmail.com
 ```
 
-Save that access token somewhere that is safely secure. Once the access token is used you'll never see it again. (If you would like a `NEW` access token then contact `Mike Mclaughlin` through the channels listed above.)
+Save that access token somewhere that is safely secure. Once the access token is used, you'll never see it again. (If you would like a `NEW` access token then contact `Mike Mclaughlin` through the channels listed above.)
 
-Clone the `HTTPS` version, you will be asked for your username and password (If you are not asked for the `username and password` after you run the `git clone...`, you will be asked when you run your `npm install` command):
+Clone the repo...then, save it somewhere on your computer where you'll remember its location. (I use my Documents folder):
+
+```
+git clone https://github.com/michael-mclaughlin/cypress-playground.git
+```
+
+After cloning the repo, you will be asked for your username and password (If you are not asked for the `username and password` after you run the `git clone...`, you will be asked when you run your `npm install` command):
 
 ```
 username = the username you used to be granted access to the repo
 password = the ACCESS_TOKEN that was given to you
 ```
 
-After you input the `ACCESS_TOKEN` into the password of your terminal, the install of the the `node_modules` folder with assets will complete. (If you don't see the node_modules within your editor that's okay. You can open the folder through your computer file folder structure and see that the folder and contents are there)
+After you input the `ACCESS_TOKEN` into the password of your terminal, the install of the the `node_modules` folder with assets will complete. (If you don't see the node_modules within your editor that's okay. You can open the project folder through your computer file folder structure and see that the `node_modules` folder and contents are there at the root level of the project.)
 
 Open your editor/IDE and bring the whole project into your editor.
 After that, use these commands (in order they are listed) to change directories into the project folder and install the node_modules with NPM.
