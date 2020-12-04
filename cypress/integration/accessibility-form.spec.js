@@ -29,86 +29,108 @@ const emailInput = '[data-cy="email-input"]';
 const submitButton = '[data-cy="submit-button"]';
 const resetButton = '[data-cy="reset-button"]';
 beforeEach(() => {
-    cy.visit("http://localhost:8080");
+    cy.visit('http://localhost:8080');
     cy.addAxeCode(); // overwrite of injectAxe() by using axe.core, which fixes axe-cypress which has a require.resolve error
 });
 
-context("Form Acessibility (A11Y)", () => {
-  it('passes "Accessiblity A11Y" tests', () => {
-    cy.get(form).should('be.visible').find(fieldset).should('be.visible').within(() => {
-      cy.get(legend).should('be.visible').and('have.text', 'The Form');
+context('Form Acessibility (A11Y)', () => {
+    it('passes "Accessiblity A11Y" tests', () => {
+        cy.get(form)
+            .should('be.visible')
+            .find(fieldset)
+            .should('be.visible')
+            .within(() => {
+                cy.get(legend).should('be.visible').and('have.text', 'The Form');
+            });
+        cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
-    cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
-  });
 
-  it('has the "Name form inputs" that pass "Acessibility (A11Y)"', () => {
-    cy.get(nameDiv).should('be.visible').within(() => {
-      cy.get(nameInputLabel).should('be.visible').and('have.text', 'Name');
-      cy.get(nameInput).should('be.visible');
+    it('has the "Name form inputs" that pass "Acessibility (A11Y)"', () => {
+        cy.get(nameDiv)
+            .should('be.visible')
+            .within(() => {
+                cy.get(nameInputLabel).should('be.visible').and('have.text', 'Name');
+                cy.get(nameInput).should('be.visible');
+            });
+        cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
-    cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
-  });
 
-  it('has the "Address form inputs" that pass "Acessibility (A11Y)"', () => {
-    cy.get(addressDiv).should('be.visible').within(() => {
-      cy.get(addressInputLabel).should('be.visible').and('have.text', 'Address');
-      cy.get(addressInput).should('be.visible');
+    it('has the "Address form inputs" that pass "Acessibility (A11Y)"', () => {
+        cy.get(addressDiv)
+            .should('be.visible')
+            .within(() => {
+                cy.get(addressInputLabel).should('be.visible').and('have.text', 'Address');
+                cy.get(addressInput).should('be.visible');
+            });
+        cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
-    cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
-  });
 
-  it('has the "Address2 form inputs" that pass "Acessibility (A11Y)"', () => {
-    cy.get(address2Div).should('be.visible').within(() => {
-      cy.get(address2InputLabel).should('be.visible').and('have.text', 'Address 2');
-      cy.get(address2Input).should('be.visible');
+    it('has the "Address2 form inputs" that pass "Acessibility (A11Y)"', () => {
+        cy.get(address2Div)
+            .should('be.visible')
+            .within(() => {
+                cy.get(address2InputLabel).should('be.visible').and('have.text', 'Address 2');
+                cy.get(address2Input).should('be.visible');
+            });
+        cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
-    cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
-  });
 
-  it('has the "City form inputs" that pass "Acessibility (A11Y)"', () => {
-    cy.get(cityDiv).should('be.visible').within(() => {
-      cy.get(cityInputLabel).should('be.visible').and('have.text', 'City');
-      cy.get(cityInput).should('be.visible');
+    it('has the "City form inputs" that pass "Acessibility (A11Y)"', () => {
+        cy.get(cityDiv)
+            .should('be.visible')
+            .within(() => {
+                cy.get(cityInputLabel).should('be.visible').and('have.text', 'City');
+                cy.get(cityInput).should('be.visible');
+            });
+        cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
-    cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
-  });
 
-  it('has the "State form inputs" that pass "Acessibility (A11Y)"', () => {
-    cy.get(stateDiv).should('be.visible').within(() => {
-      cy.get(stateInputLabel).should('be.visible').and('have.text', 'State');
-      cy.get(stateInput).should('be.visible');
+    it('has the "State form inputs" that pass "Acessibility (A11Y)"', () => {
+        cy.get(stateDiv)
+            .should('be.visible')
+            .within(() => {
+                cy.get(stateInputLabel).should('be.visible').and('have.text', 'State');
+                cy.get(stateInput).should('be.visible');
+            });
+        cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
-    cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
-  });
 
-  it('has the "Zip form inputs" that pass "Acessibility (A11Y)"', () => {
-    cy.get(zipDiv).should('be.visible').within(() => {
-      cy.get(zipInputLabel).should('be.visible').and('have.text', 'Zip Code');
-      cy.get(zipInput).should('be.visible');
+    it('has the "Zip form inputs" that pass "Acessibility (A11Y)"', () => {
+        cy.get(zipDiv)
+            .should('be.visible')
+            .within(() => {
+                cy.get(zipInputLabel).should('be.visible').and('have.text', 'Zip Code');
+                cy.get(zipInput).should('be.visible');
+            });
+        cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
-    cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
-  });
 
-  it('has the "Phone form inputs" that pass "Acessibility (A11Y)"', () => {
-    cy.get(phoneDiv).should('be.visible').within(() => {
-      cy.get(phoneInputLabel).should('be.visible').and('have.text', 'Phone Number');
-      cy.get(phoneInput).should('be.visible');
+    it('has the "Phone form inputs" that pass "Acessibility (A11Y)"', () => {
+        cy.get(phoneDiv)
+            .should('be.visible')
+            .within(() => {
+                cy.get(phoneInputLabel).should('be.visible').and('have.text', 'Phone Number');
+                cy.get(phoneInput).should('be.visible');
+            });
+        cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
-    cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
-  });
 
-  it('has the "Email form inputs" that pass "Acessibility (A11Y)"', () => {
-    cy.get(emailDiv).should('be.visible').within(() => {
-      cy.get(emailInputLabel).should('be.visible').and('have.text', 'Email');
-      cy.get(emailInput).should('be.visible');
+    it('has the "Email form inputs" that pass "Acessibility (A11Y)"', () => {
+        cy.get(emailDiv)
+            .should('be.visible')
+            .within(() => {
+                cy.get(emailInputLabel).should('be.visible').and('have.text', 'Email');
+                cy.get(emailInput).should('be.visible');
+            });
+        cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
-    cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
-  });
-  it('has the "Button form inputs" that pass "Acessibility (A11Y)"', () => {
-    cy.get(buttonDiv).should('be.visible').within(() => {
-      cy.get(submitButton).should('be.visible').and('have.text', 'Submit');
-      cy.get(resetButton).should('be.visible').and('have.text', 'Clear');
+    it('has the "Button form inputs" that pass "Acessibility (A11Y)"', () => {
+        cy.get(buttonDiv)
+            .should('be.visible')
+            .within(() => {
+                cy.get(submitButton).should('be.visible').and('have.text', 'Submit');
+                cy.get(resetButton).should('be.visible').and('have.text', 'Clear');
+            });
+        cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
-    cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
-  });
 });
