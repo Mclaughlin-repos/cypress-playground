@@ -8,6 +8,7 @@ import Legend from './foundations/Legend/index';
 import Div from './containers/Div/index';
 import Section from './containers/Section/index';
 import Header from './containers/Header/index';
+import ColorPicker from './containers/Color-Picker/index';
 import Button from './foundations/Button/index';
 import H1 from './foundations/H1/index';
 import H2 from './foundations/H2/index';
@@ -249,49 +250,62 @@ const App = (props: HelloWorldProps) => (
                 id="h1-color-contrast-container"
                 className="Div Color-contrast-container H1-contrast"
                 dataCy="h1-color-contrast-div">
-                <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                    Color Contrast H1
-                </H1>
+                <ColorPicker>
+                    <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
+                        Click here to change background color
+                    </H1>
+                </ColorPicker>
             </Div>
+
             <Div
                 id="h2-color-contrast-container"
                 className="Div Color-contrast-container H2-contrast"
                 dataCy="h2-color-contrast-div">
-                <H2 id="heading-2" className="Heading-2" dataCy="heading-2">
-                    Color Contrast H2
-                </H2>
+                <ColorPicker>
+                    <H2 id="heading-2" className="Heading-2" dataCy="heading-2">
+                        Click here to change background color
+                    </H2>
+                </ColorPicker>
             </Div>
             <Div
                 id="h3-color-contrast-container"
                 className="Div Color-contrast-container H3-contrast"
                 dataCy="h3-color-contrast-div">
-                <H3 id="heading-3" className="Heading-3" dataCy="heading-3">
-                    Color Contrast H3
-                </H3>
+                <ColorPicker>
+                    <H3 id="heading-3" className="Heading-3" dataCy="heading-3">
+                        Click here to change background color
+                    </H3>
+                </ColorPicker>
             </Div>
             <Div
                 id="h4-color-contrast-container"
                 className="Div Color-contrast-container H4-contrast"
                 dataCy="h4-color-contrast-div">
-                <H4 id="heading-4" className="Heading-4" dataCy="heading-4">
-                    Color Contrast H4
-                </H4>
+                <ColorPicker>
+                    <H4 id="heading-4" className="Heading-4" dataCy="heading-4">
+                        Click here to change background color
+                    </H4>
+                </ColorPicker>
             </Div>
             <Div
                 id="h5-color-contrast-container"
                 className="Div Color-contrast-container H5-contrast"
                 dataCy="h5-color-contrast-div">
-                <H5 id="heading-5" className="Heading-5" dataCy="heading-5">
-                    Color Contrast H5
-                </H5>
+                <ColorPicker>
+                    <H5 id="heading-5" className="Heading-5" dataCy="heading-5">
+                        Click here to change background color
+                    </H5>
+                </ColorPicker>
             </Div>
             <Div
                 id="h6-color-contrast-container"
                 className="Div Color-contrast-container H6-contrast"
                 dataCy="h6-color-contrast-div">
-                <H6 id="heading-6" className="Heading-6" dataCy="heading-6">
-                    Color Contrast H6
-                </H6>
+                <ColorPicker>
+                    <H6 id="heading-6" className="Heading-6" dataCy="heading-6">
+                        Click here to change background color
+                    </H6>
+                </ColorPicker>
             </Div>
         </Section>
         <Section
@@ -460,7 +474,6 @@ const AppContainer = styled.section`
             & > h1 {
                 font-size: 1.75rem;
             }
-            background-color: #222222;
         }
         & .H2-contrast {
             & > h2 {
@@ -479,21 +492,18 @@ const AppContainer = styled.section`
                 font-size: 1.75rem;
             }
             color: orange;
-            background-color: blue;
         }
         & .H5-contrast {
             & > h5 {
                 font-size: 1.75rem;
             }
             color: red;
-            background-color: green;
         }
         & .H6-contrast {
             & > h6 {
                 font-size: 1.75rem;
             }
             color: #ffffff;
-            background-color: #2b78e4;
         }
     }
     & .Heading-order-section {
