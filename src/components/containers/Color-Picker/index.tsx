@@ -1,9 +1,15 @@
 import React from 'react';
 import reactCSS from 'reactcss';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { SketchPicker } from 'react-color';
 
-class ColorPicker extends React.Component {
+interface Props {
+    dataCy: string;
+    id: string;
+    className: string;
+}
+
+class ColorPicker extends React.Component<Props> {
     state = {
         displayColorPicker: false,
         color: {
@@ -35,14 +41,23 @@ class ColorPicker extends React.Component {
                 },
             },
         });
-        const { children } = this.props;
+        const { children, id, className, dataCy } = this.props;
         return (
-            <Container className="color-picker-container">
-                <Swatch onClick={this.handleClick} className="color-picker-swatch">
-                    <ColorContainer style={styles.color}>{children}</ColorContainer>
+            <Container className={`color-picker-container ${className}`} id={id} data-cy={dataCy}>
+                <Swatch
+                    onClick={this.handleClick}
+                    className="color-picker-swatch"
+                    id="color-picker-swatch-container"
+                    data-cy="swatch-container">
+                    <ColorContainer style={styles.color} data-cy="swatch-color-container">
+                        {children}
+                    </ColorContainer>
                 </Swatch>
                 {this.state.displayColorPicker ? (
-                    <PopOver className="color-picker-popover">
+                    <PopOver
+                        className="color-picker-popover"
+                        id="color-picker-popover"
+                        data-cy="color-picker-popover">
                         <Cover onClick={this.handleClose} />
                         <SketchPicker
                             color={this.state.color}

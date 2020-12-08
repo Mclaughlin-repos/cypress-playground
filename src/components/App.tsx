@@ -16,6 +16,7 @@ import H3 from './foundations/H3/index';
 import H4 from './foundations/H4/index';
 import H5 from './foundations/H5/index';
 import H6 from './foundations/H6/index';
+import H7 from './foundations/H7/index';
 export interface HelloWorldProps {
     userName: string;
     lang: string;
@@ -250,7 +251,10 @@ const App = (props: HelloWorldProps) => (
                 id="h1-color-contrast-container"
                 className="Div Color-contrast-container H1-contrast"
                 dataCy="h1-color-contrast-div">
-                <ColorPicker>
+                <ColorPicker
+                    id="color-contrast-h1-picker"
+                    className="Color-contrast-h1-picker"
+                    dataCy="color-contrast-h1-picker">
                     <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
                         Click here to change background color
                     </H1>
@@ -261,7 +265,10 @@ const App = (props: HelloWorldProps) => (
                 id="h2-color-contrast-container"
                 className="Div Color-contrast-container H2-contrast"
                 dataCy="h2-color-contrast-div">
-                <ColorPicker>
+                <ColorPicker
+                    id="color-contrast-h2-picker"
+                    className="Color-contrast-h2-picker"
+                    dataCy="color-contrast-h2-picker">
                     <H2 id="heading-2" className="Heading-2" dataCy="heading-2">
                         Click here to change background color
                     </H2>
@@ -271,7 +278,10 @@ const App = (props: HelloWorldProps) => (
                 id="h3-color-contrast-container"
                 className="Div Color-contrast-container H3-contrast"
                 dataCy="h3-color-contrast-div">
-                <ColorPicker>
+                <ColorPicker
+                    id="color-contrast-h3-picker"
+                    className="Color-contrast-h3-picker"
+                    dataCy="color-contrast-h3-picker">
                     <H3 id="heading-3" className="Heading-3" dataCy="heading-3">
                         Click here to change background color
                     </H3>
@@ -281,7 +291,10 @@ const App = (props: HelloWorldProps) => (
                 id="h4-color-contrast-container"
                 className="Div Color-contrast-container H4-contrast"
                 dataCy="h4-color-contrast-div">
-                <ColorPicker>
+                <ColorPicker
+                    id="color-contrast-h4-picker"
+                    className="Color-contrast-h4-picker"
+                    dataCy="color-contrast-h4-picker">
                     <H4 id="heading-4" className="Heading-4" dataCy="heading-4">
                         Click here to change background color
                     </H4>
@@ -291,7 +304,10 @@ const App = (props: HelloWorldProps) => (
                 id="h5-color-contrast-container"
                 className="Div Color-contrast-container H5-contrast"
                 dataCy="h5-color-contrast-div">
-                <ColorPicker>
+                <ColorPicker
+                    id="color-contrast-h5-picker"
+                    className="Color-contrast-h5-picker"
+                    dataCy="color-contrast-h5-picker">
                     <H5 id="heading-5" className="Heading-5" dataCy="heading-5">
                         Click here to change background color
                     </H5>
@@ -301,10 +317,26 @@ const App = (props: HelloWorldProps) => (
                 id="h6-color-contrast-container"
                 className="Div Color-contrast-container H6-contrast"
                 dataCy="h6-color-contrast-div">
-                <ColorPicker>
+                <ColorPicker
+                    id="color-contrast-h6-picker"
+                    className="Color-contrast-h6-picker"
+                    dataCy="color-contrast-h6-picker">
                     <H6 id="heading-6" className="Heading-6" dataCy="heading-6">
                         Click here to change background color
                     </H6>
+                </ColorPicker>
+            </Div>
+            <Div
+                id="h7-color-contrast-container"
+                className="Div Color-contrast-container H7-contrast"
+                dataCy="h7-color-contrast-div">
+                <ColorPicker
+                    id="color-contrast-h7-picker"
+                    className="Color-contrast-h7-picker"
+                    dataCy="color-contrast-h7-picker">
+                    <H7 id="heading-7" className="Heading-7" dataCy="heading-7">
+                        Click here to change background color
+                    </H7>
                 </ColorPicker>
             </Div>
         </Section>
@@ -455,11 +487,11 @@ const AppContainer = styled.section`
     }
     & .Color-contrast-section {
         & .Header-color-contrast-section {
-            font-size: 1.75rem;
             margin: 0 0 1rem 0;
             padding: 0;
 
             & .Heading-1 {
+                font-size: 1.75rem;
                 margin: 0;
                 padding: 0;
             }
@@ -468,42 +500,52 @@ const AppContainer = styled.section`
             background-color: #eeeeee;
             padding: 1rem;
             border-radius: 0.25rem;
-            font-size: 1.75rem;
+            & .color-picker-container {
+                & .Heading-7,
+                .Heading-6,
+                .Heading-5,
+                .Heading-4,
+                .Heading-3,
+                .Heading-2,
+                .Heading-1 {
+                    font-size: 2rem;
+                }
+            }
         }
         & .H1-contrast {
+            color: #ffffff;
             & > h1 {
-                font-size: 1.75rem;
             }
         }
         & .H2-contrast {
+            color: #000000;
             & > h2 {
-                font-size: 1.75rem;
             }
-            color: #ffffff;
         }
         & .H3-contrast {
             & > h3 {
-                font-size: 1.75rem;
             }
-            color: #333333;
+            color: #666666;
         }
         & .H4-contrast {
             & > h4 {
-                font-size: 1.75rem;
             }
             color: orange;
         }
         & .H5-contrast {
             & > h5 {
-                font-size: 1.75rem;
             }
             color: red;
         }
         & .H6-contrast {
             & > h6 {
-                font-size: 1.75rem;
             }
-            color: #ffffff;
+            color: #2b78e4;
+        }
+        & .H7-contrast {
+            & > h6 {
+            }
+            color: green;
         }
     }
     & .Heading-order-section {
