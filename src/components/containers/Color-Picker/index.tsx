@@ -58,37 +58,15 @@ class ColorPicker extends React.Component<Props> {
                     onChange={this.handleChange}
                     className="color-picker-sketch"
                     presetColors={presetColors}
+                    width={'300px'}
                 />
             </Container>
         );
     }
 }
 
-const Cover = styled.div``;
-const PopOver = styled.div`
-    position: 'absolute';
-    z-index: '2';
-    margin: 1rem 0;
-`;
-
-const Swatch = styled.div`
-    padding: '100px';
-    border-radius: '1px';
-    box-shadow: '0 0 0 1px rgba(0,0,0,.1)';
-    display: 'inline-block';
-    cursor: 'pointer';
-`;
 const Container = styled.div`
     display: flex;
-    /* flex-flow: column; */
-    /* border: 10px solid green; */
-`;
-
-const ColorContainer = styled.div`
-    padding: 1rem;
-    &:hover {
-        cursor: pointer;
-    }
 `;
 
 export default ColorPicker;

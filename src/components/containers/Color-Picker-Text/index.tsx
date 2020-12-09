@@ -57,6 +57,7 @@ class ColorPickerText extends React.Component<Props> {
                         onChange={this.handleChange}
                         className="text-color-picker-sketch"
                         presetColors={presetColors}
+                        width={'440px'}
                     />
                 </Container>
             </ParentContainer>
