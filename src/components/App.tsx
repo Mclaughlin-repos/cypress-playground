@@ -9,6 +9,7 @@ import Div from './containers/Div/index';
 import Section from './containers/Section/index';
 import Header from './containers/Header/index';
 import ColorPicker from './containers/Color-Picker/index';
+import ColorPickerText from './containers/Color-Picker-Text/index';
 import Button from './foundations/Button/index';
 import H1 from './foundations/H1/index';
 import H2 from './foundations/H2/index';
@@ -16,7 +17,6 @@ import H3 from './foundations/H3/index';
 import H4 from './foundations/H4/index';
 import H5 from './foundations/H5/index';
 import H6 from './foundations/H6/index';
-import H7 from './foundations/H7/index';
 export interface HelloWorldProps {
     userName: string;
     lang: string;
@@ -247,96 +247,32 @@ const App = (props: HelloWorldProps) => (
                     Accessibility with Color Contrast Exercise
                 </H1>
             </Header>
+            <p className="section-instructions">
+                Choose a background color then choose a text color. After that, run the tests and
+                see the Accessibility readout.
+            </p>
             <Div
                 id="h1-color-contrast-container"
                 className="Div Color-contrast-container H1-contrast"
                 dataCy="h1-color-contrast-div">
+                <H2
+                    id="color-contrast-heading-2"
+                    className="Color-contrast-heading-2"
+                    dataCy="color-contrast-heading-2">
+                    Choose a Background color
+                </H2>
                 <ColorPicker
                     id="color-contrast-h1-picker"
                     className="Color-contrast-h1-picker"
                     dataCy="color-contrast-h1-picker">
-                    <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                        Click here to change background color
-                    </H1>
-                </ColorPicker>
-            </Div>
-
-            <Div
-                id="h2-color-contrast-container"
-                className="Div Color-contrast-container H2-contrast"
-                dataCy="h2-color-contrast-div">
-                <ColorPicker
-                    id="color-contrast-h2-picker"
-                    className="Color-contrast-h2-picker"
-                    dataCy="color-contrast-h2-picker">
-                    <H2 id="heading-2" className="Heading-2" dataCy="heading-2">
-                        Click here to change background color
-                    </H2>
-                </ColorPicker>
-            </Div>
-            <Div
-                id="h3-color-contrast-container"
-                className="Div Color-contrast-container H3-contrast"
-                dataCy="h3-color-contrast-div">
-                <ColorPicker
-                    id="color-contrast-h3-picker"
-                    className="Color-contrast-h3-picker"
-                    dataCy="color-contrast-h3-picker">
-                    <H3 id="heading-3" className="Heading-3" dataCy="heading-3">
-                        Click here to change background color
-                    </H3>
-                </ColorPicker>
-            </Div>
-            <Div
-                id="h4-color-contrast-container"
-                className="Div Color-contrast-container H4-contrast"
-                dataCy="h4-color-contrast-div">
-                <ColorPicker
-                    id="color-contrast-h4-picker"
-                    className="Color-contrast-h4-picker"
-                    dataCy="color-contrast-h4-picker">
-                    <H4 id="heading-4" className="Heading-4" dataCy="heading-4">
-                        Click here to change background color
-                    </H4>
-                </ColorPicker>
-            </Div>
-            <Div
-                id="h5-color-contrast-container"
-                className="Div Color-contrast-container H5-contrast"
-                dataCy="h5-color-contrast-div">
-                <ColorPicker
-                    id="color-contrast-h5-picker"
-                    className="Color-contrast-h5-picker"
-                    dataCy="color-contrast-h5-picker">
-                    <H5 id="heading-5" className="Heading-5" dataCy="heading-5">
-                        Click here to change background color
-                    </H5>
-                </ColorPicker>
-            </Div>
-            <Div
-                id="h6-color-contrast-container"
-                className="Div Color-contrast-container H6-contrast"
-                dataCy="h6-color-contrast-div">
-                <ColorPicker
-                    id="color-contrast-h6-picker"
-                    className="Color-contrast-h6-picker"
-                    dataCy="color-contrast-h6-picker">
-                    <H6 id="heading-6" className="Heading-6" dataCy="heading-6">
-                        Click here to change background color
-                    </H6>
-                </ColorPicker>
-            </Div>
-            <Div
-                id="h7-color-contrast-container"
-                className="Div Color-contrast-container H7-contrast"
-                dataCy="h7-color-contrast-div">
-                <ColorPicker
-                    id="color-contrast-h7-picker"
-                    className="Color-contrast-h7-picker"
-                    dataCy="color-contrast-h7-picker">
-                    <H7 id="heading-7" className="Heading-7" dataCy="heading-7">
-                        Click here to change background color
-                    </H7>
+                    <ColorPickerText
+                        id="text-color-contrast-h1-picker"
+                        className="Text-color-contrast-h1-picker"
+                        dataCy="text-color-contrast-h1-picker">
+                        <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
+                            Choose a text color!
+                        </H1>
+                    </ColorPickerText>
                 </ColorPicker>
             </Div>
         </Section>
@@ -496,11 +432,23 @@ const AppContainer = styled.section`
                 padding: 0;
             }
         }
+        & .section-instructions {
+            font-size: 1.25rem;
+        }
+
         & .Color-contrast-container {
-            background-color: #eeeeee;
             padding: 1rem;
-            border-radius: 0.25rem;
+            & .color-picker-parent-container {
+                width: 30rem;
+                margin: 2rem auto 6rem;
+                & .Heading-1 {
+                    font-size: 2rem;
+                }
+            }
             & .color-picker-container {
+                flex-flow: row-reverse;
+                justify-content: flex-end;
+
                 & .Heading-7,
                 .Heading-6,
                 .Heading-5,
@@ -510,42 +458,44 @@ const AppContainer = styled.section`
                 .Heading-1 {
                     font-size: 2rem;
                 }
+                & .text-color-picker-container {
+                    margin: 0;
+                }
             }
         }
         & .H1-contrast {
-            color: #ffffff;
             & > h1 {
             }
         }
         & .H2-contrast {
-            color: #000000;
             & > h2 {
+                color: #000000;
             }
         }
         & .H3-contrast {
             & > h3 {
+                color: #666666;
             }
-            color: #666666;
         }
         & .H4-contrast {
             & > h4 {
+                color: orange;
             }
-            color: orange;
         }
         & .H5-contrast {
             & > h5 {
+                color: red;
             }
-            color: red;
         }
         & .H6-contrast {
             & > h6 {
+                color: #2b78e4;
             }
-            color: #2b78e4;
         }
         & .H7-contrast {
             & > h6 {
+                color: green;
             }
-            color: green;
         }
     }
     & .Heading-order-section {
