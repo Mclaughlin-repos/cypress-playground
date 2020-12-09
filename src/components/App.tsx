@@ -248,8 +248,9 @@ const App = (props: HelloWorldProps) => (
                 </H1>
             </Header>
             <p className="section-instructions">
-                Choose a background color then choose a text color. After that, run the tests and
-                see the Accessibility readout.
+                Choose a swatch from the <strong>Aurora swatch collection</strong> OR use the inputs
+                to search for a custom color. Then, run the Accessibility scripts from the{' '}
+                <strong>.README</strong> file to see the readout.
             </p>
             <Div
                 id="h1-color-contrast-container"

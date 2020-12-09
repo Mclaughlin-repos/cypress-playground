@@ -2,12 +2,13 @@ import React from 'react';
 import reactCSS from 'reactcss';
 import styled from 'styled-components';
 import { SketchPicker } from 'react-color';
-// import H3 from '../../foundations/H3/index';
+import { presetColors } from '../../../utils/preset-colors';
 
 interface Props {
     dataCy: string;
     id: string;
     className: string;
+    presetColors?: string[];
 }
 
 class ColorPickerText extends React.Component<Props> {
@@ -55,6 +56,7 @@ class ColorPickerText extends React.Component<Props> {
                         color={this.state.color}
                         onChange={this.handleChange}
                         className="text-color-picker-sketch"
+                        presetColors={presetColors}
                     />
                 </Container>
             </ParentContainer>

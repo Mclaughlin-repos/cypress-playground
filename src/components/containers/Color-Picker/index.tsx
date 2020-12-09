@@ -2,12 +2,13 @@ import React from 'react';
 import reactCSS from 'reactcss';
 import styled from 'styled-components';
 import { SketchPicker } from 'react-color';
-// import H3 from '../../foundations/H3/index';
+import { presetColors } from '../../../utils/preset-colors';
 
 interface Props {
     dataCy: string;
     id: string;
     className: string;
+    presetColors?: string[];
 }
 
 class ColorPicker extends React.Component<Props> {
@@ -43,6 +44,7 @@ class ColorPicker extends React.Component<Props> {
                 },
             },
         });
+
         const { children, id, className, dataCy } = this.props;
         return (
             <Container
@@ -55,6 +57,7 @@ class ColorPicker extends React.Component<Props> {
                     color={this.state.color}
                     onChange={this.handleChange}
                     className="color-picker-sketch"
+                    presetColors={presetColors}
                 />
             </Container>
         );
