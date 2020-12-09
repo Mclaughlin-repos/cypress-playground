@@ -249,8 +249,10 @@ const App = (props: HelloWorldProps) => (
             </Header>
             <p className="section-instructions">
                 Choose a swatch from the <strong>Aurora swatch collection</strong> OR use the inputs
-                to search for a custom color. Then, run the Accessibility scripts from the{' '}
-                <strong>.README</strong> file to see the readout.
+                to search for a custom color for <strong>background color</strong> then, change the{' '}
+                <strong>font color</strong> the same way. <br /> Once you have chosen your colors,
+                run the Accessibility scripts from the <strong>.README</strong> file to see the
+                readout.
             </p>
             <Div
                 id="h1-color-contrast-container"
