@@ -1,6 +1,6 @@
 # CYPRESS-PLAYGROUND
 
-This is a playground to become familiar with the automation possibilities using AXE/ AXE-Core/ Cypress-AXE/ PA11Y/ PA11Y-AXE
+This is a playground to become familiar with the automation possibilities using AXE/ AXE-Core/ Cypress-AXE/ PA11Y/ PA11Y-AXE.
 
 ## Webapp Automation using Cypress
 
@@ -11,7 +11,7 @@ Running cypress spins up a browser and executes the tests defined in the cypress
 More documentation [here.](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell)
 
 ## What you need to do before you start...
-
+### Clone the HTTPS version of the repo
 Install PA11Y globally onto your computer. Pa11y is your automated accessibility testing pal. It runs accessibility tests on your pages via the command line or Node.js, so you can automate your testing process:
 Go to `https://pa11y.org/` to get more info, go to the GitHub `https://github.com/pa11y/pa11y` to learn more about the repo itself (You will need node.js so if you don't have node...run this command to install node `$brew install node` before you continue. If you don't have Homebrew installed...go to `https://docs.brew.sh/Installation` to install then run the `$brew install node` command and follow the steps accordingly...) Then run this command in terminal/console
 
