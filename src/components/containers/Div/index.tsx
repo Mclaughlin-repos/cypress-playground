@@ -23,7 +23,6 @@ const DivContainer = styled.div`
     ${DEFAULT_CONTENT_CONTAINER_STYLES}
     display: flex;
     flex-flow: column;
-    max-width: 18.75rem;
     margin: 1rem 0 1.5rem;
 `;
 
