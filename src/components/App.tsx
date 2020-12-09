@@ -449,17 +449,14 @@ const AppContainer = styled.section`
                 flex-flow: row-reverse;
                 justify-content: flex-end;
 
-                & .Heading-7,
-                .Heading-6,
-                .Heading-5,
-                .Heading-4,
-                .Heading-3,
-                .Heading-2,
-                .Heading-1 {
-                    font-size: 2rem;
+                & .Heading-1 {
+                    font-size: 3rem;
                 }
                 & .text-color-picker-container {
                     margin: 0;
+                }
+                & .color-picker-sketch {
+                    height: fit-content;
                 }
             }
         }
