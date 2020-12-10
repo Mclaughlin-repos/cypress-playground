@@ -16,6 +16,12 @@ More documentation [here.](https://docs.cypress.io/guides/overview/why-cypress.h
 
 Permissions will only be granted to those who have one of account types specified above.
 
+If you need to set up a `GitHub account`, you can quickly set one up with the link to this documentation
+
+```
+https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/set-up-git
+```
+
 ### Pa11y
 
 Pa11y is your automated accessibility testing pal.
