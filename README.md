@@ -12,36 +12,47 @@ More documentation [here.](https://docs.cypress.io/guides/overview/why-cypress.h
 
 ## What you need to do before you start...
 
-### Pa11y 
-Pa11y is your automated accessibility testing pal. 
+### You must have a GitHub, GitLab, or an Indeed personal GitHub account in order to use this repo.
+
+Permissions will only be granted to those who have one of account types specified above.
+
+### Pa11y
+
+Pa11y is your automated accessibility testing pal.
 It runs accessibility tests on your pages via the command line or Node.js, so you can automate your testing process:
 Go to `https://pa11y.org/` to get more info, go to the GitHub `https://github.com/pa11y/pa11y` to learn more about the repo itself (You will need node.js so if you don't have node...run this command to install node `$brew install node` before you continue. If you don't have Homebrew installed...go to `https://docs.brew.sh/Installation` to install then run the `$brew install node` command and follow the steps accordingly...)
 
 ### AXE-CORE
-Axe is an accessibility testing engine for websites and other HTML-based user interfaces. It's fast, secure, lightweight, and was built to seamlessly integrate with any existing test environment so you can automate accessibility testing alongside your regular functional testing.  To get more info, go to `https://github.com/dequelabs/axe-core`
+
+Axe is an accessibility testing engine for websites and other HTML-based user interfaces. It's fast, secure, lightweight, and was built to seamlessly integrate with any existing test environment so you can automate accessibility testing alongside your regular functional testing. To get more info, go to `https://github.com/dequelabs/axe-core`
 
 ### Cypress
-Cypress is a next generation front end testing tool built for the modern web. We address the key pain points developers and QA engineers face when testing modern applications.  To learn more, go to: `https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell`
+
+Cypress is a next generation front end testing tool built for the modern web. We address the key pain points developers and QA engineers face when testing modern applications. To learn more, go to: `https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell`
 
 We make it possible to:
+
 ```
 Set up tests
 Write tests
 Run tests
 Debug Tests
 ```
-Cypress is most often compared to Selenium; however Cypress is both fundamentally and architecturally different. Cypress is not constrained by the same restrictions as Selenium.  This enables you to write faster, easier and more reliable tests.
+
+Cypress is most often compared to Selenium; however Cypress is both fundamentally and architecturally different. Cypress is not constrained by the same restrictions as Selenium. This enables you to write faster, easier and more reliable tests.
 
 ## Steps to get up and running
+
 You will need to be granted access to the repo. You will need to be given access to the `Organization` and to the `Member Access`.
-Contact Mike Mclaughlin through: 
+Contact Mike Mclaughlin through:
+
 ```
 personal email: michaelmclaughlindesigns@gmail.com
 work email: mclaughlin@indeed.com
 work slack: @mclaughlin
 ```
-to receive access to the `Organization` and to receive your `Member Access`.
 
+to receive access to the `Organization` and to receive your `Member Access`.
 
 Clone the repo...then, save it somewhere on your computer where you'll remember its location. (I use my Documents folder):
 
@@ -167,6 +178,7 @@ npm run pa11y:reporter:json
 ```
 
 ### If you need some help:
+
 ```
 Mike Mclaughlin
 michaelmclaughlindesigns@gmail.com
