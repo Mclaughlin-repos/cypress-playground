@@ -40,7 +40,7 @@ personal email: michaelmclaughlindesigns@gmail.com
 work email: mclaughlin@indeed.com
 work slack: @mclaughlin
 ```
-to receive access to the `Organization` and to receive your `Member Access`.  Follow the steps below...
+to receive access to the `Organization` and to receive your `Member Access`.
 
 
 Clone the repo...then, save it somewhere on your computer where you'll remember its location. (I use my Documents folder):
