@@ -108,7 +108,7 @@ The next commands show you how to play with each on your own. Happy Learning!
 
 ## Cypress/AXE-Core/Cypress AXE commands
 
-### All cy commands must be run when you are within the `Cypress` folder
+### All cy commands must be run when you are within the `cypress` folder
 
 ### The app MUST be loaded into a browser window before running cy commands
 
