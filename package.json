@@ -100,6 +100,7 @@
     "colors": "^1.4.0",
     "dotenv": "^8.2.0",
     "html2canvas": "^1.0.0-rc.7",
+    "pa11y": "^5.3.0",
     "pa11y-reporter-cli": "^2.0.0",
     "pa11y-reporter-csv": "^2.0.0",
     "pa11y-reporter-json": "^2.0.0",

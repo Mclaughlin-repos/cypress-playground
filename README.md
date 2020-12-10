@@ -12,7 +12,18 @@ More documentation [here.](https://docs.cypress.io/guides/overview/why-cypress.h
 
 ## What you need to do before you start...
 
-Install PA11Y globally onto your computer. Pa11y is your automated accessibility testing pal. It runs accessibility tests on your pages via the command line or Node.js, so you can automate your testing process:
+You will need to be granted access to the repo. You will need to be given access to the `Organization` and to the `Member Access` with an `ACCESS TOKEN`.
+Contact Mike Mclaughlin through: 
+```
+personal email: michaelmclaughlindesigns@gmail.com
+work email: mclaughlin@indeed.com
+work slack: @mclaughlin
+```
+to receive access to the `Organization` and to receive your `ACCESS_TOKEN`.  Follow the steps below...
+
+Install PA11Y globally onto your computer. 
+Pa11y is your automated accessibility testing pal. 
+It runs accessibility tests on your pages via the command line or Node.js, so you can automate your testing process:
 Go to `https://pa11y.org/` to get more info, go to the GitHub `https://github.com/pa11y/pa11y` to learn more about the repo itself (You will need node.js so if you don't have node...run this command to install node `$brew install node` before you continue. If you don't have Homebrew installed...go to `https://docs.brew.sh/Installation` to install then run the `$brew install node` command and follow the steps accordingly...) Then run this command in terminal/console
 
 ```
