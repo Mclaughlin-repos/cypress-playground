@@ -394,6 +394,7 @@ const AppContainer = styled.section`
             margin: 0;
             padding: 1.5rem;
             color: #2ddfff;
+            /* box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25); */
 
             & .App-heading-1-span {
                 font-size: 1.5rem;
@@ -409,6 +410,7 @@ const AppContainer = styled.section`
             padding: 1.5rem;
             background-color: #0643ad;
             margin: 0;
+            box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.5);
         }
     }
     & .Button-container {
@@ -445,6 +447,7 @@ const AppContainer = styled.section`
         padding: 1rem 1.5rem 2rem;
         margin: 2rem;
         border-radius: 0.5rem;
+        box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
     }
     & .Color-contrast-container {
         margin: 1rem 1rem 1.5rem;
