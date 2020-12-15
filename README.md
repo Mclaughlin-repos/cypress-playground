@@ -128,9 +128,13 @@ The next commands show you how to play with each on your own. Happy Learning!
 ### All cy commands must be run when you are within the `cypress` folder
 #### Command to run all tests (Pa11y, Cypress, Axe-core) all together at once: `(PREFERRED METHOD)`
 ```
+
 npm run test:all
+
+
 ```
-#### Individual commands
+
+### Cypress Individual commands
 To open the cypress gui:
 
 ```
@@ -155,11 +159,9 @@ To run the cypress with AXE on a specific page:
 npm run cy:axe:webpage
 ```
 
-## PA11Y commands
+### PA11Y Individual commands
 
-### PA11Y is browser based so results will present in the terminal/console
-
-### The app MUST be loaded into a browser window before running PA11Y commands
+#### PA11Y is browser based so results will present in the terminal/console
 
 To run PA11Y on the app:
 
@@ -173,7 +175,7 @@ To run PA11Y with section 508 rules (fallback...not preferred):
 npm run pa11y:508
 ```
 
-To run PA11Y with AXE rules (preferred):
+To run PA11Y with AXE rules (wcag and 508 rules - preferred):
 
 ```
 npm run pa11y:axe
