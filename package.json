@@ -18,7 +18,8 @@
     "pa11y:axe": "pa11y --runner axe http://localhost:8080",
     "pa11y:reporter:json": "pa11y --reporter json http://localhost:8080 > axe/pa11y/report.json",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.tsx' --write",
-    "prettier-watch": "onchange 'src/**/*.tsx' -- prettier --write {{changed}}"
+    "prettier-watch": "onchange 'src/**/*.tsx' -- prettier --write {{changed}}",
+    "start:test": "webpack serve --config ./webpack.config.js --mode development & start-server-and-test start http://localhost:8080 cy:open & pa11y --runner axe http://localhost:8080"
   },
   "repository": {
     "type": "git",
