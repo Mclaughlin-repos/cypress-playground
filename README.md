@@ -123,9 +123,9 @@ This is where you will learn how to use AXE-CORE and PA11Y to work with componen
 Now you are ready to start playing with Cypress/ AXE-Core/ PA11Y!
 The next commands show you how to play with each on your own. Happy Learning!
 
-## Cypress/AXE-Core/Cypress AXE commands
+## Cypress/AXE-Core/Pa11y commands
 
-### All cy commands must be run when you are within the `cypress` folder
+### All commands below must be run when you are within the `cypress` folder within a terminal window
 #### Command to run all tests (Pa11y, Cypress, Axe-core) all together at once: `(PREFERRED METHOD)`
 This command: `starts the application` running in localhost (without opening a browser window), `opens and runs the cypress tests with axe core` AND `runs the pa11y tests` all concurrently. (user needs to go to browser window and type `http://localhost:8080` to see app)
 ```
