@@ -26,7 +26,8 @@ const App = (props: HelloWorldProps) => (
         <Header
             id="app-header-container"
             className="App-header-container"
-            dataCy="app-header-container">
+            dataCy="app-header-container"
+        >
             <H1 id="app-heading-1" className="App-heading-1" dataCy="app-heading-1">
                 Hi {props.userName}! Welcome to the Cypress Playground...{''}&nbsp;
                 <span className="App-heading-1-span">Now using {props.lang}!</span>
@@ -40,11 +41,13 @@ const App = (props: HelloWorldProps) => (
             <Header
                 id="header-form-section"
                 className="Header-form-section"
-                dataCy="header-form-section">
+                dataCy="header-form-section"
+            >
                 <H1
                     id="form-section-heading-1"
                     className="Form-section-heading-1"
-                    dataCy="form-section-heading-1">
+                    dataCy="form-section-heading-1"
+                >
                     Accessibility with Forms Exercise
                 </H1>
             </Header>
@@ -52,7 +55,8 @@ const App = (props: HelloWorldProps) => (
                 <Fieldset
                     id="fieldset-container"
                     className="Fieldset-container"
-                    dataCy="fieldset-container">
+                    dataCy="fieldset-container"
+                >
                     <Legend id="legend" className="Legend" dataCy="legend">
                         The Form
                     </Legend>
@@ -61,7 +65,8 @@ const App = (props: HelloWorldProps) => (
                             id="name-label-container"
                             className="Name-label-container"
                             dataCy="name-label-container"
-                            htmlFor="name-input">
+                            htmlFor="name-input"
+                        >
                             Name
                         </LabelContainer>
                         <Input
@@ -76,7 +81,8 @@ const App = (props: HelloWorldProps) => (
                             id="address-label-container"
                             className="Address-label-container"
                             dataCy="address-label-container"
-                            htmlFor="address-input">
+                            htmlFor="address-input"
+                        >
                             Address
                         </LabelContainer>
                         <Input
@@ -91,7 +97,8 @@ const App = (props: HelloWorldProps) => (
                             id="address2-label-container"
                             className="Address2-label-container"
                             dataCy="address2-label-container"
-                            htmlFor="address2-input">
+                            htmlFor="address2-input"
+                        >
                             Address 2
                         </LabelContainer>
                         <Input
@@ -106,7 +113,8 @@ const App = (props: HelloWorldProps) => (
                             id="city-label-container"
                             className="city-label-container"
                             dataCy="city-label-container"
-                            htmlFor="city-input">
+                            htmlFor="city-input"
+                        >
                             City
                         </LabelContainer>
                         <Input
@@ -121,7 +129,8 @@ const App = (props: HelloWorldProps) => (
                             id="state-label-container"
                             className="state-label-container"
                             dataCy="state-label-container"
-                            htmlFor="state-input">
+                            htmlFor="state-input"
+                        >
                             State
                         </LabelContainer>
                         <Input
@@ -136,7 +145,8 @@ const App = (props: HelloWorldProps) => (
                             id="zip-label-container"
                             className="zip-label-container"
                             dataCy="zip-label-container"
-                            htmlFor="zip-input">
+                            htmlFor="zip-input"
+                        >
                             Zip Code
                         </LabelContainer>
                         <Input
@@ -151,7 +161,8 @@ const App = (props: HelloWorldProps) => (
                             id="phone-label-container"
                             className="phone-label-container"
                             dataCy="phone-label-container"
-                            htmlFor="phone-input">
+                            htmlFor="phone-input"
+                        >
                             Phone Number
                         </LabelContainer>
                         <Input
@@ -166,7 +177,8 @@ const App = (props: HelloWorldProps) => (
                             id="email-label-container"
                             className="Email-label-container"
                             dataCy="email-label-container"
-                            htmlFor="email-input">
+                            htmlFor="email-input"
+                        >
                             Email
                         </LabelContainer>
                         <Input
@@ -183,7 +195,8 @@ const App = (props: HelloWorldProps) => (
                             className="Reset-button"
                             value="reset"
                             buttonType="reset"
-                            dataCy="reset-button">
+                            dataCy="reset-button"
+                        >
                             Clear
                         </Button>
                         <Button
@@ -192,7 +205,8 @@ const App = (props: HelloWorldProps) => (
                             className="Submit-button"
                             value="submit"
                             buttonType="submit"
-                            dataCy="submit-button">
+                            dataCy="submit-button"
+                        >
                             Submit
                         </Button>
                     </Div>
@@ -202,11 +216,13 @@ const App = (props: HelloWorldProps) => (
         <Section
             id="heading-order-section"
             className="Heading-order-section"
-            dataCy="heading-order-section">
+            dataCy="heading-order-section"
+        >
             <Header
                 id="header-heading-order-section"
                 className="Header-heading-order-section"
-                dataCy="header-heading-order-section">
+                dataCy="header-heading-order-section"
+            >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
                     Accessibility with Heading Order Exercise
                 </H1>
@@ -214,7 +230,8 @@ const App = (props: HelloWorldProps) => (
             <Div
                 id="heading-order-container-div"
                 className="Div Heading-order-container-div"
-                dataCy="heading-order-container-div">
+                dataCy="heading-order-container-div"
+            >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
                     Heading Order H1
                 </H1>
@@ -238,11 +255,13 @@ const App = (props: HelloWorldProps) => (
         <Section
             id="color-contrast-section"
             className="Color-contrast-section"
-            dataCy="color-contrast-section">
+            dataCy="color-contrast-section"
+        >
             <Header
                 id="header-color-contrast-section"
                 className="Header-color-contrast-section"
-                dataCy="header-color-contrast-section">
+                dataCy="header-color-contrast-section"
+            >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
                     Accessibility with Color Contrast Exercise
                 </H1>
@@ -257,21 +276,25 @@ const App = (props: HelloWorldProps) => (
             <Div
                 id="h1-color-contrast-container"
                 className="Div Color-contrast-container H1-contrast"
-                dataCy="h1-color-contrast-div">
+                dataCy="h1-color-contrast-div"
+            >
                 <H2
                     id="color-contrast-heading-2"
                     className="Color-contrast-heading-2"
-                    dataCy="color-contrast-heading-2">
+                    dataCy="color-contrast-heading-2"
+                >
                     Choose a Background color
                 </H2>
                 <ColorPicker
                     id="color-contrast-h1-picker"
                     className="Color-contrast-h1-picker"
-                    dataCy="color-contrast-h1-picker">
+                    dataCy="color-contrast-h1-picker"
+                >
                     <ColorPickerText
                         id="text-color-contrast-h1-picker"
                         className="Text-color-contrast-h1-picker"
-                        dataCy="text-color-contrast-h1-picker">
+                        dataCy="text-color-contrast-h1-picker"
+                    >
                         <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
                             Choose a text color!
                         </H1>
@@ -282,11 +305,13 @@ const App = (props: HelloWorldProps) => (
         <Section
             id="color-contrast-font-size-section"
             className="Color-contrast-font-size-section"
-            dataCy="color-contrast-font-size-section">
+            dataCy="color-contrast-font-size-section"
+        >
             <Header
                 id="header-color-contrast-font-size-section"
                 className="Header-color-contrast-font-size-section"
-                dataCy="header-color-contrast-font-size-section">
+                dataCy="header-color-contrast-font-size-section"
+            >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
                     Accessibility with Color Contrast and Font Size Exercise
                 </H1>
@@ -294,7 +319,8 @@ const App = (props: HelloWorldProps) => (
             <Div
                 id="h1-color-contrast-container"
                 className="Div Color-contrast-container H1-contrast"
-                dataCy="h1-color-contrast-div">
+                dataCy="h1-color-contrast-div"
+            >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
                     Color Contrast with font size H1
                 </H1>
@@ -302,7 +328,8 @@ const App = (props: HelloWorldProps) => (
             <Div
                 id="h2-color-contrast-container"
                 className="Div Color-contrast-container H2-contrast"
-                dataCy="h2-color-contrast-div">
+                dataCy="h2-color-contrast-div"
+            >
                 <H2 id="heading-2" className="Heading-2" dataCy="heading-2">
                     Color Contrast with font size H2
                 </H2>
@@ -310,7 +337,8 @@ const App = (props: HelloWorldProps) => (
             <Div
                 id="h3-color-contrast-container"
                 className="Div Color-contrast-container H3-contrast"
-                dataCy="h3-color-contrast-div">
+                dataCy="h3-color-contrast-div"
+            >
                 <H3 id="heading-3" className="Heading-3" dataCy="heading-3">
                     Color Contrast with font size H3
                 </H3>
@@ -318,7 +346,8 @@ const App = (props: HelloWorldProps) => (
             <Div
                 id="h4-color-contrast-container"
                 className="Div Color-contrast-container H4-contrast"
-                dataCy="h4-color-contrast-div">
+                dataCy="h4-color-contrast-div"
+            >
                 <H4 id="heading-4" className="Heading-4" dataCy="heading-4">
                     Color Contrast with font size H4
                 </H4>
@@ -326,7 +355,8 @@ const App = (props: HelloWorldProps) => (
             <Div
                 id="h5-color-contrast-container"
                 className="Div Color-contrast-container H5-contrast"
-                dataCy="h5-color-contrast-div">
+                dataCy="h5-color-contrast-div"
+            >
                 <H5 id="heading-5" className="Heading-5" dataCy="heading-5">
                     Color Contrast with font size H5
                 </H5>
@@ -334,7 +364,8 @@ const App = (props: HelloWorldProps) => (
             <Div
                 id="h6-color-contrast-container"
                 className="Div Color-contrast-container H6-contrast"
-                dataCy="h6-color-contrast-div">
+                dataCy="h6-color-contrast-div"
+            >
                 <H6 id="heading-6" className="Heading-6" dataCy="heading-6">
                     Color Contrast with font size H6
                 </H6>
@@ -348,6 +379,7 @@ const AppContainer = styled.section`
     font-size: 1rem;
     margin: 0;
     padding: 0;
+    background-color: #092347;
     & .App-header-container {
         font-size: 2.25rem;
         color: #ffffff;
@@ -408,11 +440,19 @@ const AppContainer = styled.section`
     .Heading-order-section,
     .Form-section,
     .Color-contrast-font-size-section {
-        border: 2px solid #b3b3b3;
-        background-color: #d6d6d6;
+        border: 2px solid #061831;
+        background-color: #0c2e5e;
         padding: 1rem 1.5rem 2rem;
+        margin: 2rem;
+        border-radius: 0.5rem;
+    }
+    & .Color-contrast-container {
+        margin: 1rem 1rem 1.5rem;
     }
     & .Form-section {
+        & .Form {
+            margin: 1rem 1rem 1.5rem;
+        }
         & .Header-form-section {
             font-size: 1.75rem;
             margin: 0 0 1rem 0;
@@ -421,6 +461,8 @@ const AppContainer = styled.section`
             & .Form-section-heading-1 {
                 margin: 0;
                 padding: 0;
+                color: #ffffff;
+                letter-spacing: 0.5px;
             }
         }
     }
@@ -433,14 +475,25 @@ const AppContainer = styled.section`
                 font-size: 1.75rem;
                 margin: 0;
                 padding: 0;
+                color: #ffffff;
+                letter-spacing: 0.5px;
             }
         }
         & .section-instructions {
             font-size: 1.25rem;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            font-weight: 300;
+            & strong {
+                color: #2ddfff;
+            }
         }
 
         & .Color-contrast-container {
             padding: 1rem;
+            background-color: #e6e6e6;
+            border-radius: 0.25rem;
+            margin: 1rem 1rem 1.5rem;
             & .color-picker-parent-container {
                 width: 30rem;
                 margin: 2rem auto 6rem;
@@ -507,6 +560,8 @@ const AppContainer = styled.section`
             & .Heading-1 {
                 margin: 0;
                 padding: 0;
+                color: #ffffff;
+                letter-spacing: 0.5px;
             }
         }
         & .Heading-1 {
@@ -516,6 +571,8 @@ const AppContainer = styled.section`
             padding: 1rem;
             border-radius: 0.25rem;
             border: 1px solid #b3b3b3;
+            background-color: #e6e6e6;
+            margin: 1rem 1rem 1.5rem;
         }
     }
     & .Color-contrast-font-size-section {
@@ -527,6 +584,8 @@ const AppContainer = styled.section`
             & .Heading-1 {
                 margin: 0;
                 padding: 0;
+                color: #ffffff;
+                letter-spacing: 0.5px;
             }
         }
         & .Color-contrast-container {
