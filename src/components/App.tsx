@@ -10,6 +10,8 @@ import Section from './containers/Section/index';
 import Header from './containers/Header/index';
 import ColorPicker from './containers/Color-Picker/index';
 import ColorPickerText from './containers/Color-Picker-Text/index';
+import ColorPickerCustom from './containers/Color-Picker-Custom/index';
+import ColorPickerAuroraText from './containers/Color-Picker-Aurora-Text/index';
 import Button from './foundations/Button/index';
 import H1 from './foundations/H1/index';
 import H2 from './foundations/H2/index';
@@ -316,63 +318,201 @@ const App = (props: HelloWorldProps) => (
                     Accessibility with Color Contrast and Font Size Exercise
                 </H1>
             </Header>
-            <Div
-                id="h1-color-contrast-container"
-                className="Div Color-contrast-container H1-contrast"
-                dataCy="h1-color-contrast-div"
+            <ColorPickerAuroraText
+                id="color-contrast-h1-swatch-picker"
+                className="Color-contrast-h1-swatch-picker"
+                dataCy="color-contrast-h1-swatch-picker"
             >
-                <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                    Color Contrast with font size H1
-                </H1>
-            </Div>
-            <Div
-                id="h2-color-contrast-container"
-                className="Div Color-contrast-container H2-contrast"
-                dataCy="h2-color-contrast-div"
-            >
-                <H2 id="heading-2" className="Heading-2" dataCy="heading-2">
-                    Color Contrast with font size H2
-                </H2>
-            </Div>
-            <Div
-                id="h3-color-contrast-container"
-                className="Div Color-contrast-container H3-contrast"
-                dataCy="h3-color-contrast-div"
-            >
-                <H3 id="heading-3" className="Heading-3" dataCy="heading-3">
-                    Color Contrast with font size H3
-                </H3>
-            </Div>
-            <Div
-                id="h4-color-contrast-container"
-                className="Div Color-contrast-container H4-contrast"
-                dataCy="h4-color-contrast-div"
-            >
-                <H4 id="heading-4" className="Heading-4" dataCy="heading-4">
-                    Color Contrast with font size H4
-                </H4>
-            </Div>
-            <Div
-                id="h5-color-contrast-container"
-                className="Div Color-contrast-container H5-contrast"
-                dataCy="h5-color-contrast-div"
-            >
-                <H5 id="heading-5" className="Heading-5" dataCy="heading-5">
-                    Color Contrast with font size H5
-                </H5>
-            </Div>
-            <Div
-                id="h6-color-contrast-container"
-                className="Div Color-contrast-container H6-contrast"
-                dataCy="h6-color-contrast-div"
-            >
-                <H6 id="heading-6" className="Heading-6" dataCy="heading-6">
-                    Color Contrast with font size H6
-                </H6>
-            </Div>
+                <Div
+                    id="h1-color-contrast-container"
+                    className="Div Color-contrast-container H1-contrast"
+                    dataCy="h1-color-contrast-div"
+                >
+                    <Title className="title">Change the background color</Title>
+                    <ColorPickerCustom
+                        id="color-contrast-h1-picker"
+                        className="Color-contrast-h1-picker"
+                        dataCy="color-contrast-h1-picker"
+                    >
+                        <Div
+                            id="h1-color-contrast-container"
+                            className="Div Color-picker-parent-container"
+                            dataCy="h1-color-contrast-div"
+                        >
+                            <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
+                                Font size 44px
+                            </H1>
+                        </Div>
+                    </ColorPickerCustom>
+                </Div>
+                <Div
+                    id="h2-color-contrast-container"
+                    className="Div Color-contrast-container H2-contrast"
+                    dataCy="h2-color-contrast-div"
+                >
+                    <Title className="title">Change the background color</Title>
+                    <ColorPickerCustom
+                        id="color-contrast-h2-picker"
+                        className="Color-contrast-h2-picker"
+                        dataCy="color-contrast-h2-picker"
+                    >
+                        <Div
+                            id="h2-color-contrast-container"
+                            className="Div Color-picker-parent-container"
+                            dataCy="h2-color-contrast-div"
+                        >
+                            <H2 id="heading-2" className="Heading-2" dataCy="heading-2">
+                                Font size 36px
+                            </H2>
+                        </Div>
+                    </ColorPickerCustom>
+                </Div>
+                <Div
+                    id="h3-color-contrast-container"
+                    className="Div Color-contrast-container H3-contrast"
+                    dataCy="h3-color-contrast-div"
+                >
+                    <Title className="title">Change the background color</Title>
+                    <ColorPickerCustom
+                        id="color-contrast-h3-picker"
+                        className="Color-contrast-h3-picker"
+                        dataCy="color-contrast-h3-picker"
+                    >
+                        <Div
+                            id="h2-color-contrast-container"
+                            className="Div Color-picker-parent-container"
+                            dataCy="h3-color-contrast-div"
+                        >
+                            <H3 id="heading-3" className="Heading-3" dataCy="heading-3">
+                                Font size 28px
+                            </H3>
+                        </Div>
+                    </ColorPickerCustom>
+                </Div>
+                <Div
+                    id="h4-color-contrast-container"
+                    className="Div Color-contrast-container H4-contrast"
+                    dataCy="h4-color-contrast-div"
+                >
+                    <Title className="title">Change the background color</Title>
+                    <ColorPickerCustom
+                        id="color-contrast-h4-picker"
+                        className="Color-contrast-h4-picker"
+                        dataCy="color-contrast-h4-picker"
+                    >
+                        <Div
+                            id="h4-color-contrast-container"
+                            className="Div Color-picker-parent-container"
+                            dataCy="h4-color-contrast-div"
+                        >
+                            <H4 id="heading-4" className="Heading-4" dataCy="heading-4">
+                                Font size 24px
+                            </H4>
+                        </Div>
+                    </ColorPickerCustom>
+                </Div>
+                <Div
+                    id="h5-color-contrast-container"
+                    className="Div Color-contrast-container H5-contrast"
+                    dataCy="h5-color-contrast-div"
+                >
+                    <Title className="title">Change the background color</Title>
+                    <ColorPickerCustom
+                        id="color-contrast-h5-picker"
+                        className="Color-contrast-h5-picker"
+                        dataCy="color-contrast-h5-picker"
+                    >
+                        <Div
+                            id="h5-color-contrast-container"
+                            className="Div Color-picker-parent-container"
+                            dataCy="h5-color-contrast-div"
+                        >
+                            <H5 id="heading-5" className="Heading-5" dataCy="heading-5">
+                                Font size 20px
+                            </H5>
+                        </Div>
+                    </ColorPickerCustom>
+                </Div>
+                <Div
+                    id="h6-color-contrast-container"
+                    className="Div Color-contrast-container H6-contrast"
+                    dataCy="h6-color-contrast-div"
+                >
+                    <Title className="title">Change the background color</Title>
+                    <ColorPickerCustom
+                        id="color-contrast-h6-picker"
+                        className="Color-contrast-h6-picker"
+                        dataCy="color-contrast-h6-picker"
+                    >
+                        <Div
+                            id="h6-color-contrast-container"
+                            className="Div Color-picker-parent-container"
+                            dataCy="h6-color-contrast-div"
+                        >
+                            <H6 id="heading-6" className="Heading-6" dataCy="heading-6">
+                                Font size 16px
+                            </H6>
+                        </Div>
+                    </ColorPickerCustom>
+                </Div>
+                <Div
+                    id="h7-color-contrast-container"
+                    className="Div Color-contrast-container H7-contrast"
+                    dataCy="h7-color-contrast-div"
+                >
+                    <Title className="title">Change the background color</Title>
+                    <ColorPickerCustom
+                        id="color-contrast-h7-picker"
+                        className="Color-contrast-h7-picker"
+                        dataCy="color-contrast-h7-picker"
+                    >
+                        <Div
+                            id="h7-color-contrast-container"
+                            className="Div Color-picker-parent-container"
+                            dataCy="h7-color-contrast-div"
+                        >
+                            <H6 id="heading-7" className="Heading-7" dataCy="heading-7">
+                                Font size 14px
+                            </H6>
+                        </Div>
+                    </ColorPickerCustom>
+                </Div>
+                <Div
+                    id="h8-color-contrast-container"
+                    className="Div Color-contrast-container H8-contrast"
+                    dataCy="h8-color-contrast-div"
+                >
+                    <Title className="title">Change the background color</Title>
+                    <ColorPickerCustom
+                        id="color-contrast-h8-picker"
+                        className="Color-contrast-h8-picker"
+                        dataCy="color-contrast-h8-picker"
+                    >
+                        <Div
+                            id="h8-color-contrast-container"
+                            className="Div Color-picker-parent-container"
+                            dataCy="h8-color-contrast-div"
+                        >
+                            <H6 id="heading-8" className="Heading-8" dataCy="heading-8">
+                                Font size 12px
+                            </H6>
+                        </Div>
+                    </ColorPickerCustom>
+                </Div>
+            </ColorPickerAuroraText>
         </Section>
     </AppContainer>
 );
+const Title = styled.p`
+    color: #2d2d2d;
+    background-color: #2557a7;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    font-size: 1.25rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    padding: 1rem;
+`;
 
 const AppContainer = styled.section`
     font-family: Helvetica, sans-serif;
@@ -380,6 +520,7 @@ const AppContainer = styled.section`
     margin: 0;
     padding: 0;
     background-color: #092347;
+
     & .App-header-container {
         font-size: 2.25rem;
         color: #ffffff;
@@ -394,7 +535,6 @@ const AppContainer = styled.section`
             margin: 0;
             padding: 1.5rem;
             color: #2ddfff;
-            /* box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25); */
 
             & .App-heading-1-span {
                 font-size: 1.5rem;
@@ -516,41 +656,8 @@ const AppContainer = styled.section`
                 }
                 & .color-picker-sketch {
                     height: fit-content;
+                    position: absolute;
                 }
-            }
-        }
-        & .H1-contrast {
-            & > h1 {
-            }
-        }
-        & .H2-contrast {
-            & > h2 {
-                color: #000000;
-            }
-        }
-        & .H3-contrast {
-            & > h3 {
-                color: #666666;
-            }
-        }
-        & .H4-contrast {
-            & > h4 {
-                color: orange;
-            }
-        }
-        & .H5-contrast {
-            & > h5 {
-                color: red;
-            }
-        }
-        & .H6-contrast {
-            & > h6 {
-                color: #2b78e4;
-            }
-        }
-        & .H7-contrast {
-            & > h6 {
-                color: green;
             }
         }
     }
@@ -591,31 +698,146 @@ const AppContainer = styled.section`
                 letter-spacing: 0.5px;
             }
         }
+        & .color-picker-parent-container {
+            & .Color-contrast-h1-swatch-picker {
+                position: absolute;
+                right: 5rem;
+                width: 20rem;
+                margin: -2rem 0 0;
+                & .text-color-picker-swatch {
+                }
+            }
+        }
         & .Color-contrast-container {
             background-color: #eeeeee;
-            padding: 1rem;
+            padding: 0 1rem 1rem;
             border-radius: 0.25rem;
+            width: 23rem;
+            height: 30rem;
+
+            & .color-picker-container {
+                box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.5);
+            }
         }
         & .H1-contrast {
-            background-color: #222222;
+            & .Heading-1 {
+                padding: 1rem;
+                margin: 0;
+                font-size: 2.75rem;
+            }
+            & .Color-contrast-h1-picker {
+                height: 7rem;
+                & .color-picker-sketch {
+                    position: absolute;
+                    left: 5.65rem;
+                    margin-top: 8.5rem;
+                }
+            }
         }
         & .H2-contrast {
-            color: #ffffff;
+            & .Heading-2 {
+                padding: 1rem;
+                margin: 0;
+                font-size: 2.25rem;
+            }
+            & .Color-contrast-h2-picker {
+                height: 7rem;
+                & .color-picker-sketch {
+                    position: absolute;
+                    left: 5.65rem;
+                    margin-top: 8.5rem;
+                }
+            }
         }
         & .H3-contrast {
-            color: #333333;
+            & .Heading-3 {
+                padding: 1.5rem 1rem;
+                margin: 0;
+                font-size: 1.75rem;
+            }
+            & .Color-contrast-h3-picker {
+                height: 7rem;
+                & .color-picker-sketch {
+                    position: absolute;
+                    left: 5.65rem;
+                    margin-top: 8.5rem;
+                }
+            }
         }
         & .H4-contrast {
-            color: orange;
-            background-color: blue;
+            & .Heading-4 {
+                padding: 1.5rem 1rem;
+                margin: 0;
+                font-size: 1.5rem;
+            }
+            & .Color-contrast-h4-picker {
+                height: 7rem;
+                & .color-picker-sketch {
+                    position: absolute;
+                    left: 5.65rem;
+                    margin-top: 8.5rem;
+                }
+            }
         }
         & .H5-contrast {
-            color: red;
-            background-color: green;
+            & .Heading-5 {
+                padding: 1.5rem 1rem;
+                margin: 0;
+                font-size: 1.25rem;
+            }
+            & .Color-contrast-h5-picker {
+                height: 7rem;
+                & .color-picker-sketch {
+                    position: absolute;
+                    left: 5.65rem;
+                    margin-top: 8.5rem;
+                }
+            }
         }
         & .H6-contrast {
-            color: #ffffff;
-            background-color: #2b78e4;
+            & .Heading-6 {
+                padding: 1.5rem 1rem;
+                margin: 0;
+                font-size: 1rem;
+            }
+            & .Color-contrast-h6-picker {
+                height: 7rem;
+                & .color-picker-sketch {
+                    position: absolute;
+                    left: 5.65rem;
+                    margin-top: 8.5rem;
+                }
+            }
+        }
+        & .H7-contrast {
+            & .Heading-7 {
+                padding: 1.5rem 1rem;
+                margin: 0;
+                font-size: 0.875rem;
+            }
+            & .Color-contrast-h7-picker {
+                height: 7rem;
+                & .color-picker-sketch {
+                    position: absolute;
+                    left: 5.65rem;
+                    margin-top: 8.5rem;
+                }
+            }
+        }
+        & .H8-contrast {
+            & .Heading-8 {
+                padding: 1.5rem 1rem;
+                margin: 0;
+                font-size: 0.75rem;
+            }
+            & .Color-contrast-h8-picker {
+                height: 7rem;
+                & .color-picker-sketch {
+                    position: absolute;
+                    left: 5.65rem;
+                    margin-top: 8.5rem;
+                }
+            }
         }
     }
 `;
