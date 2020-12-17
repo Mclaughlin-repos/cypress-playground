@@ -80,8 +80,8 @@ const App = (props: HelloWorldProps) => (
                 </InstructionsParagraph>
                 <InstructionsParagraph className="section-instructions">
                     Once you see and understand the errors within the <strong>terminal</strong> and
-                    the <strong>cypress GUI</strong>, try to figure out how to fix the form to make
-                    it <strong>WCAG 2.0 AA</strong> compliant.
+                    the <strong>cypress GUI</strong>, try to figure out how to fix the exercise to
+                    make it <strong>WCAG 2.0 AA</strong> compliant.
                 </InstructionsParagraph>
             </InstructionsContainer>
             <Form action="" method="post" id="form" className="Form" dataCy="form">
@@ -289,30 +289,41 @@ const App = (props: HelloWorldProps) => (
                     (You may need to scroll up within the terminal window to see the{' '}
                     <strong>pa11y</strong> errors)
                 </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    Once you see and understand the errors within the <strong>terminal</strong> and
+                    the <strong>cypress GUI</strong>, try to figure out how to fix the exercise to
+                    make it <strong>WCAG 2.0 AA</strong> compliant.
+                </InstructionsParagraph>
             </InstructionsContainer>
             <Div
                 id="heading-order-container-div"
                 className="Div Heading-order-container-div"
                 dataCy="heading-order-container-div"
             >
-                <H6 id="heading-6" className="Heading-6" dataCy="heading-6">
-                    Heading Order H6
-                </H6>
-                <H4 id="heading-4" className="Heading-4" dataCy="heading-4">
-                    Heading Order H4
-                </H4>
-                <H2 id="heading-2" className="Heading-2" dataCy="heading-2">
-                    Heading Order H2
-                </H2>
-                <H3 id="heading-3" className="Heading-3" dataCy="heading-3">
-                    Heading Order H3
-                </H3>
-                <H5 id="heading-5" className="Heading-5" dataCy="heading-5">
-                    Heading Order H5
-                </H5>
-                <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                    Heading Order H1
-                </H1>
+                <Div
+                    id="headings-container-div"
+                    className="Div Headings-container-div"
+                    dataCy="headings-container-div"
+                >
+                    <H6 id="heading-6" className="Heading-6" dataCy="heading-6">
+                        Heading Order H6
+                    </H6>
+                    <H4 id="heading-4" className="Heading-4" dataCy="heading-4">
+                        Heading Order H4
+                    </H4>
+                    <H2 id="heading-2" className="Heading-2" dataCy="heading-2">
+                        Heading Order H2
+                    </H2>
+                    <H3 id="heading-3" className="Heading-3" dataCy="heading-3">
+                        Heading Order H3
+                    </H3>
+                    <H5 id="heading-5" className="Heading-5" dataCy="heading-5">
+                        Heading Order H5
+                    </H5>
+                    <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
+                        Heading Order H1
+                    </H1>
+                </Div>
             </Div>
         </Section>
         <Section
@@ -350,6 +361,11 @@ const App = (props: HelloWorldProps) => (
                     the readout <strong>both</strong> within the <strong>cypress GUI</strong> and
                     within the <strong>terminal window</strong>. (You may need to scroll up within
                     the terminal window to see the <strong>pa11y</strong> errors)
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    Once you see and understand the errors within the <strong>terminal</strong> and
+                    the <strong>cypress GUI</strong>, try to figure out how to fix the exercise to
+                    make it <strong>WCAG 2.0 AA</strong> compliant.
                 </InstructionsParagraph>
             </InstructionsContainer>
             <Div
@@ -421,6 +437,11 @@ const App = (props: HelloWorldProps) => (
                     the readout <strong>both</strong> within the <strong>cypress GUI</strong> and
                     within the <strong>terminal window</strong>. (You may need to scroll up within
                     the terminal window to see the <strong>pa11y</strong> errors)
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    Once you see and understand the errors within the <strong>terminal</strong> and
+                    the <strong>cypress GUI</strong>, try to figure out how to fix the exercise to
+                    make it <strong>WCAG 2.0 AA</strong> compliant.
                 </InstructionsParagraph>
             </InstructionsContainer>
             <ColorPickerAuroraText
@@ -630,7 +651,8 @@ const InstructionsParagraph = styled.p`
     color: #ffffff;
     letter-spacing: 0.5px;
     font-weight: 300;
-    margin: 0.75rem 1rem;
+    margin: 1rem;
+    line-height: 1.3;
     & strong {
         color: #2ddfff;
         & code {
@@ -646,7 +668,7 @@ const AppContainer = styled.section`
     font-family: Helvetica, sans-serif;
     font-size: 1rem;
     margin: 0;
-    padding: 0;
+    padding: 14rem 0 0 0;
     background-color: #092347;
 
     & .App-header-container {
@@ -657,6 +679,9 @@ const AppContainer = styled.section`
         padding: 0;
         display: flex;
         flex-flow: column;
+        position: fixed;
+        top: 0;
+        z-index: 1;
 
         & .App-heading-1 {
             background-color: #0d2d5e;
@@ -797,11 +822,14 @@ const AppContainer = styled.section`
             font-size: 1.75rem;
         }
         & .Heading-order-container-div {
-            padding: 1rem;
+            padding: 1rem 1.5rem;
             border-radius: 0.25rem;
-            border: 1px solid #b3b3b3;
-            background-color: #e6e6e6;
-            margin: 1rem 1rem 1.5rem;
+            background-color: #082347;
+            & .Headings-container-div {
+                background-color: #e6e6e6;
+                border-radius: 0.25rem;
+                padding: 0 1.5rem;
+            }
         }
     }
     & .Color-contrast-font-size-section {
