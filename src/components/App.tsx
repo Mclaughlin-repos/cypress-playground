@@ -53,6 +53,37 @@ const App = (props: HelloWorldProps) => (
                     Accessibility with Forms Exercise
                 </H1>
             </Header>
+            <InstructionsContainer>
+                <InstructionsParagraph className="section-instructions">
+                    Below you will see a form to help you understand how to create{' '}
+                    <strong>WCAG 2.0 AA</strong> compliant forms.
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    This form does <strong>not</strong> pass the <strong>WCAG 2.0 AA</strong>{' '}
+                    initially to surface errors for you to learn from.
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    In your terminal change directories into the <strong>cypress folder</strong>{' '}
+                    then, run this command in your terminal:{' '}
+                    <strong>
+                        <code>
+                            <pre>npm run start:test</pre>
+                        </code>
+                    </strong>
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    This will open a new browser window, open the <strong>cypress GUI</strong> while
+                    running the <strong>pa11y</strong> tests all at once. You will be able to see
+                    the readout <strong>both</strong> within the <strong>cypress GUI</strong> and
+                    within the <strong>terminal window</strong>. (You may need to scroll up within
+                    the terminal window to see the <strong>pa11y</strong> errors)
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    Once you see and understand the errors within the <strong>terminal</strong> and
+                    the <strong>cypress GUI</strong>, try to figure out how to fix the form to make
+                    it <strong>WCAG 2.0 AA</strong> compliant.
+                </InstructionsParagraph>
+            </InstructionsContainer>
             <Form action="" method="post" id="form" className="Form" dataCy="form">
                 <Fieldset
                     id="fieldset-container"
