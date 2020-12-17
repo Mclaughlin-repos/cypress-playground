@@ -366,10 +366,14 @@ const App = (props: HelloWorldProps) => (
             </Header>
             <InstructionsContainer>
                 <InstructionsParagraph className="section-instructions">
+                    Below you will see the official <strong>Aurora font sizes</strong> within each
+                    card starting from largest to smallest.
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
                     Choose a swatch from the <strong>Aurora swatch collection</strong> OR use the
                     inputs to search for a custom color for <strong>font color</strong> then, change
                     the <strong>background color</strong> of each individual card to see differences
-                    with color contrast combined with font size differences.
+                    with color contrast combined with the <strong>Aurora font sizes</strong>.
                 </InstructionsParagraph>
                 <InstructionsParagraph className="section-instructions">
                     Once you have chosen your colors, in your terminal change directories into the{' '}
@@ -598,6 +602,12 @@ const InstructionsParagraph = styled.p`
     margin: 0.75rem 1rem;
     & strong {
         color: #2ddfff;
+        & code {
+            & pre {
+                font-size: 1.5rem;
+                letter-spacing: 1.5px;
+            }
+        }
     }
 `;
 
