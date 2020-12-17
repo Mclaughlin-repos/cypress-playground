@@ -59,7 +59,7 @@ class ColorPicker extends React.Component<Props> {
                     onChange={this.handleChange}
                     className="color-picker-sketch"
                     presetColors={presetColors}
-                    width={'300px'}
+                    width={'316px'}
                 />
             </Container>
         );
@@ -70,28 +70,32 @@ const Container = styled.div`
     display: flex;
 
     & .color-picker-sketch {
-        height: 14.5rem;
+        height: 14.85rem;
         & > div {
             position: absolute !important;
-            width: 300px !important;
+            width: 316px !important;
             > div {
                 height: 4rem;
             }
         }
         & .flexbox-fix:nth-child(2) {
             top: 5rem;
-            width: 300px !important;
+            width: 316px !important;
         }
         & .flexbox-fix:nth-child(3) {
             top: 7rem;
-            width: 300px !important;
+            width: 316px !important;
         }
         & .flexbox-fix:nth-child(4) {
             top: 10rem;
-            padding: 0 !important;
+            padding: 0 0.5rem !important;
             border: none !important;
             margin: 0 !important;
             width: 316px !important;
+            & div {
+                width: 18px !important;
+                height: 18px !important;
+            }
         }
     }
 `;
