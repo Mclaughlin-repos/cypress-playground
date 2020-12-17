@@ -34,17 +34,17 @@ const Form: React.FC<{
             autoSave={autosave}
             encType={enctype}
             target={target}
-            data-cy={dataCy}>
+            data-cy={dataCy}
+        >
             {children}
         </FormContainer>
     );
 };
 
 const FormContainer = styled.form`
-    border: 2px solid #b3b3b3;
-    background-color: #d6d6d6;
+    background-color: #082347;
     border-radius: 0.25rem;
-    padding: 1rem 1rem 2rem;
+    padding: 1rem 1.5rem 2rem;
 `;
 
 export default Form;

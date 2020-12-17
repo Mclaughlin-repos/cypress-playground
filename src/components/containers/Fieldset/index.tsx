@@ -18,6 +18,7 @@ const FieldsetContainer = styled.fieldset`
     border: none;
     background-color: #eeeeee;
     border-radius: 0.25rem;
+    padding: 0 1.5rem;
 `;
 
 export default Fieldset;

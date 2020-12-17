@@ -722,7 +722,7 @@ const AppContainer = styled.section`
     }
     & .Form-section {
         & .Form {
-            margin: 1rem 1rem 1.5rem;
+            margin: 1rem 0 1rem;
         }
         & .Header-form-section {
             font-size: 1.75rem;
