@@ -15,9 +15,9 @@ class ColorPickerAuroraText extends React.Component<Props> {
     state = {
         displayColorPicker: false,
         color: {
-            r: 89,
-            g: 89,
-            b: 89,
+            r: 255,
+            g: 90,
+            b: 31,
             a: 1,
         },
     };
