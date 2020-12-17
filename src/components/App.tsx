@@ -285,7 +285,7 @@ const App = (props: HelloWorldProps) => (
                     className="Color-contrast-heading-2"
                     dataCy="color-contrast-heading-2"
                 >
-                    Choose a Background color
+                    Choose Background Color
                 </H2>
                 <ColorPicker
                     id="color-contrast-h1-picker"
@@ -328,7 +328,7 @@ const App = (props: HelloWorldProps) => (
                     className="Div Color-contrast-container H1-contrast"
                     dataCy="h1-color-contrast-div"
                 >
-                    <Title className="title">Change the background color</Title>
+                    <Title className="title">Choose Background Color</Title>
                     <ColorPickerCustom
                         id="color-contrast-h1-picker"
                         className="Color-contrast-h1-picker"
@@ -350,7 +350,7 @@ const App = (props: HelloWorldProps) => (
                     className="Div Color-contrast-container H2-contrast"
                     dataCy="h2-color-contrast-div"
                 >
-                    <Title className="title">Change the background color</Title>
+                    <Title className="title">Choose Background Color</Title>
                     <ColorPickerCustom
                         id="color-contrast-h2-picker"
                         className="Color-contrast-h2-picker"
@@ -372,7 +372,7 @@ const App = (props: HelloWorldProps) => (
                     className="Div Color-contrast-container H3-contrast"
                     dataCy="h3-color-contrast-div"
                 >
-                    <Title className="title">Change the background color</Title>
+                    <Title className="title">Choose Background Color</Title>
                     <ColorPickerCustom
                         id="color-contrast-h3-picker"
                         className="Color-contrast-h3-picker"
@@ -394,7 +394,7 @@ const App = (props: HelloWorldProps) => (
                     className="Div Color-contrast-container H4-contrast"
                     dataCy="h4-color-contrast-div"
                 >
-                    <Title className="title">Change the background color</Title>
+                    <Title className="title">Choose Background Color</Title>
                     <ColorPickerCustom
                         id="color-contrast-h4-picker"
                         className="Color-contrast-h4-picker"
@@ -416,7 +416,7 @@ const App = (props: HelloWorldProps) => (
                     className="Div Color-contrast-container H5-contrast"
                     dataCy="h5-color-contrast-div"
                 >
-                    <Title className="title">Change the background color</Title>
+                    <Title className="title">Choose Background Color</Title>
                     <ColorPickerCustom
                         id="color-contrast-h5-picker"
                         className="Color-contrast-h5-picker"
@@ -438,7 +438,7 @@ const App = (props: HelloWorldProps) => (
                     className="Div Color-contrast-container H6-contrast"
                     dataCy="h6-color-contrast-div"
                 >
-                    <Title className="title">Change the background color</Title>
+                    <Title className="title">Choose Background Color</Title>
                     <ColorPickerCustom
                         id="color-contrast-h6-picker"
                         className="Color-contrast-h6-picker"
@@ -460,7 +460,7 @@ const App = (props: HelloWorldProps) => (
                     className="Div Color-contrast-container H7-contrast"
                     dataCy="h7-color-contrast-div"
                 >
-                    <Title className="title">Change the background color</Title>
+                    <Title className="title">Choose Background Color</Title>
                     <ColorPickerCustom
                         id="color-contrast-h7-picker"
                         className="Color-contrast-h7-picker"
@@ -482,7 +482,7 @@ const App = (props: HelloWorldProps) => (
                     className="Div Color-contrast-container H8-contrast"
                     dataCy="h8-color-contrast-div"
                 >
-                    <Title className="title">Change the background color</Title>
+                    <Title className="title">Choose Background Color</Title>
                     <ColorPickerCustom
                         id="color-contrast-h8-picker"
                         className="Color-contrast-h8-picker"
@@ -709,10 +709,10 @@ const AppContainer = styled.section`
             }
         }
         & .Color-contrast-container {
-            background-color: #eeeeee;
+            background-color: #082347;
             padding: 0 1rem 1rem;
             border-radius: 0.25rem;
-            width: 23rem;
+            width: 21rem;
             height: 30rem;
 
             & .color-picker-container {
