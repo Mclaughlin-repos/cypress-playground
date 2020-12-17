@@ -23,7 +23,7 @@ const DivContainer = styled.div`
     ${DEFAULT_CONTENT_CONTAINER_STYLES}
     display: flex;
     flex-flow: column;
-    margin: 1rem 0 1.5rem;
+    margin: 1rem 0 1rem;
 `;
 
 export default Div;
