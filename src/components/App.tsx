@@ -229,29 +229,59 @@ const App = (props: HelloWorldProps) => (
                     Accessibility with Heading Order Exercise
                 </H1>
             </Header>
+            <InstructionsContainer>
+                <InstructionsParagraph className="section-instructions">
+                    Take a look at the <strong>Heading Order</strong> of these 6 headings and
+                    observe that they are out of order based off of the{' '}
+                    <strong>semantic HTML5/ WCAG 2.0 AA</strong> compliance standards.
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    The <strong>headings</strong> are out of order on purpose so you can see the
+                    errors when you first run the script comands.
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    In your terminal change directories into the <strong>cypress folder</strong>{' '}
+                    then, run this command within your terminal window:{' '}
+                    <strong>
+                        <code>
+                            <pre>npm run start:test</pre>
+                        </code>
+                    </strong>
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    This will open a new browser window, open the <strong>cypress GUI</strong> while
+                    running the <strong>pa11y</strong> tests all at once.
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    You will be able to see the readout <strong>both</strong> within the{' '}
+                    <strong>cypress GUI</strong> and within the <strong>terminal window</strong>,
+                    (You may need to scroll up within the terminal window to see the{' '}
+                    <strong>pa11y</strong> errors)
+                </InstructionsParagraph>
+            </InstructionsContainer>
             <Div
                 id="heading-order-container-div"
                 className="Div Heading-order-container-div"
                 dataCy="heading-order-container-div"
             >
-                <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                    Heading Order H1
-                </H1>
+                <H6 id="heading-6" className="Heading-6" dataCy="heading-6">
+                    Heading Order H6
+                </H6>
+                <H4 id="heading-4" className="Heading-4" dataCy="heading-4">
+                    Heading Order H4
+                </H4>
                 <H2 id="heading-2" className="Heading-2" dataCy="heading-2">
                     Heading Order H2
                 </H2>
                 <H3 id="heading-3" className="Heading-3" dataCy="heading-3">
                     Heading Order H3
                 </H3>
-                <H4 id="heading-4" className="Heading-4" dataCy="heading-4">
-                    Heading Order H4
-                </H4>
                 <H5 id="heading-5" className="Heading-5" dataCy="heading-5">
                     Heading Order H5
                 </H5>
-                <H6 id="heading-6" className="Heading-6" dataCy="heading-6">
-                    Heading Order H6
-                </H6>
+                <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
+                    Heading Order H1
+                </H1>
             </Div>
         </Section>
         <Section
@@ -268,13 +298,29 @@ const App = (props: HelloWorldProps) => (
                     Accessibility with Color Contrast Exercise
                 </H1>
             </Header>
-            <p className="section-instructions">
-                Choose a swatch from the <strong>Aurora swatch collection</strong> OR use the inputs
-                to search for a custom color for <strong>background color</strong> then, change the{' '}
-                <strong>font color</strong> the same way. <br /> Once you have chosen your colors,
-                run the Accessibility scripts from the <strong>.README</strong> file to see the
-                readout.
-            </p>
+            <InstructionsContainer>
+                <InstructionsParagraph className="section-instructions">
+                    Choose a swatch from the <strong>Aurora swatch collection</strong> OR use the
+                    inputs to search for a custom color for <strong>background color</strong> then,
+                    change the <strong>font color</strong> the same way.
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    Once you have chosen your colors, in your terminal change directories into the{' '}
+                    <strong>cypress folder</strong> then, run this command in your terminal:{' '}
+                    <strong>
+                        <code>
+                            <pre>npm run start:test</pre>
+                        </code>
+                    </strong>
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    This will open a new browser window, open the <strong>cypress GUI</strong> while
+                    running the <strong>pa11y</strong> tests all at once. You will be able to see
+                    the readout <strong>both</strong> within the <strong>cypress GUI</strong> and
+                    within the <strong>terminal window</strong>. (You may need to scroll up within
+                    the terminal window to see the <strong>pa11y</strong> errors)
+                </InstructionsParagraph>
+            </InstructionsContainer>
             <Div
                 id="h1-color-contrast-container"
                 className="Div Color-contrast-container H1-contrast"
@@ -318,6 +364,30 @@ const App = (props: HelloWorldProps) => (
                     Accessibility with Color Contrast and Font Size Exercise
                 </H1>
             </Header>
+            <InstructionsContainer>
+                <InstructionsParagraph className="section-instructions">
+                    Choose a swatch from the <strong>Aurora swatch collection</strong> OR use the
+                    inputs to search for a custom color for <strong>font color</strong> then, change
+                    the <strong>background color</strong> of each individual card to see differences
+                    with color contrast combined with font size differences.
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    Once you have chosen your colors, in your terminal change directories into the{' '}
+                    <strong>cypress folder</strong> then, run this command in your terminal:{' '}
+                    <strong>
+                        <code>
+                            <pre>npm run start:test</pre>
+                        </code>
+                    </strong>
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    This will open a new browser window, open the <strong>cypress GUI</strong> while
+                    running the <strong>pa11y</strong> tests all at once. You will be able to see
+                    the readout <strong>both</strong> within the <strong>cypress GUI</strong> and
+                    within the <strong>terminal window</strong>. (You may need to scroll up within
+                    the terminal window to see the <strong>pa11y</strong> errors)
+                </InstructionsParagraph>
+            </InstructionsContainer>
             <ColorPickerAuroraText
                 id="color-contrast-h1-swatch-picker"
                 className="Color-contrast-h1-swatch-picker"
@@ -514,6 +584,23 @@ const Title = styled.p`
     padding: 1rem;
 `;
 
+const InstructionsContainer = styled.div`
+    background-color: #082347;
+    padding: 1rem 0.5rem;
+    border-radius: 0.25rem;
+`;
+
+const InstructionsParagraph = styled.p`
+    font-size: 1.25rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    margin: 0.75rem 1rem;
+    & strong {
+        color: #2ddfff;
+    }
+`;
+
 const AppContainer = styled.section`
     font-family: Helvetica, sans-serif;
     font-size: 1rem;
@@ -590,7 +677,7 @@ const AppContainer = styled.section`
         box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
     }
     & .Color-contrast-container {
-        margin: 1rem 1rem 1.5rem;
+        margin: 2rem 0 1.5rem;
     }
     & .Form-section {
         & .Form {
@@ -620,15 +707,6 @@ const AppContainer = styled.section`
                 padding: 0;
                 color: #ffffff;
                 letter-spacing: 0.5px;
-            }
-        }
-        & .section-instructions {
-            font-size: 1.25rem;
-            color: #ffffff;
-            letter-spacing: 0.5px;
-            font-weight: 300;
-            & strong {
-                color: #2ddfff;
             }
         }
 
@@ -703,14 +781,14 @@ const AppContainer = styled.section`
                 position: absolute;
                 right: 5rem;
                 width: 20rem;
-                margin: -2rem 0 0;
+                margin: 2rem 0 0;
                 & .text-color-picker-swatch {
                 }
             }
         }
         & .Color-contrast-container {
             background-color: #082347;
-            padding: 0 1rem 1rem;
+            padding: 0.5rem 1.5rem 1.5rem;
             border-radius: 0.25rem;
             width: 21rem;
             height: 30rem;
@@ -729,7 +807,7 @@ const AppContainer = styled.section`
                 height: 7rem;
                 & .color-picker-sketch {
                     position: absolute;
-                    left: 5.65rem;
+                    left: 5.15rem;
                     margin-top: 8.5rem;
                 }
             }
@@ -744,7 +822,7 @@ const AppContainer = styled.section`
                 height: 7rem;
                 & .color-picker-sketch {
                     position: absolute;
-                    left: 5.65rem;
+                    left: 5.15rem;
                     margin-top: 8.5rem;
                 }
             }
@@ -759,7 +837,7 @@ const AppContainer = styled.section`
                 height: 7rem;
                 & .color-picker-sketch {
                     position: absolute;
-                    left: 5.65rem;
+                    left: 5.15rem;
                     margin-top: 8.5rem;
                 }
             }
@@ -774,7 +852,7 @@ const AppContainer = styled.section`
                 height: 7rem;
                 & .color-picker-sketch {
                     position: absolute;
-                    left: 5.65rem;
+                    left: 5.15rem;
                     margin-top: 8.5rem;
                 }
             }
@@ -789,7 +867,7 @@ const AppContainer = styled.section`
                 height: 7rem;
                 & .color-picker-sketch {
                     position: absolute;
-                    left: 5.65rem;
+                    left: 5.15rem;
                     margin-top: 8.5rem;
                 }
             }
@@ -804,7 +882,7 @@ const AppContainer = styled.section`
                 height: 7rem;
                 & .color-picker-sketch {
                     position: absolute;
-                    left: 5.65rem;
+                    left: 5.15rem;
                     margin-top: 8.5rem;
                 }
             }
@@ -819,7 +897,7 @@ const AppContainer = styled.section`
                 height: 7rem;
                 & .color-picker-sketch {
                     position: absolute;
-                    left: 5.65rem;
+                    left: 5.15rem;
                     margin-top: 8.5rem;
                 }
             }
@@ -834,7 +912,7 @@ const AppContainer = styled.section`
                 height: 7rem;
                 & .color-picker-sketch {
                     position: absolute;
-                    left: 5.65rem;
+                    left: 5.15rem;
                     margin-top: 8.5rem;
                 }
             }
