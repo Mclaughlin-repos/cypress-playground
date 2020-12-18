@@ -9,8 +9,9 @@ import Div from './containers/Div/index';
 import Section from './containers/Section/index';
 import Header from './containers/Header/index';
 import ColorPicker from './containers/Color-Picker/index';
-import ColorPickerText from './containers/Color-Picker-Text/index';
+// import ColorPickerText from './containers/Color-Picker-Text/index';
 import ColorPickerCustom from './containers/Color-Picker-Custom/index';
+import ColorPickerDynamic from './containers/Color-Picker-Dynamic/index';
 import ColorPickerAuroraText from './containers/Color-Picker-Aurora-Text/index';
 import Button from './foundations/Button/index';
 import H1 from './foundations/H1/index';
@@ -340,7 +341,7 @@ const App = (props: HelloWorldProps) => (
                     Accessibility with Color Contrast Exercise
                 </H1>
             </Header>
-            <InstructionsContainer>
+            <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
                 <InstructionsParagraph className="section-instructions">
                     Choose a swatch from the <strong>Aurora swatch collection</strong> OR use the
                     inputs to search for a custom color for <strong>background color</strong> then,
@@ -368,34 +369,31 @@ const App = (props: HelloWorldProps) => (
                     make it <strong>WCAG 2.0 AA</strong> compliant.
                 </InstructionsParagraph>
             </InstructionsContainer>
-            <Div
-                id="h1-color-contrast-container"
-                className="Div Color-contrast-container H1-contrast"
-                dataCy="h1-color-contrast-div"
+            <ColorPickerDynamic
+                id="color-contrast-dynamic-picker"
+                className="Color-contrast-dynamic-picker"
+                dataCy="color-contrast-dynamic-picker"
             >
-                <H2
-                    id="color-contrast-heading-2"
-                    className="Color-contrast-heading-2"
-                    dataCy="color-contrast-heading-2"
+                <ColorPickerAuroraText
+                    id="color-contrast-aurora-text-picker"
+                    className="Color-contrast-aurora-text-picker"
+                    dataCy="color-contrast-aurora-text-picker"
                 >
-                    Choose Background Color
-                </H2>
-                <ColorPicker
-                    id="color-contrast-h1-picker"
-                    className="Color-contrast-h1-picker"
-                    dataCy="color-contrast-h1-picker"
-                >
-                    <ColorPickerText
-                        id="text-color-contrast-h1-picker"
-                        className="Text-color-contrast-h1-picker"
-                        dataCy="text-color-contrast-h1-picker"
+                    <Div
+                        id="h1-color-contrast-container"
+                        className="Div Color-contrast-container H1-contrast color-contrast-text-container"
+                        dataCy="h1-color-contrast-div"
                     >
-                        <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                            Choose a text color!
+                        <H1
+                            id="heading-1-color-contrast"
+                            className="Heading-1"
+                            dataCy="heading-1-color-contrast"
+                        >
+                            Change the font color &nbsp;:-)
                         </H1>
-                    </ColorPickerText>
-                </ColorPicker>
-            </Div>
+                    </Div>
+                </ColorPickerAuroraText>
+            </ColorPickerDynamic>
         </Section>
         <Section
             id="color-contrast-font-size-section"
@@ -411,7 +409,7 @@ const App = (props: HelloWorldProps) => (
                     Accessibility with Color Contrast and Font Size Exercise
                 </H1>
             </Header>
-            <InstructionsContainer>
+            <InstructionsContainer className="Instructions-container color-contrast-font-size-instructions-container">
                 <InstructionsParagraph className="section-instructions">
                     Below you will see the official <strong>Aurora font sizes</strong> within each
                     card starting from largest to smallest.
@@ -681,7 +679,8 @@ const AppContainer = styled.section`
         flex-flow: column;
         position: fixed;
         top: 0;
-        z-index: 1;
+        z-index: 2;
+        width: 100%;
 
         & .App-heading-1 {
             background-color: #0d2d5e;
@@ -741,6 +740,7 @@ const AppContainer = styled.section`
         margin: 2rem;
         border-radius: 0.5rem;
         box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
+        min-width: 43.5rem;
     }
     & .Color-contrast-container {
         margin: 2rem 0 1.5rem;
@@ -775,12 +775,77 @@ const AppContainer = styled.section`
                 letter-spacing: 0.5px;
             }
         }
+        & .Color-picker-dynamic-parent-container {
+            background-color: #082347;
+            margin: 2rem 0 0;
+            padding: 2rem 1.5rem 1.5rem;
+            border-radius: 0.25rem;
+
+            & .color-picker-container {
+                margin: 2rem auto;
+                max-width: 50rem;
+                min-width: 43rem;
+
+                & .Color-picker-button {
+                    position: absolute;
+                    z-index: 1;
+                    margin: -1.5rem 0;
+                }
+
+                & .color-picker-popover {
+                    position: absolute;
+                    margin: 0.25rem 0;
+                }
+                & .color-picker-aurora-text-popover {
+                    margin: 4.5rem 20rem 0;
+                }
+                & .color-picker-dynamic-popover {
+                    margin: 2.25rem 0 0;
+                }
+                & .color-picker-dynamic-child-container {
+                    background-color: transparent;
+                    & .color-picker-parent-container {
+                        & .text-color-picker-container {
+                            position: absolute;
+                            max-width: 50rem;
+                            min-width: 43rem;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            & .color-picker-aurora-text-popover {
+                                & .color-picker-aurora-text-cover {
+                                    & .text-color-picker-swatch {
+                                        position: absolute;
+                                    }
+                                }
+                            }
+                        }
+
+                        & .color-picker-aurora-text-child-container {
+                            border-top: 4px solid #ff581f;
+                            box-shadow: 3px 10px 11px 0px rgba(0, 0, 0, 0.5);
+                            & .color-contrast-text-container {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+
+                                & .Heading-1 {
+                                    font-size: 44px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            & .Color-contrast-dynamic-picker {
+                background-color: transparent !important;
+            }
+        }
 
         & .Color-contrast-container {
-            padding: 1rem;
-            background-color: #e6e6e6;
+            padding: 1.5rem;
             border-radius: 0.25rem;
-            margin: 1rem 1rem 1.5rem;
             & .color-picker-parent-container {
                 width: 30rem;
                 margin: 2rem auto 6rem;
@@ -797,6 +862,8 @@ const AppContainer = styled.section`
                 }
                 & .text-color-picker-container {
                     margin: 0;
+                    border: 10px solid red;
+                    position: absolute;
                 }
                 & .color-picker-sketch {
                     height: fit-content;
