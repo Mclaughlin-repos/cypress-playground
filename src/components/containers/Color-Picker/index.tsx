@@ -15,9 +15,9 @@ class ColorPicker extends React.Component<Props> {
     state = {
         displayColorPicker: true,
         color: {
-            r: 66,
-            g: 66,
-            b: 66,
+            r: 230,
+            g: 230,
+            b: 230,
             a: 1,
         },
     };
