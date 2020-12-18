@@ -110,8 +110,7 @@ const OpenButton = styled.button`
     transition: 120ms ease-in-out;
     &:hover {
         cursor: pointer;
-        background-color: #2ddfff;
-        color: #082347;
+        background-color: #ff581f;
         border: 4px solid #ffffff;
     }
 `;
@@ -132,8 +131,8 @@ const CloseButton = styled.button`
     transition: 120ms ease-in-out;
     &:hover {
         cursor: pointer;
-        background-color: #2ddfff;
-        color: #082347;
+        background-color: #082347;
+        border: 4px solid #ff581f;
     }
 `;
 
