@@ -8,8 +8,6 @@ import Legend from './foundations/Legend/index';
 import Div from './containers/Div/index';
 import Section from './containers/Section/index';
 import Header from './containers/Header/index';
-import ColorPicker from './containers/Color-Picker/index';
-// import ColorPickerText from './containers/Color-Picker-Text/index';
 import ColorPickerCustom from './containers/Color-Picker-Custom/index';
 import ColorPickerDynamic from './containers/Color-Picker-Dynamic/index';
 import ColorPickerAuroraText from './containers/Color-Picker-Aurora-Text/index';
@@ -20,6 +18,9 @@ import H3 from './foundations/H3/index';
 import H4 from './foundations/H4/index';
 import H5 from './foundations/H5/index';
 import H6 from './foundations/H6/index';
+import ButtonIcon from './foundations/Button-icon/index';
+import Icon from '-!svg-react-loader?name=Icon!../../Icons/book.svg';
+
 export interface HelloWorldProps {
     userName: string;
     lang: string;
@@ -32,7 +33,16 @@ const App = (props: HelloWorldProps) => (
             dataCy="app-header-container"
         >
             <H1 id="app-heading-1" className="App-heading-1" dataCy="app-heading-1">
-                Hi {props.userName}! Welcome to the Cypress Playground...{''}&nbsp;
+                <ButtonIcon
+                    id="home-link"
+                    className="header-button-icon"
+                    name="home-link"
+                    value="home"
+                    dataCy="home-link"
+                >
+                    <Icon />
+                </ButtonIcon>
+                Cypress Playground...{''}&nbsp;
                 <span className="App-heading-1-span">Now using {props.lang}!</span>
             </H1>
             <H2 id="app-heading-2" className="App-heading-2" dataCy="app-heading-2">
@@ -48,9 +58,18 @@ const App = (props: HelloWorldProps) => (
             >
                 <H1
                     id="form-section-heading-1"
-                    className="Form-section-heading-1"
+                    className="Heading-1"
                     dataCy="form-section-heading-1"
                 >
+                    <ButtonIcon
+                        id="home-link"
+                        className="header-button-icon"
+                        name="home-link"
+                        value="home"
+                        dataCy="home-link"
+                    >
+                        <Icon />
+                    </ButtonIcon>{' '}
                     Accessibility with Forms Exercise
                 </H1>
             </Header>
@@ -66,12 +85,12 @@ const App = (props: HelloWorldProps) => (
                 <InstructionsParagraph className="section-instructions">
                     In your terminal change directories into the <strong>cypress folder</strong>{' '}
                     then, run this command in your terminal:{' '}
-                    <strong>
-                        <code>
-                            <pre>npm run start:test</pre>
-                        </code>
-                    </strong>
                 </InstructionsParagraph>
+                <strong>
+                    <code>
+                        <pre>npm run start:test</pre>
+                    </code>
+                </strong>
                 <InstructionsParagraph className="section-instructions">
                     This will open a new browser window, open the <strong>cypress GUI</strong> while
                     running the <strong>pa11y</strong> tests all at once. You will be able to see
@@ -258,6 +277,15 @@ const App = (props: HelloWorldProps) => (
                 dataCy="header-heading-order-section"
             >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
+                    <ButtonIcon
+                        id="home-link"
+                        className="header-button-icon"
+                        name="home-link"
+                        value="home"
+                        dataCy="home-link"
+                    >
+                        <Icon />
+                    </ButtonIcon>{' '}
                     Accessibility with Heading Order Exercise
                 </H1>
             </Header>
@@ -274,12 +302,12 @@ const App = (props: HelloWorldProps) => (
                 <InstructionsParagraph className="section-instructions">
                     In your terminal change directories into the <strong>cypress folder</strong>{' '}
                     then, run this command within your terminal window:{' '}
-                    <strong>
-                        <code>
-                            <pre>npm run start:test</pre>
-                        </code>
-                    </strong>
                 </InstructionsParagraph>
+                <strong>
+                    <code>
+                        <pre>npm run start:test</pre>
+                    </code>
+                </strong>
                 <InstructionsParagraph className="section-instructions">
                     This will open a new browser window, open the <strong>cypress GUI</strong> while
                     running the <strong>pa11y</strong> tests all at once.
@@ -338,6 +366,15 @@ const App = (props: HelloWorldProps) => (
                 dataCy="header-color-contrast-section"
             >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
+                    <ButtonIcon
+                        id="home-link"
+                        className="header-button-icon"
+                        name="home-link"
+                        value="home"
+                        dataCy="home-link"
+                    >
+                        <Icon />
+                    </ButtonIcon>{' '}
                     Accessibility with Color Contrast Exercise
                 </H1>
             </Header>
@@ -350,12 +387,12 @@ const App = (props: HelloWorldProps) => (
                 <InstructionsParagraph className="section-instructions">
                     Once you have chosen your colors, in your terminal change directories into the{' '}
                     <strong>cypress folder</strong> then, run this command in your terminal:{' '}
-                    <strong>
-                        <code>
-                            <pre>npm run start:test</pre>
-                        </code>
-                    </strong>
                 </InstructionsParagraph>
+                <strong>
+                    <code>
+                        <pre>npm run start:test</pre>
+                    </code>
+                </strong>
                 <InstructionsParagraph className="section-instructions">
                     This will open a new browser window, open the <strong>cypress GUI</strong> while
                     running the <strong>pa11y</strong> tests all at once. You will be able to see
@@ -406,6 +443,15 @@ const App = (props: HelloWorldProps) => (
                 dataCy="header-color-contrast-font-size-section"
             >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
+                    <ButtonIcon
+                        id="home-link"
+                        className="header-button-icon"
+                        name="home-link"
+                        value="home"
+                        dataCy="home-link"
+                    >
+                        <Icon />
+                    </ButtonIcon>{' '}
                     Accessibility with Color Contrast and Font Size Exercise
                 </H1>
             </Header>
@@ -423,12 +469,12 @@ const App = (props: HelloWorldProps) => (
                 <InstructionsParagraph className="section-instructions">
                     Once you have chosen your colors, in your terminal change directories into the{' '}
                     <strong>cypress folder</strong> then, run this command in your terminal:{' '}
-                    <strong>
-                        <code>
-                            <pre>npm run start:test</pre>
-                        </code>
-                    </strong>
                 </InstructionsParagraph>
+                <strong>
+                    <code>
+                        <pre>npm run start:test</pre>
+                    </code>
+                </strong>
                 <InstructionsParagraph className="section-instructions">
                     This will open a new browser window, open the <strong>cypress GUI</strong> while
                     running the <strong>pa11y</strong> tests all at once. You will be able to see
@@ -627,6 +673,7 @@ const App = (props: HelloWorldProps) => (
         </Section>
     </AppContainer>
 );
+
 const Title = styled.p`
     color: #2d2d2d;
     background-color: #2557a7;
@@ -642,6 +689,16 @@ const InstructionsContainer = styled.div`
     background-color: #082347;
     padding: 1rem 0.5rem;
     border-radius: 0.25rem;
+    & strong {
+        color: #2ddfff;
+        & code {
+            & pre {
+                font-size: 1.5rem;
+                letter-spacing: 1.5px;
+                padding: 0.5rem 2rem;
+            }
+        }
+    }
 `;
 
 const InstructionsParagraph = styled.p`
@@ -651,15 +708,6 @@ const InstructionsParagraph = styled.p`
     font-weight: 300;
     margin: 1rem;
     line-height: 1.3;
-    & strong {
-        color: #2ddfff;
-        & code {
-            & pre {
-                font-size: 1.5rem;
-                letter-spacing: 1.5px;
-            }
-        }
-    }
 `;
 
 const AppContainer = styled.section`
@@ -687,6 +735,8 @@ const AppContainer = styled.section`
             margin: 0;
             padding: 1.5rem;
             color: #2ddfff;
+            display: flex;
+            align-items: center;
 
             & .App-heading-1-span {
                 font-size: 1.5rem;
@@ -741,6 +791,19 @@ const AppContainer = styled.section`
         border-radius: 0.5rem;
         box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
         min-width: 43.5rem;
+        & header {
+            & .Heading-1 {
+                display: flex;
+                align-items: center;
+                color: #ffffff;
+                margin: 0;
+                padding: 0;
+                letter-spacing: 0.5px;
+                & .header-button-icon {
+                    margin: 0 1.25rem 0 0;
+                }
+            }
+        }
     }
     & .Color-contrast-container {
         margin: 2rem 0 1.5rem;
