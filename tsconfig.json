@@ -11,11 +11,19 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
-    "types": ["node", "cypress", "webpack-env"]
+    "types": ["node", "cypress", "webpack-env"],
+    "typeRoots": [
+      "./src/@types",
+      "./node_modules/@types"
+    ],
   },
+  "files": [
+    "src/@types/assets/index.d.ts"
+  ],
   "include": [
-    "src/components/index.tsx",
-    "cypress/**/*.ts."
+    "**/*.tsx",
+    "cypress/**/*.ts.",
+    "src/@types/assets/index.d.ts"
   ],
   "exclude": ["node_modules"]
 }

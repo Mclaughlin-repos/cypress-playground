@@ -10,6 +10,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: 'bundle.js',
+        publicPath: '/',
     },
     resolve: {
         extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
@@ -18,7 +19,10 @@ module.exports = {
         rules: [
             {
                 test: /\.(ts|tsx)$/,
+                // test: /\.ts|\.tsx$/,
                 loader: 'awesome-typescript-loader',
+                // loader: ['babel-loader', 'awesome-typescript-loader'],
+                // include: __dirname
             },
             {
                 enforce: 'pre',
@@ -30,6 +34,22 @@ module.exports = {
                 test: /\.css$/,
                 loader: 'css-loader',
             },
+            {
+                test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+                use: [
+                        {
+                            loader: "babel-loader"
+                        },
+                        {
+                            loader: 'react-svg-loader',
+                            options: {
+                                jsx: true // true outputs JSX tags
+                            }
+                        }
+                    ],
+                
+            }
+            
         ],
     },
     plugins: [
