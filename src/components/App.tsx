@@ -19,13 +19,10 @@ import H4 from './foundations/H4/index';
 import H5 from './foundations/H5/index';
 import H6 from './foundations/H6/index';
 import ButtonIcon from './foundations/Button-icon/index';
-import Icon from '-!svg-react-loader?name=Icon!../../Icons/book.svg';
+import LearnIcon from '-!svg-react-loader?name=Icon!../../Icons/mind.svg';
+import ButtonIconDropdown from './foundations/Button-icon-dropdown/index';
 
-export interface HelloWorldProps {
-    userName: string;
-    lang: string;
-}
-const App = (props: HelloWorldProps) => (
+const App = () => (
     <AppContainer>
         <Header
             id="app-header-container"
@@ -40,10 +37,9 @@ const App = (props: HelloWorldProps) => (
                     value="home"
                     dataCy="home-link"
                 >
-                    <Icon />
+                    <LearnIcon />
                 </ButtonIcon>
-                Cypress Playground...{''}&nbsp;
-                <span className="App-heading-1-span">Now using {props.lang}!</span>
+                Cypress Playground
             </H1>
             <H2 id="app-heading-2" className="App-heading-2" dataCy="app-heading-2">
                 This is where you will learn how to use Cypress, AXE-CORE and PA11Y to learn how to
@@ -61,15 +57,12 @@ const App = (props: HelloWorldProps) => (
                     className="Heading-1"
                     dataCy="form-section-heading-1"
                 >
-                    <ButtonIcon
-                        id="home-link"
-                        className="header-button-icon"
-                        name="home-link"
-                        value="home"
-                        dataCy="home-link"
+                    <ButtonIconDropdown
+                        id="form-exercise-learn-button"
+                        className="learn-button form-exercise-learn-button"
                     >
-                        <Icon />
-                    </ButtonIcon>{' '}
+                        <h1>This is a message</h1>
+                    </ButtonIconDropdown>{' '}
                     Accessibility with Forms Exercise
                 </H1>
             </Header>
@@ -277,15 +270,12 @@ const App = (props: HelloWorldProps) => (
                 dataCy="header-heading-order-section"
             >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                    <ButtonIcon
-                        id="home-link"
-                        className="header-button-icon"
-                        name="home-link"
-                        value="home"
-                        dataCy="home-link"
+                    <ButtonIconDropdown
+                        id="form-exercise-learn-button"
+                        className="learn-button form-exercise-learn-button"
                     >
-                        <Icon />
-                    </ButtonIcon>{' '}
+                        <h1>This is a message</h1>
+                    </ButtonIconDropdown>{' '}
                     Accessibility with Heading Order Exercise
                 </H1>
             </Header>
@@ -366,15 +356,12 @@ const App = (props: HelloWorldProps) => (
                 dataCy="header-color-contrast-section"
             >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                    <ButtonIcon
-                        id="home-link"
-                        className="header-button-icon"
-                        name="home-link"
-                        value="home"
-                        dataCy="home-link"
+                    <ButtonIconDropdown
+                        id="form-exercise-learn-button"
+                        className="learn-button form-exercise-learn-button"
                     >
-                        <Icon />
-                    </ButtonIcon>{' '}
+                        <h1>This is a message</h1>
+                    </ButtonIconDropdown>{' '}
                     Accessibility with Color Contrast Exercise
                 </H1>
             </Header>
@@ -443,15 +430,12 @@ const App = (props: HelloWorldProps) => (
                 dataCy="header-color-contrast-font-size-section"
             >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                    <ButtonIcon
-                        id="home-link"
-                        className="header-button-icon"
-                        name="home-link"
-                        value="home"
-                        dataCy="home-link"
+                    <ButtonIconDropdown
+                        id="form-exercise-learn-button"
+                        className="learn-button form-exercise-learn-button"
                     >
-                        <Icon />
-                    </ButtonIcon>{' '}
+                        <h1>This is a message</h1>
+                    </ButtonIconDropdown>{' '}
                     Accessibility with Color Contrast and Font Size Exercise
                 </H1>
             </Header>
@@ -718,8 +702,8 @@ const AppContainer = styled.section`
     background-color: #092347;
 
     & .App-header-container {
-        font-size: 2.25rem;
-        color: #ffffff;
+        font-size: 1.5rem;
+        /* color: #ffffff; */
         background-color: #0643ad;
         margin: 0;
         padding: 0;
@@ -731,15 +715,14 @@ const AppContainer = styled.section`
         width: 100%;
 
         & .App-heading-1 {
-            background-color: #0d2d5e;
+            background-color: #030c18;
             margin: 0;
-            padding: 1.5rem;
-            color: #2ddfff;
+            color: #ff581f;
             display: flex;
             align-items: center;
 
             & .App-heading-1-span {
-                font-size: 1.5rem;
+                font-size: 1rem;
                 letter-spacing: 0.5px;
                 font-weight: 500;
             }
@@ -799,7 +782,7 @@ const AppContainer = styled.section`
                 margin: 0;
                 padding: 0;
                 letter-spacing: 0.5px;
-                & .header-button-icon {
+                & .Button-icon-button-dropdown {
                     margin: 0 1.25rem 0 0;
                 }
             }
