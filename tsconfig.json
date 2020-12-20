@@ -23,7 +23,7 @@
   "include": [
     "**/*.tsx",
     "cypress/**/*.ts.",
-    "src/@types/assets/index.d.ts"
+    "src/@types/assets/index.d.ts", "src/Hooks/use-click-outside.ts"
   ],
   "exclude": ["node_modules"]
 }
