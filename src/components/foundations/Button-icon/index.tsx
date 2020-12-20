@@ -71,7 +71,6 @@ const ButtonContainer = styled.button`
     font-size: 1.25rem;
     letter-spacing: 0.5px;
     border-radius: 0.25rem;
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
     width: 5rem;
     height: 5rem;
     display: flex;
