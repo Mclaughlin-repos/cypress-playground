@@ -18,8 +18,11 @@ import H3 from './foundations/H3/index';
 import H4 from './foundations/H4/index';
 import H5 from './foundations/H5/index';
 import H6 from './foundations/H6/index';
+import Link from './foundations/Link/index';
 import ButtonIcon from './foundations/Button-icon/index';
 import LearnIcon from '-!svg-react-loader?name=Icon!../../Icons/mind.svg';
+import SolutionIcon from '-!svg-react-loader?name=Icon!../../Icons/solution.svg';
+import ChallengeIcon from '-!svg-react-loader?name=Icon!../../Icons/book-min.svg';
 import ButtonIconDropdown from './foundations/Button-icon-dropdown/index';
 
 const App = () => (
@@ -60,8 +63,38 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
+                        headingChildren={<strong>Why is this important?</strong>}
                     >
-                        <h1>This is a message</h1>
+                        <InstructionsContainer>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                Forms can be visually and cognitively complex and challenging to
+                                use. Accessible forms are easier to use for everyone, including
+                                people with disabilities.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People with cognitive disablities: </strong>
+                                can better understand the form and how to complete it, as making
+                                forms accessible improves the layout structure, instructions, and
+                                feedback.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People using speech input: </strong>
+                                can use the labels via voice commands to activate controls and move
+                                the focus to the fields that they have to complete.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People with limited dexterity: </strong>
+                                benefit from large clickable areas that include the labels,
+                                especially for smaller controls, such as radio buttons and
+                                checkboxes.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People using screen readers: </strong>
+                                can identify and understand form controls more easily because they
+                                are associated with labels, field sets, and other structural
+                                elements.
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
                     </ButtonIconDropdown>{' '}
                     Accessibility with Forms Exercise
                 </H1>
@@ -258,6 +291,28 @@ const App = () => (
                     </Div>
                 </Fieldset>
             </Form>
+            <LinkContainer className="forms-link-container">
+                <Link
+                    id="link-1"
+                    href="https://www.w3.org/WAI/tutorials/forms/"
+                    messageChildren={'Go to w3.org to learn more about accessible forms'}
+                    title="link to accessible forms references"
+                    className="form-reference-link"
+                >
+                    <SolutionIcon />
+                </Link>
+                <Link
+                    id="link-1"
+                    href="https://www.w3.org/WAI/tutorials/forms/"
+                    messageChildren={
+                        'Your challenge: Try and fix this form to make it accessible with this reference link'
+                    }
+                    title="link to accessible forms challenge practice"
+                    className="forms-challenge-link"
+                >
+                    <ChallengeIcon />
+                </Link>
+            </LinkContainer>
         </Section>
         <Section
             id="heading-order-section"
@@ -273,6 +328,7 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
+                        headingChildren={<strong>Why is this important?</strong>}
                     >
                         <h1>This is a message</h1>
                     </ButtonIconDropdown>{' '}
@@ -359,6 +415,7 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
+                        headingChildren={<strong>Why is this important?</strong>}
                     >
                         <h1>This is a message</h1>
                     </ButtonIconDropdown>{' '}
@@ -433,6 +490,7 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
+                        headingChildren={<strong>Why is this important?</strong>}
                     >
                         <h1>This is a message</h1>
                     </ButtonIconDropdown>{' '}
@@ -657,6 +715,14 @@ const App = () => (
         </Section>
     </AppContainer>
 );
+
+const LinkContainer = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
+    & .Link-parent-container {
+        margin-right: 1.5rem;
+    }
+`;
 
 const Title = styled.p`
     color: #2d2d2d;
