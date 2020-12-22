@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import ButtonIcon from '../Button-icon/index';
+import ButtonIcon from '../button-icon/index';
 import LearnIcon from '-!svg-react-loader?name=Icon!../../../../Icons/mind.svg';
 import CloseIcon from '-!svg-react-loader?name=Icon!../../../../Icons/cancel.svg';
 
@@ -8,9 +8,9 @@ const ButtonDropdown: React.FC<{
     id: string;
     className?: string;
     children?: React.ReactNode;
-    name?: string;
-    value?: string;
-}> = ({ id, className, children }) => {
+    headingChildren: React.ReactNode;
+    footerChildren?: React.ReactNode;
+}> = ({ id, className, children, headingChildren, footerChildren }) => {
     const [state, setState] = useState(false);
     const openState = () => {
         setState(true);
@@ -37,16 +37,23 @@ const ButtonDropdown: React.FC<{
                     className={`Button-dropdown-button-container ${className}`}
                 >
                     <CloseButtonContainer className="Close-button-container" onClick={closeState}>
+                        <Heading2>{headingChildren}</Heading2>
                         <CloseIcon />
                     </CloseButtonContainer>
                     <MessageContainer>{children}</MessageContainer>
+                    <FooterContainer>{footerChildren}</FooterContainer>
                 </DropdownContainer>
             )}
         </ButtonDropdownContainer>
     );
 };
+const Heading2 = styled.h2`
+    margin: 0 0 0 2.75rem;
+    padding: 0.5rem 0;
+    color: #2ddfff;
+`;
 
-const ButtonDropdownContainer = styled.div`
+const ButtonDropdownContainer = styled.article`
     transition: 1s ease-in-out;
 `;
 const DropdownContainer = styled.div`
@@ -56,7 +63,9 @@ const DropdownContainer = styled.div`
     box-shadow: 2px 5px 24px 2px rgba(0, 0, 0, 0.5);
     border: 1px solid black;
     margin: 1.75rem 0 0;
-    &::before {
+    max-width: 50%;
+    z-index: 1;
+    &::after {
         position: absolute;
         background-color: #030c18;
         left: 1.5rem;
@@ -67,12 +76,13 @@ const DropdownContainer = styled.div`
         transform: translateY(-50%) rotate(45deg);
         border-top: 1px solid black;
         border-left: 1px solid black;
+        z-index: -1;
     }
 `;
-const CloseButtonContainer = styled.div`
+const CloseButtonContainer = styled.header`
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.25rem;
     height: 3.75rem;
@@ -87,6 +97,9 @@ const CloseButtonContainer = styled.div`
 `;
 
 const MessageContainer = styled.div`
+    margin: 1rem 1.5rem;
+`;
+const FooterContainer = styled.footer`
     padding: 1rem 1.5rem;
 `;
 export default ButtonDropdown;

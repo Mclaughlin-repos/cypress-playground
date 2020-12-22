@@ -21,7 +21,8 @@ const Input: React.FC<{
             required={required}
             readOnly={readonly}
             placeholder={placeholder}
-            value={value}>
+            value={value}
+        >
             {children}
         </InputComponent>
     );

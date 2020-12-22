@@ -17,13 +17,15 @@
       "./node_modules/@types"
     ],
   },
-  "files": [
-    "src/@types/assets/index.d.ts"
-  ],
+  "awesomeTypescriptLoaderOptions": {
+    "useBabel": true,
+    "useCache": true,
+    "useTranspileModule": true
+  },
   "include": [
     "**/*.tsx",
     "cypress/**/*.ts.",
-    "src/@types/assets/index.d.ts", "src/Hooks/use-click-outside.ts"
+    "src/@types/assets/index.d.ts"
   ],
   "exclude": ["node_modules"]
 }

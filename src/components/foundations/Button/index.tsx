@@ -46,7 +46,8 @@ const Button: React.FC<{
             formTarget={formTarget}
             name={name}
             value={value}
-            type={buttonType}>
+            type={buttonType}
+        >
             {children}
         </ButtonContainer>
     );

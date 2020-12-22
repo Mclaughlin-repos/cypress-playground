@@ -1,26 +1,29 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import LabelContainer from './containers/Label/index';
-import Input from './foundations/Input/index';
-import Form from './containers/Form/index';
-import Fieldset from './containers/Fieldset/index';
-import Legend from './foundations/Legend/index';
-import Div from './containers/Div/index';
-import Section from './containers/Section/index';
-import Header from './containers/Header/index';
-import ColorPickerCustom from './containers/Color-Picker-Custom/index';
-import ColorPickerDynamic from './containers/Color-Picker-Dynamic/index';
-import ColorPickerAuroraText from './containers/Color-Picker-Aurora-Text/index';
-import Button from './foundations/Button/index';
-import H1 from './foundations/H1/index';
-import H2 from './foundations/H2/index';
-import H3 from './foundations/H3/index';
-import H4 from './foundations/H4/index';
-import H5 from './foundations/H5/index';
-import H6 from './foundations/H6/index';
-import ButtonIcon from './foundations/Button-icon/index';
+import LabelContainer from './containers/label/index';
+import Input from './foundations/input/index';
+import Form from './containers/form/index';
+import Fieldset from './containers/fieldset/index';
+import Legend from './foundations/legend/index';
+import Div from './containers/div/index';
+import Section from './containers/section/index';
+import Header from './containers/header/index';
+import ColorPickerCustom from './containers/color-picker-custom/index';
+import ColorPickerDynamic from './containers/color-picker-dynamic/index';
+import ColorPickerAuroraText from './containers/color-picker-aurora-text/index';
+import Button from './foundations/button/index';
+import H1 from './foundations/h1/index';
+import H2 from './foundations/h2/index';
+import H3 from './foundations/h3/index';
+import H4 from './foundations/h4/index';
+import H5 from './foundations/h5/index';
+import H6 from './foundations/h6/index';
+import Link from './foundations/link/index';
+import ButtonIcon from './foundations/button-icon/index';
 import LearnIcon from '-!svg-react-loader?name=Icon!../../Icons/mind.svg';
-import ButtonIconDropdown from './foundations/Button-icon-dropdown/index';
+import SolutionIcon from '-!svg-react-loader?name=Icon!../../Icons/solution.svg';
+import ChallengeIcon from '-!svg-react-loader?name=Icon!../../Icons/book.svg';
+import ButtonIconDropdown from './foundations/button-icon-dropdown/index';
 
 const App = () => (
     <AppContainer>
@@ -60,8 +63,38 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
+                        headingChildren={'Why is this important?'}
                     >
-                        <h1>This is a message</h1>
+                        <InstructionsContainer>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                Forms can be visually and cognitively complex and challenging to
+                                use. Accessible forms are easier to use for everyone, including
+                                people with disabilities.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People with cognitive disablities: </strong>
+                                can better understand the form and how to complete it, as making
+                                forms accessible improves the layout structure, instructions, and
+                                feedback.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People using speech input: </strong>
+                                can use the labels via voice commands to activate controls and move
+                                the focus to the fields that they have to complete.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People with limited dexterity: </strong>
+                                benefit from large clickable areas that include the labels,
+                                especially for smaller controls, such as radio buttons and
+                                checkboxes.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People using screen readers: </strong>
+                                can identify and understand form controls more easily because they
+                                are associated with labels, field sets, and other structural
+                                elements.
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
                     </ButtonIconDropdown>{' '}
                     Accessibility with Forms Exercise
                 </H1>
@@ -258,6 +291,26 @@ const App = () => (
                     </Div>
                 </Fieldset>
             </Form>
+            <LinkContainer className="forms-link-container">
+                <Link
+                    id="link-1"
+                    href="https://www.w3.org/WAI/tutorials/forms/"
+                    messageChildren={'Go to w3.org to learn more about accessible forms'}
+                    title="link to accessible forms references"
+                    className="form-reference-link"
+                >
+                    <SolutionIcon />
+                </Link>
+                <Link
+                    id="link-1"
+                    href="https://www.w3.org/WAI/tutorials/forms/"
+                    messageChildren={'Your Challenge: Try and fix this form to make it accessible'}
+                    title="link to accessible forms challenge practice"
+                    className="forms-challenge-link"
+                >
+                    <ChallengeIcon />
+                </Link>
+            </LinkContainer>
         </Section>
         <Section
             id="heading-order-section"
@@ -273,9 +326,39 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
+                        headingChildren={'Why is this important?'}
                     >
-                        <h1>This is a message</h1>
-                    </ButtonIconDropdown>{' '}
+                        <InstructionsContainer>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                Forms can be visually and cognitively complex and challenging to
+                                use. Accessible forms are easier to use for everyone, including
+                                people with disabilities.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People with cognitive disablities: </strong>
+                                can better understand the form and how to complete it, as making
+                                forms accessible improves the layout structure, instructions, and
+                                feedback.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People using speech input: </strong>
+                                can use the labels via voice commands to activate controls and move
+                                the focus to the fields that they have to complete.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People with limited dexterity: </strong>
+                                benefit from large clickable areas that include the labels,
+                                especially for smaller controls, such as radio buttons and
+                                checkboxes.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People using screen readers: </strong>
+                                can identify and understand form controls more easily because they
+                                are associated with labels, field sets, and other structural
+                                elements.
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
+                    </ButtonIconDropdown>
                     Accessibility with Heading Order Exercise
                 </H1>
             </Header>
@@ -359,6 +442,7 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
+                        headingChildren={'Why is this important'}
                     >
                         <h1>This is a message</h1>
                     </ButtonIconDropdown>{' '}
@@ -433,6 +517,7 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
+                        headingChildren={'Why is this important?'}
                     >
                         <h1>This is a message</h1>
                     </ButtonIconDropdown>{' '}
@@ -657,6 +742,14 @@ const App = () => (
         </Section>
     </AppContainer>
 );
+
+const LinkContainer = styled.div`
+    display: flex;
+    flex-flow: row nowrap;
+    & .Link-parent-container {
+        margin-right: 1.5rem;
+    }
+`;
 
 const Title = styled.p`
     color: #2d2d2d;
