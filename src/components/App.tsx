@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+<<<<<<< HEAD
 import LabelContainer from './containers/label/index';
 import Input from './foundations/input/index';
 import Form from './containers/form/index';
@@ -20,10 +21,60 @@ import H5 from './foundations/h5/index';
 import H6 from './foundations/h6/index';
 import Link from './foundations/link/index';
 import ButtonIcon from './foundations/button-icon/index';
+||||||| 0553578
+import LabelContainer from './containers/Label/index';
+import Input from './foundations/Input/index';
+import Form from './containers/Form/index';
+import Fieldset from './containers/Fieldset/index';
+import Legend from './foundations/Legend/index';
+import Div from './containers/Div/index';
+import Section from './containers/Section/index';
+import Header from './containers/Header/index';
+import ColorPickerCustom from './containers/Color-Picker-Custom/index';
+import ColorPickerDynamic from './containers/Color-Picker-Dynamic/index';
+import ColorPickerAuroraText from './containers/Color-Picker-Aurora-Text/index';
+import Button from './foundations/Button/index';
+import H1 from './foundations/H1/index';
+import H2 from './foundations/H2/index';
+import H3 from './foundations/H3/index';
+import H4 from './foundations/H4/index';
+import H5 from './foundations/H5/index';
+import H6 from './foundations/H6/index';
+import ButtonIcon from './foundations/Button-icon/index';
+=======
+import LabelContainer from './containers/Label/index';
+import Input from './foundations/Input/index';
+import Form from './containers/Form/index';
+import Fieldset from './containers/Fieldset/index';
+import Legend from './foundations/Legend/index';
+import Div from './containers/Div/index';
+import Section from './containers/Section/index';
+import Header from './containers/Header/index';
+import ColorPickerCustom from './containers/Color-Picker-Custom/index';
+import ColorPickerDynamic from './containers/Color-Picker-Dynamic/index';
+import ColorPickerAuroraText from './containers/Color-Picker-Aurora-Text/index';
+import Button from './foundations/Button/index';
+import H1 from './foundations/H1/index';
+import H2 from './foundations/H2/index';
+import H3 from './foundations/H3/index';
+import H4 from './foundations/H4/index';
+import H5 from './foundations/H5/index';
+import H6 from './foundations/H6/index';
+import Link from './foundations/Link/index';
+import ButtonIcon from './foundations/Button-icon/index';
+>>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
 import LearnIcon from '-!svg-react-loader?name=Icon!../../Icons/mind.svg';
+<<<<<<< HEAD
 import SolutionIcon from '-!svg-react-loader?name=Icon!../../Icons/solution.svg';
 import ChallengeIcon from '-!svg-react-loader?name=Icon!../../Icons/book.svg';
 import ButtonIconDropdown from './foundations/button-icon-dropdown/index';
+||||||| 0553578
+import ButtonIconDropdown from './foundations/Button-icon-dropdown/index';
+=======
+import SolutionIcon from '-!svg-react-loader?name=Icon!../../Icons/solution.svg';
+import ChallengeIcon from '-!svg-react-loader?name=Icon!../../Icons/book-min.svg';
+import ButtonIconDropdown from './foundations/Button-icon-dropdown/index';
+>>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
 
 const App = () => (
     <AppContainer>
@@ -63,7 +114,12 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
+<<<<<<< HEAD
                         headingChildren={'Why is this important?'}
+||||||| 0553578
+=======
+                        headingChildren={<strong>Why is this important?</strong>}
+>>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
                     >
                         <InstructionsContainer>
                             <InstructionsParagraph className="form-learn-button-instructions">
@@ -291,6 +347,7 @@ const App = () => (
                     </Div>
                 </Fieldset>
             </Form>
+<<<<<<< HEAD
             <LinkContainer className="forms-link-container">
                 <Link
                     id="link-1"
@@ -311,6 +368,31 @@ const App = () => (
                     <ChallengeIcon />
                 </Link>
             </LinkContainer>
+||||||| 0553578
+=======
+            <LinkContainer className="forms-link-container">
+                <Link
+                    id="link-1"
+                    href="https://www.w3.org/WAI/tutorials/forms/"
+                    messageChildren={'Go to w3.org to learn more about accessible forms'}
+                    title="link to accessible forms references"
+                    className="form-reference-link"
+                >
+                    <SolutionIcon />
+                </Link>
+                <Link
+                    id="link-1"
+                    href="https://www.w3.org/WAI/tutorials/forms/"
+                    messageChildren={
+                        'Your challenge: Try and fix this form to make it accessible with this reference link'
+                    }
+                    title="link to accessible forms challenge practice"
+                    className="forms-challenge-link"
+                >
+                    <ChallengeIcon />
+                </Link>
+            </LinkContainer>
+>>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
         </Section>
         <Section
             id="heading-order-section"
@@ -326,7 +408,12 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
+<<<<<<< HEAD
                         headingChildren={'Why is this important?'}
+||||||| 0553578
+=======
+                        headingChildren={<strong>Why is this important?</strong>}
+>>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
                     >
                         <InstructionsContainer>
                             <InstructionsParagraph className="form-learn-button-instructions">
@@ -442,7 +529,12 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
+<<<<<<< HEAD
                         headingChildren={'Why is this important'}
+||||||| 0553578
+=======
+                        headingChildren={<strong>Why is this important?</strong>}
+>>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
                     >
                         <h1>This is a message</h1>
                     </ButtonIconDropdown>{' '}
@@ -517,7 +609,12 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
+<<<<<<< HEAD
                         headingChildren={'Why is this important?'}
+||||||| 0553578
+=======
+                        headingChildren={<strong>Why is this important?</strong>}
+>>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
                     >
                         <h1>This is a message</h1>
                     </ButtonIconDropdown>{' '}
