@@ -1,6 +1,5 @@
 import * as React from 'react';
 import styled from 'styled-components';
-<<<<<<< HEAD
 import LabelContainer from './containers/label/index';
 import Input from './foundations/input/index';
 import Form from './containers/form/index';
@@ -21,60 +20,10 @@ import H5 from './foundations/h5/index';
 import H6 from './foundations/h6/index';
 import Link from './foundations/link/index';
 import ButtonIcon from './foundations/button-icon/index';
-||||||| 0553578
-import LabelContainer from './containers/Label/index';
-import Input from './foundations/Input/index';
-import Form from './containers/Form/index';
-import Fieldset from './containers/Fieldset/index';
-import Legend from './foundations/Legend/index';
-import Div from './containers/Div/index';
-import Section from './containers/Section/index';
-import Header from './containers/Header/index';
-import ColorPickerCustom from './containers/Color-Picker-Custom/index';
-import ColorPickerDynamic from './containers/Color-Picker-Dynamic/index';
-import ColorPickerAuroraText from './containers/Color-Picker-Aurora-Text/index';
-import Button from './foundations/Button/index';
-import H1 from './foundations/H1/index';
-import H2 from './foundations/H2/index';
-import H3 from './foundations/H3/index';
-import H4 from './foundations/H4/index';
-import H5 from './foundations/H5/index';
-import H6 from './foundations/H6/index';
-import ButtonIcon from './foundations/Button-icon/index';
-=======
-import LabelContainer from './containers/Label/index';
-import Input from './foundations/Input/index';
-import Form from './containers/Form/index';
-import Fieldset from './containers/Fieldset/index';
-import Legend from './foundations/Legend/index';
-import Div from './containers/Div/index';
-import Section from './containers/Section/index';
-import Header from './containers/Header/index';
-import ColorPickerCustom from './containers/Color-Picker-Custom/index';
-import ColorPickerDynamic from './containers/Color-Picker-Dynamic/index';
-import ColorPickerAuroraText from './containers/Color-Picker-Aurora-Text/index';
-import Button from './foundations/Button/index';
-import H1 from './foundations/H1/index';
-import H2 from './foundations/H2/index';
-import H3 from './foundations/H3/index';
-import H4 from './foundations/H4/index';
-import H5 from './foundations/H5/index';
-import H6 from './foundations/H6/index';
-import Link from './foundations/Link/index';
-import ButtonIcon from './foundations/Button-icon/index';
->>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
 import LearnIcon from '-!svg-react-loader?name=Icon!../../Icons/mind.svg';
-<<<<<<< HEAD
 import SolutionIcon from '-!svg-react-loader?name=Icon!../../Icons/solution.svg';
 import ChallengeIcon from '-!svg-react-loader?name=Icon!../../Icons/book.svg';
 import ButtonIconDropdown from './foundations/button-icon-dropdown/index';
-||||||| 0553578
-import ButtonIconDropdown from './foundations/Button-icon-dropdown/index';
-=======
-import SolutionIcon from '-!svg-react-loader?name=Icon!../../Icons/solution.svg';
-import ChallengeIcon from '-!svg-react-loader?name=Icon!../../Icons/book-min.svg';
-import ButtonIconDropdown from './foundations/Button-icon-dropdown/index';
->>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
 
 const App = () => (
     <AppContainer>
@@ -114,12 +63,7 @@ const App = () => (
                     <ButtonIconDropdown
                         id="form-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
-<<<<<<< HEAD
                         headingChildren={'Why is this important?'}
-||||||| 0553578
-=======
-                        headingChildren={<strong>Why is this important?</strong>}
->>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
                     >
                         <InstructionsContainer>
                             <InstructionsParagraph className="form-learn-button-instructions">
@@ -347,7 +291,6 @@ const App = () => (
                     </Div>
                 </Fieldset>
             </Form>
-<<<<<<< HEAD
             <LinkContainer className="forms-link-container">
                 <Link
                     id="link-1"
@@ -368,31 +311,6 @@ const App = () => (
                     <ChallengeIcon />
                 </Link>
             </LinkContainer>
-||||||| 0553578
-=======
-            <LinkContainer className="forms-link-container">
-                <Link
-                    id="link-1"
-                    href="https://www.w3.org/WAI/tutorials/forms/"
-                    messageChildren={'Go to w3.org to learn more about accessible forms'}
-                    title="link to accessible forms references"
-                    className="form-reference-link"
-                >
-                    <SolutionIcon />
-                </Link>
-                <Link
-                    id="link-1"
-                    href="https://www.w3.org/WAI/tutorials/forms/"
-                    messageChildren={
-                        'Your challenge: Try and fix this form to make it accessible with this reference link'
-                    }
-                    title="link to accessible forms challenge practice"
-                    className="forms-challenge-link"
-                >
-                    <ChallengeIcon />
-                </Link>
-            </LinkContainer>
->>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
         </Section>
         <Section
             id="heading-order-section"
@@ -406,43 +324,34 @@ const App = () => (
             >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
                     <ButtonIconDropdown
-                        id="form-exercise-learn-button"
+                        id="heading-order-exercise-learn-button"
                         className="learn-button form-exercise-learn-button"
-<<<<<<< HEAD
                         headingChildren={'Why is this important?'}
-||||||| 0553578
-=======
-                        headingChildren={<strong>Why is this important?</strong>}
->>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
                     >
                         <InstructionsContainer>
-                            <InstructionsParagraph className="form-learn-button-instructions">
-                                Forms can be visually and cognitively complex and challenging to
-                                use. Accessible forms are easier to use for everyone, including
-                                people with disabilities.
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                A heading describes the content that follows it, much like a news
+                                headline. When arriving at a new page, sighted users gravitate
+                                toward headings to quickly find what they want on the page. Screen
+                                reader and other assistive technology users can also skip from
+                                heading to heading.
                             </InstructionsParagraph>
-                            <InstructionsParagraph className="form-learn-button-instructions">
-                                <strong>People with cognitive disablities: </strong>
-                                can better understand the form and how to complete it, as making
-                                forms accessible improves the layout structure, instructions, and
-                                feedback.
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                Headings create an outline for the page, similar to a term paper
+                                outline or table of contents. The <strong>h1</strong> describes the
+                                page as a whole, and should be similar to the page{' '}
+                                <strong>title</strong>).
                             </InstructionsParagraph>
-                            <InstructionsParagraph className="form-learn-button-instructions">
-                                <strong>People using speech input: </strong>
-                                can use the labels via voice commands to activate controls and move
-                                the focus to the fields that they have to complete.
+                            <InstructionsParagraph>
+                                A page should typically have only one <strong>h1</strong>. Headings{' '}
+                                <strong>h2</strong> through <strong>h6</strong> represent increasing
+                                degrees of <strong>"indentation"</strong> in our conceptual{' '}
+                                <strong>"outline"</strong>.
                             </InstructionsParagraph>
-                            <InstructionsParagraph className="form-learn-button-instructions">
-                                <strong>People with limited dexterity: </strong>
-                                benefit from large clickable areas that include the labels,
-                                especially for smaller controls, such as radio buttons and
-                                checkboxes.
-                            </InstructionsParagraph>
-                            <InstructionsParagraph className="form-learn-button-instructions">
-                                <strong>People using screen readers: </strong>
-                                can identify and understand form controls more easily because they
-                                are associated with labels, field sets, and other structural
-                                elements.
+                            <InstructionsParagraph>
+                                Because of this, it does not make sense to skip heading levels, such
+                                as from <strong>h2</strong> to <strong>h4</strong>, going down the
+                                page.
                             </InstructionsParagraph>
                         </InstructionsContainer>
                     </ButtonIconDropdown>
@@ -514,6 +423,26 @@ const App = () => (
                     </H1>
                 </Div>
             </Div>
+            <LinkContainer className="heading-order-link-container">
+                <Link
+                    id="link-1"
+                    href="https://webaim.org/techniques/semanticstructure/#nature"
+                    messageChildren={'Go to w3.org to learn more about semantic DOM structure'}
+                    title="link to webaim semantic structure docs"
+                    className="heading-order-reference-link"
+                >
+                    <SolutionIcon />
+                </Link>
+                <Link
+                    id="link-1"
+                    href="https://webaim.org/techniques/semanticstructure/#headings"
+                    messageChildren={'Your Challenge: Try to make the heading order accessible'}
+                    title="link to accessible heading order challenge practice"
+                    className="heading-order-challenge-link"
+                >
+                    <ChallengeIcon />
+                </Link>
+            </LinkContainer>
         </Section>
         <Section
             id="color-contrast-section"
@@ -527,18 +456,35 @@ const App = () => (
             >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
                     <ButtonIconDropdown
-                        id="form-exercise-learn-button"
-                        className="learn-button form-exercise-learn-button"
-<<<<<<< HEAD
-                        headingChildren={'Why is this important'}
-||||||| 0553578
-=======
-                        headingChildren={<strong>Why is this important?</strong>}
->>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
+                        id="color-contrast-exercise-learn-button"
+                        className="learn-button color-contrast-exercise-learn-button"
+                        headingChildren={'Why is this important?'}
                     >
-                        <h1>This is a message</h1>
-                    </ButtonIconDropdown>{' '}
-                    Accessibility with Color Contrast Exercise
+                        <InstructionsContainer>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                Contrast and color use are vital to accessibility. Users, including
+                                users with visual disabilities, must be able to perceive content on
+                                the page. There is a great deal of fine print and complexity within
+                                the Web Content Accessibility Guidelines (WCAG) 2 that can easily
+                                confuse web content creators and web accessibility evaluators. This
+                                article pulls together the terms and principles needed to understand
+                                WCAG 2 requirements for contrast and color.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                In WCAG 2, contrast is a measure of the difference in perceived
+                                <strong>luminance or brightness</strong> between two colors (the
+                                phrase "color contrast" is never used).
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                This brightness difference is expressed as a ratio ranging from{' '}
+                                <strong>1:1</strong> (e.g.{' '}
+                                <strong>white text on a white background</strong> ) to
+                                <strong>21:1</strong> (e.g.,{' '}
+                                <strong>black text on a white background</strong>).
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
+                    </ButtonIconDropdown>
+                    Accessibility with Contrast Ratio
                 </H1>
             </Header>
             <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
@@ -594,6 +540,26 @@ const App = () => (
                     </Div>
                 </ColorPickerAuroraText>
             </ColorPickerDynamic>
+            <LinkContainer className="contrast-ratio-link-container">
+                <Link
+                    id="link-1"
+                    href="https://webaim.org/articles/contrast/"
+                    messageChildren={'Go to w3.org to learn more about contrast ratio'}
+                    title="link to accessible contrast ratio references"
+                    className="form-reference-link"
+                >
+                    <SolutionIcon />
+                </Link>
+                <Link
+                    id="link-1"
+                    href="https://webaim.org/articles/contrast/#ratio"
+                    messageChildren={'Your Challenge: Try and find colors that pass contrast ratio'}
+                    title="link to accessible contrast ratio documents"
+                    className="contrast-ratio-challenge-link"
+                >
+                    <ChallengeIcon />
+                </Link>
+            </LinkContainer>
         </Section>
         <Section
             id="color-contrast-font-size-section"
@@ -607,18 +573,48 @@ const App = () => (
             >
                 <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
                     <ButtonIconDropdown
-                        id="form-exercise-learn-button"
-                        className="learn-button form-exercise-learn-button"
-<<<<<<< HEAD
+                        id="color-contrast-exercise-learn-button"
+                        className="learn-button color-contrast-exercise-learn-button"
                         headingChildren={'Why is this important?'}
-||||||| 0553578
-=======
-                        headingChildren={<strong>Why is this important?</strong>}
->>>>>>> 135de08ae7615e791dcb41f8ec047b143d6f9945
                     >
-                        <h1>This is a message</h1>
-                    </ButtonIconDropdown>{' '}
-                    Accessibility with Color Contrast and Font Size Exercise
+                        <InstructionsContainer>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                <strong>Typefaces</strong> are groups of designed text characters,
+                                such as <strong>Arial, Helvetica</strong>, and{' '}
+                                <strong>Times New Roman</strong>.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                <strong>Fonts</strong> are <strong>sub-sets</strong> of typefaces
+                                that have a consistent appearance, such as a 14 point and bold font
+                                in the Arial typeface. Typography—how typefaces and fonts present
+                                text—is very impactful on reading, which is a core component of
+                                visual accessibility.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                <strong>WCAG 2.0 AA</strong> requires a contrast ratio of at least{' '}
+                                <strong>4.5:1</strong> for <strong>normal text</strong> and{' '}
+                                <strong>3:1</strong> for <strong>large text</strong>.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                <strong>WCAG 2.1</strong> requires a contrast ratio of at least{' '}
+                                <strong>3:1</strong> for{' '}
+                                <strong>graphics and user interface components</strong> (such as
+                                form input borders).
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                <strong>WCAG 2.1 AAA</strong> Level requires a contrast ratio of at
+                                least <strong>7:1</strong> for <strong>normal text</strong> and
+                                <strong>4.5:1</strong> for <strong>large text</strong>.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                <strong>Colorzilla</strong> is an excellent tool for extracting the
+                                color value from any page element. Additionally,{' '}
+                                <strong>WAVE</strong> can analyze contrast ratios for all page text
+                                elements at once.
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
+                    </ButtonIconDropdown>
+                    Accessibility with Contrast Ratio and Font Size Exercise
                 </H1>
             </Header>
             <InstructionsContainer className="Instructions-container color-contrast-font-size-instructions-container">
@@ -836,6 +832,37 @@ const App = () => (
                     </ColorPickerCustom>
                 </Div>
             </ColorPickerAuroraText>
+            <LinkContainer className="contrast-ratio-font-size-link-container">
+                <Link
+                    id="link-1"
+                    href="https://webaim.org/techniques/fonts/"
+                    messageChildren={'Go to w3.org to learn more about font size'}
+                    title="link to accessible font size references"
+                    className="font-size-reference-link"
+                >
+                    <SolutionIcon />
+                </Link>
+                <Link
+                    id="link-1"
+                    href="https://webaim.org/resources/contrastchecker/"
+                    messageChildren={'Go to w3.org to learn more about contrast checkers'}
+                    title="link to accessible contrast checker references"
+                    className="text-contrast-reference-link"
+                >
+                    <LearnIcon />
+                </Link>
+                <Link
+                    id="link-1"
+                    href="https://webaim.org/articles/contrast/#ratio"
+                    messageChildren={
+                        'Your Challenge: Try different font sizes that pass contrast ratio'
+                    }
+                    title="link to accessible contrast ratio documents"
+                    className="font-size-contrast-challenge-link"
+                >
+                    <ChallengeIcon />
+                </Link>
+            </LinkContainer>
         </Section>
     </AppContainer>
 );
@@ -893,7 +920,6 @@ const AppContainer = styled.section`
 
     & .App-header-container {
         font-size: 1.5rem;
-        /* color: #ffffff; */
         background-color: #0643ad;
         margin: 0;
         padding: 0;
@@ -901,7 +927,7 @@ const AppContainer = styled.section`
         flex-flow: column;
         position: fixed;
         top: 0;
-        z-index: 2;
+        z-index: 3;
         width: 100%;
 
         & .App-heading-1 {
@@ -1013,7 +1039,7 @@ const AppContainer = styled.section`
         }
         & .Color-picker-dynamic-parent-container {
             background-color: #082347;
-            margin: 2rem 0 0;
+            margin: 2rem 0 1rem;
             padding: 2rem 1.5rem 1.5rem;
             border-radius: 0.25rem;
 
