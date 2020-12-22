@@ -54,14 +54,14 @@ class ColorPickerAuroraText extends React.Component<Props> {
                 >
                     {this.state.displayColorPicker ? (
                         <CloseButton
-                            className="Color-picker-button color-picker-aurora-text-close-button"
+                            className="Color-picker-button color-picker-aurora-text-button color-picker-aurora-text-close-button"
                             onClick={this.handleClose}
                         >
                             Close Font Color
                         </CloseButton>
                     ) : (
                         <OpenButton
-                            className="Color-picker-button color-picker-aurora-text-open-button"
+                            className="Color-picker-button color-picker-aurora-text-button color-picker-aurora-text-open-button"
                             onClick={this.handleClick}
                         >
                             Change Font Color
