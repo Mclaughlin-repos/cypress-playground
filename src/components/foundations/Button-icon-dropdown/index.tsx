@@ -64,7 +64,7 @@ const DropdownContainer = styled.div`
     border: 1px solid black;
     margin: 1.75rem 0 0;
     max-width: 50%;
-    z-index: 1;
+    z-index: 2;
     &::after {
         position: absolute;
         background-color: #030c18;
