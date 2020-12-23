@@ -201,8 +201,9 @@ const App = () => {
                         Write <strong>custom components</strong> to test to detect accessibility
                         issues within your test components. <br />
                         Create new <strong>composed components</strong> from the provided components
-                        to test for accessibility Test the <strong>whole application</strong> end to
-                        end to learn more about application accessibility. <br />
+                        to test for accessibility. <br /> Test the{' '}
+                        <strong>whole application</strong> end to end to learn more about
+                        application accessibility. <br />
                         Create new <strong>mini-webapps</strong> and <strong>micro-sites</strong>{' '}
                         from the provided components to test for whole{' '}
                         <strong>application accessibility</strong>. <br />
