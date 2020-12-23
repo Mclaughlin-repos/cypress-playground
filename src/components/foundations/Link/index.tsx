@@ -24,6 +24,7 @@ const Link: React.FC<{
                 title={title}
             >
                 {children}
+                <LinkCaption>Link to stuff</LinkCaption>
             </LinkElement>
             <DropdownContainer
                 id={`link-dropdown-container-${id}`}
@@ -94,8 +95,13 @@ const MessageContainer = styled.p`
 
 const LinkElement = styled.a`
     display: flex;
+    color: #ff581f;
     & svg {
         padding: 1rem 1.1rem;
     }
+`;
+const LinkCaption = styled.span`
+    color: #ff581f;
+    font-size: 0.875rem;
 `;
 export default Link;
