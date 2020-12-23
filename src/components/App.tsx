@@ -147,12 +147,6 @@ const App = () => {
                     className="section-heading Introduction-heading  heading-2"
                     dataCy="introduction-heading"
                 >
-                    <SectionLogo
-                        id="introduction-section-logo"
-                        className="Target introduction-section-logo"
-                    >
-                        <LearnIcon />
-                    </SectionLogo>
                     Introduction
                 </H2>
                 <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
