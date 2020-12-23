@@ -24,7 +24,6 @@ const Link: React.FC<{
                 title={title}
             >
                 {children}
-                <LinkCaption>Link to stuff</LinkCaption>
             </LinkElement>
             <DropdownContainer
                 id={`link-dropdown-container-${id}`}

@@ -31,6 +31,7 @@ const App = () => {
     const headingsRef = useRef(null);
     const contrastRef = useRef(null);
     const fontSizeRef = useRef(null);
+    const introRef = useRef(null);
     const handleScroll = () => {
         formRef.current.scrollIntoView({ behavior: 'smooth' });
     };
@@ -42,6 +43,9 @@ const App = () => {
     };
     const handleScrollFontSizeContrast = () => {
         fontSizeRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+    const handleScrollIntro = () => {
+        introRef.current.scrollIntoView({ behavior: 'smooth' });
     };
     return (
         <AppContainer>
@@ -61,10 +65,19 @@ const App = () => {
                         id="link-1"
                         title="link to accessible forms references"
                         className="form-reference-link"
+                        linkText="Intro"
+                        onClick={handleScrollIntro}
+                    >
+                        <SolutionIcon />
+                    </TextLink>
+                    <TextLink
+                        id="link-1"
+                        title="link to accessible forms references"
+                        className="form-reference-link"
                         linkText="Forms"
                         onClick={handleScroll}
                     >
-                        <LearnIcon />
+                        <SolutionIcon />
                     </TextLink>
                     <TextLink
                         id="link-1"
@@ -73,7 +86,7 @@ const App = () => {
                         linkText="Headings"
                         onClick={handleScrollHeadings}
                     >
-                        <LearnIcon />
+                        <SolutionIcon />
                     </TextLink>
                     <TextLink
                         id="link-1"
@@ -82,7 +95,7 @@ const App = () => {
                         linkText="Contrast"
                         onClick={handleScrollContrast}
                     >
-                        <LearnIcon />
+                        <SolutionIcon />
                     </TextLink>
                     <TextLink
                         id="link-1"
@@ -91,39 +104,130 @@ const App = () => {
                         linkText="Font Size"
                         onClick={handleScrollFontSizeContrast}
                     >
-                        <LearnIcon />
+                        <SolutionIcon />
                     </TextLink>
                 </NavContainer>
             </Header>
+            <Div id="svg-div-container" className="Svg-div-container" dataCy="svg-div-container">
+                <SectionLogo id="learn-logo" className="section-logo Learn-logo">
+                    <LearnIcon />
+                    <InstructionsParagraph>Why a Topic is Important</InstructionsParagraph>
+                </SectionLogo>
+                <SectionLogo id="explore-logo" className="section-logo Explore-logo">
+                    <SolutionIcon />
+                    <InstructionsParagraph>Explore a Topic</InstructionsParagraph>
+                </SectionLogo>
+                <SectionLogo id="innovate-logo" className="section-logo Innovate-logo">
+                    <InnovationIcon />
+                    <InstructionsParagraph>Innovate an Idea</InstructionsParagraph>
+                </SectionLogo>
+            </Div>
+            <Div
+                id="svg-div-container-2"
+                className="Svg-div-container svg-div-second-container"
+                dataCy="svg-div-container-2"
+            >
+                <SectionLogo id="understand-logo" className="section-logo Understand-logo">
+                    <IdeaIcon />
+                    <InstructionsParagraph>Understand a Topic</InstructionsParagraph>
+                </SectionLogo>
+                <SectionLogo id="challenge-logo" className="section-logo challenge-logo">
+                    <ChallengeIcon />
+                    <InstructionsParagraph>Complete a Challenge</InstructionsParagraph>
+                </SectionLogo>
+                <Target id="introduction-target" ref={introRef} />
+            </Div>
             <Section
                 id="introduction-section"
                 className="Introduction-section"
                 dataCy="introduction-section"
             >
+                <H2
+                    id="introduction-heading"
+                    className="section-heading Introduction-heading  heading-2"
+                    dataCy="introduction-heading"
+                >
+                    <SectionLogo
+                        id="introduction-section-logo"
+                        className="Target introduction-section-logo"
+                    >
+                        <LearnIcon />
+                    </SectionLogo>
+                    Introduction
+                </H2>
                 <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
                     <InstructionsParagraph className="section-instructions">
-                        Choose a swatch from the <strong>Aurora swatch collection</strong> OR use
-                        the inputs to search for a custom color for{' '}
-                        <strong>background color</strong> then, change the{' '}
-                        <strong>font color</strong> the same way.
+                        <strong>Welcome to the AXE Testing Playground!</strong>
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
-                        Once you have chosen your colors, in your terminal change directories into
-                        the <strong>cypress folder</strong> then, run this command in your terminal:{' '}
+                        Internet accessibility has come a long way over the past few years and,
+                        should be an ever present necessity for the population who require
+                        assistance from other avenues to use for websites, applications and internet
+                        browsing.
                     </InstructionsParagraph>
-                    <strong>
-                        <code>
-                            <pre>npm run start:test</pre>
-                        </code>
-                    </strong>
                     <InstructionsParagraph className="section-instructions">
-                        This will open a new browser window, open the <strong>cypress GUI</strong>{' '}
-                        while running the <strong>pa11y</strong> tests all at once. You will be able
-                        to see the readout <strong>both</strong> within the{' '}
-                        <strong>cypress GUI</strong> and within the <strong>terminal window</strong>
-                        . (You may need to scroll up within the terminal window to see the{' '}
-                        <strong>pa11y</strong> errors)
-                        <Target id="forms-target" ref={formRef} />
+                        Try using your imagination to try and put yourself in the shoes of someone
+                        with an impairment who needs to use the internet. <br />
+                        <strong>For example</strong>: squinting your eyes so you have a difficult
+                        time seeing the screen then...trying to use the internet while your eyes are
+                        squinted. You have gained a little bit of a crude understanding of what it's
+                        like to need visual assistive technologies (screenreaders) by individuals
+                        who have sight impairment.
+                    </InstructionsParagraph>
+                    <InstructionsParagraph className="section-instructions">
+                        <strong>Another example:</strong> grab a stick or straight edge that is
+                        longer than 1 foot and, using your mouth, try to click on a button AND link
+                        within a website on screen. You have now gained crude insight into how an
+                        individual with physical impairments may need to use the internet.
+                    </InstructionsParagraph>
+                    <InstructionsParagraph className="section-instructions">
+                        <strong>
+                            <code>
+                                <pre>Now imagine what it's like with other impairments :-(</pre>
+                            </code>
+                        </strong>
+                    </InstructionsParagraph>
+                    <InstructionsParagraph className="section-instructions">
+                        For an <strong>engineer/ developer/ qa</strong> to be able to evaluate their
+                        current work to assess it's accessibility score, there are new automation
+                        and testing technologies that can be used to produce an{' '}
+                        <strong>accessible internet presence</strong>.
+                    </InstructionsParagraph>
+                    <InstructionsParagraph className="section-instructions">
+                        <strong>Why did I created this application repo?</strong>
+                        <br /> To provide an avenue for individuals to learn how to write{' '}
+                        <strong>Cypress tests</strong> while learning how to use:{' '}
+                        <strong>AXE-CORE</strong>, <strong>a11y-rule</strong> npm package and{' '}
+                        <strong>pa11y</strong>.
+                    </InstructionsParagraph>
+                    <InstructionsParagraph className="section-instructions">
+                        <strong>This repo is designed and developed so you can:</strong>
+                        <br /> Use the provided component to create your own{' '}
+                        <strong>Cypress tests</strong>. <br />
+                        Write <strong>custom components</strong> to test to detect accessibility
+                        issues within your test components. <br />
+                        Create new <strong>composed components</strong> from the provided components
+                        to test for accessibility Test the <strong>whole application</strong> end to
+                        end to learn more about application accessibility. <br />
+                        Create new <strong>mini-webapps</strong> and <strong>micro-sites</strong>{' '}
+                        from the provided components to test for whole{' '}
+                        <strong>application accessibility</strong>. <br />
+                        Finally, to <strong>challenge yourself</strong> by doing{' '}
+                        <strong>exercises</strong> to solidify your knowledge base.
+                    </InstructionsParagraph>
+                    <InstructionsParagraph className="section-instructions">
+                        At the end of each section there are links to resources and a challenge, so
+                        don't forget to take a look.
+                    </InstructionsParagraph>
+                    <Target id="forms-target" ref={formRef} />
+                    <InstructionsParagraph className="section-instructions">
+                        <strong>
+                            <code>
+                                <pre>
+                                    Follow the instructions within each section and...Get to It!
+                                </pre>
+                            </code>
+                        </strong>
                     </InstructionsParagraph>
                 </InstructionsContainer>
             </Section>
@@ -700,9 +804,8 @@ const App = () => {
                     <InstructionsParagraph className="section-instructions">
                         Choose a swatch from the <strong>Aurora swatch collection</strong> OR use
                         the inputs to search for a custom color for <strong>font color</strong>{' '}
-                        then, change the <strong>background color</strong> of each individual card
-                        to see differences with color contrast combined with the{' '}
-                        <strong>Aurora font sizes</strong>.
+                        then, change the <strong>background color</strong> to see differences with
+                        color contrast combined with the <strong>Aurora font sizes</strong>.
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
                         Once you have chosen your colors, in your terminal change directories into
@@ -803,7 +906,7 @@ const App = () => {
     );
 };
 
-const Target = styled.span`
+const Target = styled.div`
     width: 0;
     height: 0;
     border: none;
@@ -817,7 +920,7 @@ const NavContainer = styled.nav`
     justify-content: space-evenly;
     background-color: #0c2e5e;
     padding: 1rem 0;
-    min-width: 31rem;
+    min-width: 39rem;
 `;
 
 const LinkContainer = styled.div`
@@ -853,13 +956,23 @@ const InstructionsParagraph = styled.p`
     line-height: 1.3;
 `;
 
+const SectionLogo = styled.div`
+    margin: 0 1.5rem 0 0;
+    background-color: #030c19;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0.25rem;
+`;
+
 const AppContainer = styled.section`
     font-family: Helvetica, sans-serif;
     font-size: 1rem;
     margin: 0;
-    padding: 14rem 0 0 0;
+    padding: 10rem 0 0 0;
     background-color: #092347;
-    /* overflow-y: scroll; */
 
     & .App-header-container {
         font-size: 1.5rem;
@@ -948,9 +1061,43 @@ const AppContainer = styled.section`
             }
         }
     }
+    & .Svg-div-container {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        max-width: 70rem;
+        margin: 0 auto;
+        & .section-logo {
+            width: 17rem;
+            height: 10rem;
+            margin: 1rem;
+            display: flex;
+            flex-flow: column;
+            padding: 1rem;
+            & > svg {
+                width: 80px;
+                height: 80px;
+            }
+            & > p {
+                color: #ff581f;
+            }
+        }
+    }
+    & .svg-div-second-container {
+        max-width: 50rem;
+    }
     & .Introduction-section {
         background-color: #051830;
         box-shadow: none;
+        & .section-heading {
+            font-size: 1.75rem;
+            color: #ffffff;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            background-color: #0c2e5e;
+            padding: 1rem 1.5rem;
+            border-radius: 0.25rem;
+        }
     }
     & .Color-contrast-container {
         margin: 2rem 0 1.5rem;
