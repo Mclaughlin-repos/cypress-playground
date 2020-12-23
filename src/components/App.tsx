@@ -18,10 +18,10 @@ import H4 from './foundations/h4/index';
 import H5 from './foundations/h5/index';
 import H6 from './foundations/h6/index';
 import Link from './foundations/link/index';
-import ButtonIcon from './foundations/button-icon/index';
 import LearnIcon from '-!svg-react-loader?name=Icon!../../Icons/mind.svg';
 import SolutionIcon from '-!svg-react-loader?name=Icon!../../Icons/solution.svg';
 import InnovationIcon from '-!svg-react-loader?name=Icon!../../Icons/lightbulb-gear.svg';
+import IdeaIcon from '-!svg-react-loader?name=Icon!../../Icons/idea-lightbulb.svg';
 import ChallengeIcon from '-!svg-react-loader?name=Icon!../../Icons/book.svg';
 import ButtonIconDropdown from './foundations/button-icon-dropdown/index';
 
@@ -32,23 +32,89 @@ const App = () => (
             className="App-header-container"
             dataCy="app-header-container"
         >
-            <H1 id="app-heading-1" className="App-heading-1" dataCy="app-heading-1">
-                <ButtonIcon
-                    id="home-link"
-                    className="header-button-icon"
-                    name="home-link"
-                    value="home"
-                    dataCy="home-link"
+            <Div id="logo-container" className="Logo-container" dataCy="logo-container">
+                <LearnIcon />
+                <H1 id="app-heading-1" className="App-heading-1" dataCy="app-heading-1">
+                    AXE Testing Playground
+                </H1>
+            </Div>
+            <NavContainer className="nav-links-container">
+                <Link
+                    id="link-1"
+                    href="https://www.w3.org/WAI/tutorials/forms/"
+                    messageChildren={'Go to w3.org to learn more about accessible forms'}
+                    title="link to accessible forms references"
+                    className="form-reference-link"
                 >
-                    <LearnIcon />
-                </ButtonIcon>
-                Cypress Playground
-            </H1>
-            <H2 id="app-heading-2" className="App-heading-2" dataCy="app-heading-2">
-                This is where you will learn how to use Cypress, AXE-CORE and PA11Y to learn how to
-                work with components and pages.
-            </H2>
+                    <SolutionIcon />
+                </Link>
+                <Link
+                    id="link-1"
+                    href="https://www.w3.org/WAI/tutorials/forms/"
+                    messageChildren={'Go to w3.org to learn more about accessible forms'}
+                    title="link to accessible forms references"
+                    className="form-reference-link"
+                >
+                    <SolutionIcon />
+                </Link>
+                <Link
+                    id="link-1"
+                    href="https://www.w3.org/WAI/tutorials/forms/"
+                    messageChildren={'Go to w3.org to learn more about accessible forms'}
+                    title="link to accessible forms references"
+                    className="form-reference-link"
+                >
+                    <SolutionIcon />
+                </Link>
+                <Link
+                    id="link-1"
+                    href="https://www.w3.org/WAI/tutorials/forms/"
+                    messageChildren={'Go to w3.org to learn more about accessible forms'}
+                    title="link to accessible forms references"
+                    className="form-reference-link"
+                >
+                    <SolutionIcon />
+                </Link>
+                <Link
+                    id="link-1"
+                    href="https://www.w3.org/WAI/tutorials/forms/"
+                    messageChildren={'Challenge: Try and fix this form to make it accessible'}
+                    title="link to accessible forms challenge practice"
+                    className="forms-challenge-link"
+                >
+                    <ChallengeIcon />
+                </Link>
+            </NavContainer>
         </Header>
+        <Section
+            id="introduction-section"
+            className="Introduction-section"
+            dataCy="introduction-section"
+        >
+            <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
+                <InstructionsParagraph className="section-instructions">
+                    Choose a swatch from the <strong>Aurora swatch collection</strong> OR use the
+                    inputs to search for a custom color for <strong>background color</strong> then,
+                    change the <strong>font color</strong> the same way.
+                </InstructionsParagraph>
+                <InstructionsParagraph className="section-instructions">
+                    Once you have chosen your colors, in your terminal change directories into the{' '}
+                    <strong>cypress folder</strong> then, run this command in your terminal:{' '}
+                </InstructionsParagraph>
+                <strong>
+                    <code>
+                        <pre>npm run start:test</pre>
+                    </code>
+                </strong>
+                <InstructionsParagraph className="section-instructions">
+                    This will open a new browser window, open the <strong>cypress GUI</strong> while
+                    running the <strong>pa11y</strong> tests all at once. You will be able to see
+                    the readout <strong>both</strong> within the <strong>cypress GUI</strong> and
+                    within the <strong>terminal window</strong>. (You may need to scroll up within
+                    the terminal window to see the <strong>pa11y</strong> errors)
+                </InstructionsParagraph>
+            </InstructionsContainer>
+        </Section>
         <Section id="form-section" className="Form-section" dataCy="form-section-section">
             <Header
                 id="header-form-section"
@@ -683,7 +749,7 @@ const App = () => (
                     title="link to learn more about text leayout"
                     className="font-color-contrast-ratio-reference-link"
                 >
-                    <LearnIcon />
+                    <InnovationIcon />
                 </Link>
                 <Link
                     id="link-1"
@@ -692,7 +758,7 @@ const App = () => (
                     title="link to learn more about constrast checking"
                     className="font-color-contrast-ratio-reference-link"
                 >
-                    <InnovationIcon />
+                    <IdeaIcon />
                 </Link>
                 <Link
                     id="link-1"
@@ -708,6 +774,13 @@ const App = () => (
     </AppContainer>
 );
 
+const NavContainer = styled.nav`
+    display: flex;
+    flex-flow: row;
+    background-color: #0c2e5e;
+    padding: 1rem 1.5rem;
+`;
+
 const LinkContainer = styled.div`
     display: flex;
     flex-flow: row nowrap;
@@ -717,7 +790,7 @@ const LinkContainer = styled.div`
 `;
 
 const InstructionsContainer = styled.div`
-    background-color: #082347;
+    background-color: #051830;
     padding: 1rem 0.5rem;
     border-radius: 0.25rem;
     & strong {
@@ -754,34 +827,32 @@ const AppContainer = styled.section`
         margin: 0;
         padding: 0;
         display: flex;
-        flex-flow: column;
+        flex-flow: row;
+        justify-content: space-between;
         position: fixed;
         top: 0;
         z-index: 3;
         width: 100%;
+        border-bottom: 1px solid black;
+        box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.5);
+        & .Logo-container {
+            display: flex;
+            flex-flow: row nowrap;
+            background-color: #030618;
+            padding: 1rem 1.5rem;
+            margin: 0;
+            & > svg {
+                width: 90px;
+                height: 90px;
+                margin: 0 1rem 0 0;
+            }
+        }
 
         & .App-heading-1 {
-            background-color: #030c18;
             margin: 0;
             color: #ff581f;
             display: flex;
             align-items: center;
-
-            & .App-heading-1-span {
-                font-size: 1rem;
-                letter-spacing: 0.5px;
-                font-weight: 500;
-            }
-        }
-        & .App-heading-2 {
-            color: #06d9ff;
-            font-size: 1.5rem;
-            font-weight: 500;
-            letter-spacing: 0.5px;
-            padding: 1.5rem;
-            background-color: #0643ad;
-            margin: 0;
-            box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.5);
         }
     }
     & .Button-container {
@@ -812,6 +883,7 @@ const AppContainer = styled.section`
     & .Color-contrast-section,
     .Heading-order-section,
     .Form-section,
+    .Introduction-section,
     .Color-contrast-font-size-section {
         border: 2px solid #061831;
         background-color: #0c2e5e;
@@ -833,6 +905,10 @@ const AppContainer = styled.section`
                 }
             }
         }
+    }
+    & .Introduction-section {
+        background-color: #051830;
+        box-shadow: none;
     }
     & .Color-contrast-container {
         margin: 2rem 0 1.5rem;
