@@ -15,6 +15,7 @@ const TextLink: React.FC<{
         <LinkContainer
             id={id}
             className={`Link-parent-container Text-link-parent-container ${className}`}
+            onClick={onClick}
         >
             <LinkElement
                 id={`text-link-${id}`}
@@ -23,7 +24,6 @@ const TextLink: React.FC<{
                 href={href}
                 onClick={onClick}
                 onChange={onChange}
-                target="_blank"
                 title={title}
             >
                 {children}

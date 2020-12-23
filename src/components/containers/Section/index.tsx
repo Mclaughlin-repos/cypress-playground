@@ -1,7 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 
-// not a structural component; for WCAG 2.1 AA compliance
 const Section: React.FC<{
     className?: string;
     id: string;
