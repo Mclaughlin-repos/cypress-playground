@@ -18,6 +18,7 @@ import H4 from './foundations/h4/index';
 import H5 from './foundations/h5/index';
 import H6 from './foundations/h6/index';
 import Link from './foundations/link/index';
+import TextLink from './foundations/text-link/index';
 import LearnIcon from '-!svg-react-loader?name=Icon!../../Icons/mind.svg';
 import SolutionIcon from '-!svg-react-loader?name=Icon!../../Icons/solution.svg';
 import InnovationIcon from '-!svg-react-loader?name=Icon!../../Icons/lightbulb-gear.svg';
@@ -34,56 +35,47 @@ const App = () => (
         >
             <Div id="logo-container" className="Logo-container" dataCy="logo-container">
                 <LearnIcon />
-                <H1 id="app-heading-1" className="App-heading-1" dataCy="app-heading-1">
-                    AXE Testing Playground
-                </H1>
             </Div>
+            <H1 id="app-heading-1" className="App-heading-1" dataCy="app-heading-1">
+                AXE Testing Playground
+            </H1>
             <NavContainer className="nav-links-container">
-                <Link
+                <TextLink
                     id="link-1"
-                    href="https://www.w3.org/WAI/tutorials/forms/"
-                    messageChildren={'Go to w3.org to learn more about accessible forms'}
+                    href="/"
                     title="link to accessible forms references"
                     className="form-reference-link"
+                    linkText="Forms"
                 >
                     <SolutionIcon />
-                </Link>
-                <Link
+                </TextLink>
+                <TextLink
                     id="link-1"
-                    href="https://www.w3.org/WAI/tutorials/forms/"
-                    messageChildren={'Go to w3.org to learn more about accessible forms'}
+                    href="/"
                     title="link to accessible forms references"
                     className="form-reference-link"
+                    linkText="Headings"
                 >
                     <SolutionIcon />
-                </Link>
-                <Link
+                </TextLink>
+                <TextLink
                     id="link-1"
-                    href="https://www.w3.org/WAI/tutorials/forms/"
-                    messageChildren={'Go to w3.org to learn more about accessible forms'}
+                    href=""
                     title="link to accessible forms references"
                     className="form-reference-link"
+                    linkText="Contrast"
                 >
                     <SolutionIcon />
-                </Link>
-                <Link
+                </TextLink>
+                <TextLink
                     id="link-1"
                     href="https://www.w3.org/WAI/tutorials/forms/"
-                    messageChildren={'Go to w3.org to learn more about accessible forms'}
                     title="link to accessible forms references"
                     className="form-reference-link"
+                    linkText="Font Size"
                 >
                     <SolutionIcon />
-                </Link>
-                <Link
-                    id="link-1"
-                    href="https://www.w3.org/WAI/tutorials/forms/"
-                    messageChildren={'Challenge: Try and fix this form to make it accessible'}
-                    title="link to accessible forms challenge practice"
-                    className="forms-challenge-link"
-                >
-                    <ChallengeIcon />
-                </Link>
+                </TextLink>
             </NavContainer>
         </Header>
         <Section
@@ -777,8 +769,10 @@ const App = () => (
 const NavContainer = styled.nav`
     display: flex;
     flex-flow: row;
+    justify-content: space-evenly;
     background-color: #0c2e5e;
-    padding: 1rem 1.5rem;
+    padding: 1rem 0;
+    min-width: 31rem;
 `;
 
 const LinkContainer = styled.div`
@@ -844,15 +838,17 @@ const AppContainer = styled.section`
             & > svg {
                 width: 90px;
                 height: 90px;
-                margin: 0 1rem 0 0;
             }
         }
 
         & .App-heading-1 {
             margin: 0;
-            color: #ff581f;
+            padding: 0 1.5rem;
+            color: #ffffff;
             display: flex;
             align-items: center;
+            width: 100%;
+            background-color: #051930;
         }
     }
     & .Button-container {
