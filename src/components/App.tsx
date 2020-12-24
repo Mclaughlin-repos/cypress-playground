@@ -157,28 +157,42 @@ const App = () => {
                         Internet accessibility has come a long way over the past few years and,
                         should be an ever present necessity for the population who require
                         assistance from other avenues to use for websites, applications and internet
-                        browsing.
-                    </InstructionsParagraph>
-                    <InstructionsParagraph className="section-instructions">
-                        Try using your imagination to try and put yourself in the shoes of someone
-                        with an impairment who needs to use the internet. <br />
-                        <strong>For example</strong>: squinting your eyes so you have a difficult
-                        time seeing the screen then...trying to use the internet while your eyes are
-                        squinted. You have gained a little bit of a crude understanding of what it's
-                        like to need visual assistive technologies (screenreaders) by individuals
-                        who have sight impairment.
-                    </InstructionsParagraph>
-                    <InstructionsParagraph className="section-instructions">
-                        <strong>Another example:</strong> grab a stick or straight edge that is
-                        longer than 1 foot and, using your mouth, try to click on a button AND link
-                        within a website on screen. You have now gained crude insight into how an
-                        individual with physical impairments may need to use the internet.
+                        browsing. Society takes the ability to use the internet for granted due to
+                        it being ever present in today's culture of communication. A lot of people
+                        just either pull out their phones or sit down at their computer and start
+                        typing away to surf the web. Now think about what it would be like to surf
+                        the web and <strong>NOT</strong> be able to access certain content on a
+                        website or, be able to fill out an online form so your medications can
+                        arrive at your door on time...just because you are you. Let's go one step
+                        further for understanding shall we?
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
                         <strong>
-                            <code>
-                                <pre>Now imagine what it's like with other impairments :-(</pre>
-                            </code>
+                            <pre>
+                                Try using your imagination to put yourself in the shoes of someone
+                                with an impairment.
+                            </pre>
+                        </strong>
+                    </InstructionsParagraph>
+                    <InstructionsParagraph className="section-instructions">
+                        <strong>For example</strong>: squinting your eyes so you have a difficult
+                        time seeing the screen then...trying to use the internet while your eyes are
+                        squinted. It's a much different experience compared to how sighted people
+                        have to use the internet. You have gained a little bit of a crude
+                        understanding of what it's like to need visual assistive technologies
+                        (screenreaders) by individuals who have sight impairment.
+                    </InstructionsParagraph>
+                    <InstructionsParagraph className="section-instructions">
+                        <strong>Another example:</strong> grab a pencil/pen or straight edge and put
+                        it in your <strong>non-dominant hand</strong>. Using the pencil, try to
+                        within a website on screen. It's a much different experience compared to how
+                        non impaired people have to use the internet. You have now gained crude
+                        insight into how an individual with physical impairments may need to use the
+                        internet.
+                    </InstructionsParagraph>
+                    <InstructionsParagraph className="section-instructions">
+                        <strong>
+                            <pre>Now imagine what it's like with other impairments.</pre>
                         </strong>
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
@@ -939,6 +953,12 @@ const InstructionsContainer = styled.div`
                 padding: 0.5rem 2rem;
                 white-space: pre-wrap;
             }
+        }
+        & pre {
+            font-size: 2rem;
+            letter-spacing: 1.5px;
+            padding: 0.5rem 2rem;
+            white-space: pre-wrap;
         }
     }
 `;
