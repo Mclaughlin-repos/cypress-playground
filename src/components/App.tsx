@@ -937,6 +937,7 @@ const InstructionsContainer = styled.div`
                 font-size: 1.5rem;
                 letter-spacing: 1.5px;
                 padding: 0.5rem 2rem;
+                white-space: pre-wrap;
             }
         }
     }
