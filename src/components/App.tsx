@@ -8,6 +8,8 @@ import Legend from './foundations/legend/index';
 import Div from './containers/div/index';
 import Section from './containers/section/index';
 import Header from './containers/header/index';
+import UnorderedList from './containers/ul/index';
+import ListItem from './containers/li/index';
 import ColorPickerDynamic from './containers/color-picker-dynamic/index';
 import ColorPickerAuroraText from './containers/color-picker-aurora-text/index';
 import Button from './foundations/button/index';
@@ -151,7 +153,9 @@ const App = () => {
                 </H2>
                 <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
                     <InstructionsParagraph className="section-instructions">
-                        <strong>Welcome to the AXE Testing Playground!</strong>
+                        <strong>
+                            <pre>Welcome to the AXE Testing Playground!</pre>
+                        </strong>
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
                         Internet accessibility has come a long way over the past few years and,
@@ -162,16 +166,13 @@ const App = () => {
                         just either pull out their phones or sit down at their computer and start
                         typing away to surf the web. Now think about what it would be like to surf
                         the web and <strong>NOT</strong> be able to access certain content on a
-                        website or, be able to fill out an online form so your medications can
-                        arrive at your door on time...just because you are you. Let's go one step
-                        further for understanding shall we?
+                        website or, <strong>NOT</strong> be able to fill out an online form so your
+                        medications can arrive at your door on time...just because you are you.
+                        Let's go one step further for understanding shall we?
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
                         <strong>
-                            <pre>
-                                Try using your imagination to put yourself in the shoes of someone
-                                with an impairment.
-                            </pre>
+                            <pre>Use your imagination to put yourself in someone else's shoes.</pre>
                         </strong>
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
@@ -192,50 +193,68 @@ const App = () => {
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
                         <strong>
-                            <pre>Now imagine what it's like with other impairments.</pre>
+                            <pre>Now imagine what it's like for people with other impairments.</pre>
                         </strong>
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
-                        For an <strong>engineer/ developer/ qa</strong> to be able to evaluate their
-                        current work to assess it's accessibility score, there are new automation
-                        and testing technologies that can be used to produce an{' '}
-                        <strong>accessible internet presence</strong>.
+                        Engineers, developers and quality assurance engineers have to be able to
+                        evaluate their current work to assess how accessible their product is. Now,
+                        there are new automation and testing technologies that can be used to help
+                        produce an accessible internet presence.
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
-                        <strong>Why did I created this application repo?</strong>
-                        <br /> To provide an avenue for individuals to learn how to write{' '}
+                        <strong>
+                            <pre>Why I created this application repo.</pre>
+                        </strong>
+                    </InstructionsParagraph>
+                    <InstructionsParagraph>
+                        To provide an avenue for individuals to learn how to write{' '}
                         <strong>Cypress tests</strong> while learning how to use:{' '}
                         <strong>AXE-CORE</strong>, <strong>a11y-rule</strong> npm package and{' '}
                         <strong>pa11y</strong>.
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
-                        <strong>This repo is designed and developed so you can:</strong>
-                        <br /> Use the provided component to create your own{' '}
-                        <strong>Cypress tests</strong>. <br />
-                        Write <strong>custom components</strong> to test to detect accessibility
-                        issues within your test components. <br />
-                        Create new <strong>composed components</strong> from the provided components
-                        to test for accessibility. <br /> Test the{' '}
-                        <strong>whole application</strong> end to end to learn more about
-                        application accessibility. <br />
-                        Create new <strong>mini-webapps</strong> and <strong>micro-sites</strong>{' '}
-                        from the provided components to test for whole{' '}
-                        <strong>application accessibility</strong>. <br />
-                        Finally, to <strong>challenge yourself</strong> by doing{' '}
-                        <strong>exercises</strong> to solidify your knowledge base.
+                        This repo is designed and developed so you can:
+                        <UnorderedList id="" className="" dataCy="">
+                            <ListItem id="" className="" dataCy="">
+                                Use the provided component to create your own{' '}
+                                <strong>Cypress tests</strong>
+                            </ListItem>
+                            <ListItem id="" className="" dataCy="">
+                                Write <strong>custom components</strong> to test to detect
+                                accessibility issues within your test components.
+                            </ListItem>
+                            <ListItem id="" className="" dataCy="">
+                                Create new <strong>composed components</strong> from the provided
+                                components to test for accessibility.
+                            </ListItem>
+                            <ListItem id="" className="" dataCy="">
+                                Test the <strong>whole application</strong> end to end to learn more
+                                about application accessibility.
+                            </ListItem>
+                            <ListItem id="" className="" dataCy="">
+                                Create new <strong>mini-webapps</strong> and{' '}
+                                <strong>micro-sites</strong> from the provided components to test
+                                for whole <strong>application accessibility.</strong>
+                            </ListItem>
+                            <ListItem id="" className="" dataCy="">
+                                Finally, to <strong>challenge yourself</strong> by doing{' '}
+                                <strong>exercises</strong> to solidify your knowledge base.
+                            </ListItem>
+                        </UnorderedList>
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
-                        At the end of each section there are links to resources and a challenge, so
-                        don't forget to take a look.
+                        <strong>
+                            <pre>
+                                At the end of each section there are links to resources and a
+                                challenge, so don't forget to take a look.
+                            </pre>
+                        </strong>
                     </InstructionsParagraph>
                     <Target id="forms-target" ref={formRef} />
                     <InstructionsParagraph className="section-instructions">
                         <strong>
-                            <code>
-                                <pre>
-                                    Follow the instructions within each section and...Get to It!
-                                </pre>
-                            </code>
+                            <pre>Follow the instructions within each section and...Get to It!</pre>
                         </strong>
                     </InstructionsParagraph>
                 </InstructionsContainer>
