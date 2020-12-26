@@ -21,11 +21,13 @@ import H5 from './foundations/h5/index';
 import H6 from './foundations/h6/index';
 import Link from './foundations/link/index';
 import TextLink from './foundations/text-link/index';
+import InfoLink from './foundations/info-link/index';
 import LearnIcon from '-!svg-react-loader?name=Icon!../../Icons/mind.svg';
 import SolutionIcon from '-!svg-react-loader?name=Icon!../../Icons/solution.svg';
 import InnovationIcon from '-!svg-react-loader?name=Icon!../../Icons/lightbulb-gear.svg';
 import IdeaIcon from '-!svg-react-loader?name=Icon!../../Icons/idea-lightbulb.svg';
 import ChallengeIcon from '-!svg-react-loader?name=Icon!../../Icons/book.svg';
+import ResourcesIcon from '-!svg-react-loader?name=Icon!../../Icons/closed-book.svg';
 import ButtonIconDropdown from './foundations/button-icon-dropdown/index';
 
 const App = () => {
@@ -34,6 +36,7 @@ const App = () => {
     const contrastRef = useRef(null);
     const fontSizeRef = useRef(null);
     const introRef = useRef(null);
+    const referencesRef = useRef(null);
     const handleScroll = () => {
         formRef.current.scrollIntoView({ behavior: 'smooth' });
     };
@@ -48,6 +51,9 @@ const App = () => {
     };
     const handleScrollIntro = () => {
         introRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+    const handleScrollReference = () => {
+        referencesRef.current.scrollIntoView({ behavior: 'smooth' });
     };
     return (
         <AppContainer>
@@ -108,6 +114,15 @@ const App = () => {
                     >
                         <SolutionIcon />
                     </TextLink>
+                    <TextLink
+                        id="link-1"
+                        title="link to references"
+                        className="references-reference-link"
+                        linkText="Reference"
+                        onClick={handleScrollReference}
+                    >
+                        <SolutionIcon />
+                    </TextLink>
                 </NavContainer>
             </Header>
             <Div id="svg-div-container" className="Svg-div-container" dataCy="svg-div-container">
@@ -123,12 +138,6 @@ const App = () => {
                     <InnovationIcon />
                     <InstructionsParagraph>Innovate an Idea</InstructionsParagraph>
                 </SectionLogo>
-            </Div>
-            <Div
-                id="svg-div-container-2"
-                className="Svg-div-container svg-div-second-container"
-                dataCy="svg-div-container-2"
-            >
                 <SectionLogo id="understand-logo" className="section-logo Understand-logo">
                     <IdeaIcon />
                     <InstructionsParagraph>Understand a Topic</InstructionsParagraph>
@@ -137,8 +146,12 @@ const App = () => {
                     <ChallengeIcon />
                     <InstructionsParagraph>Complete a Challenge</InstructionsParagraph>
                 </SectionLogo>
-                <Target id="introduction-target" ref={introRef} />
+                <SectionLogo id="challenge-logo" className="section-logo challenge-logo">
+                    <ResourcesIcon />
+                    <InstructionsParagraph>See Other Resources</InstructionsParagraph>
+                </SectionLogo>
             </Div>
+            <Target id="intro-target" ref={introRef} />
             <Section
                 id="introduction-section"
                 className="Introduction-section"
@@ -889,6 +902,7 @@ const App = () => {
                         </H6>
                     </ColorPickerAuroraText>
                 </ColorPickerDynamic>
+                <Target id="reference-target" ref={referencesRef} />
                 <LinkContainer className="font-color-contrast-ratio-link-container">
                     <Link
                         id="link-1"
@@ -930,6 +944,118 @@ const App = () => {
                     </Link>
                 </LinkContainer>
             </Section>
+            <Section
+                id="references-section"
+                className="References-section"
+                dataCy="references-section"
+            >
+                <Header
+                    id="header-references-section"
+                    className="Header-references-section"
+                    dataCy="header-references-section"
+                >
+                    <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
+                        <ButtonIconDropdown
+                            id="form-exercise-learn-button"
+                            className="learn-button form-exercise-learn-button"
+                            headingChildren={'Why is this important'}
+                        >
+                            <InstructionsContainer>
+                                <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                    Designing and developing for an <strong>accessible web</strong>{' '}
+                                    presence is an extremely important philosophy for creating web
+                                    and mobile experiences that everyone can use. This list of
+                                    references can give you a good introduction into the world of
+                                    accessible web.
+                                </InstructionsParagraph>
+                                <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                    This list consists of all of the reference links I used to
+                                    create this repo AND extra links for your own research. Use this
+                                    research to embark on the final challenge listed below if you so
+                                    choose.
+                                </InstructionsParagraph>
+                            </InstructionsContainer>
+                        </ButtonIconDropdown>
+                        Extra References
+                    </H1>
+                </Header>
+                <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
+                    <strong>
+                        <pre>
+                            Take a look at the references below...then look at the final challenge.
+                        </pre>
+                    </strong>
+                </InstructionsContainer>
+
+                <LinkContainer className="references-link-container">
+                    <InfoLink
+                        id="link-1"
+                        href="https://www.w3.org/WAI/tutorials/forms/"
+                        messageChildren={
+                            'Go to w3.org to learn more about forms and how you can make them accessible.'
+                        }
+                        title="Go to w3.org to learn more about forms and how you can make them accessible."
+                        className="references-reference-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://webaim.org/techniques/semanticstructure/#nature"
+                        messageChildren={
+                            'Go to WebAIM to learn more about how to use correct DOM structure to make your web presence accessible.'
+                        }
+                        title="Go to WebAIM to learn more about how to use correct DOM structure to make your web presence accessible."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://webaim.org/articles/contrast/"
+                        messageChildren={
+                            'Go to WebAIM to learn more about how proper color contrast ratio to make your web presence accessible.'
+                        }
+                        title="Go to WebAIM to learn more about how proper color contrast ratio to make your web presence accessible."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://webaim.org/techniques/fonts/"
+                        messageChildren={
+                            'Go to WebAIM to learn more about how Typefaces and Fonts can be used to make your web presence accessible.'
+                        }
+                        title="Go to WebAIM to learn more about how Typefaces and Fonts can be used to make your web presence accessible."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://webaim.org/techniques/textlayout/"
+                        messageChildren={
+                            'Go to WebAIM to learn more about how Text Layout can be used to make your web presence accessible.'
+                        }
+                        title="Go to WebAIM to learn more about how Text Layout can be used to make your web presence accessible."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://webaim.org/resources/contrastchecker/"
+                        messageChildren={
+                            'Go to WebAIM to learn more about how to use color contrast checkers to make your web presence accessible.'
+                        }
+                        title="Go to WebAIM to learn more about how to use color contrast checkers to make your web presence accessible."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                </LinkContainer>
+            </Section>
         </AppContainer>
     );
 };
@@ -948,7 +1074,7 @@ const NavContainer = styled.nav`
     justify-content: space-evenly;
     background-color: #0c2e5e;
     padding: 1rem 0;
-    min-width: 39rem;
+    min-width: 45rem;
 `;
 
 const LinkContainer = styled.div`
@@ -1074,7 +1200,8 @@ const AppContainer = styled.section`
     .Heading-order-section,
     .Form-section,
     .Introduction-section,
-    .Color-contrast-font-size-section {
+    .Color-contrast-font-size-section,
+    .References-section {
         border: 2px solid #061831;
         background-color: #0c2e5e;
         padding: 1rem 1.5rem 2rem;
@@ -1097,14 +1224,17 @@ const AppContainer = styled.section`
         }
     }
     & .Svg-div-container {
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        max-width: 70rem;
+        width: fit-content;
         margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 20rem);
+        grid-template-rows: repeat(2, 13rem);
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
         & .section-logo {
             width: 17rem;
             height: 10rem;
-            margin: 1rem;
+            margin: auto;
             display: flex;
             flex-flow: column;
             padding: 1rem;
@@ -1116,9 +1246,6 @@ const AppContainer = styled.section`
                 color: #ff581f;
             }
         }
-    }
-    & .svg-div-second-container {
-        max-width: 50rem;
     }
     & .Introduction-section {
         background-color: #051830;
@@ -1383,6 +1510,45 @@ const AppContainer = styled.section`
 
             & .color-picker-container {
                 box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+    & .References-section {
+        & .Header-references-section {
+            font-size: 1.75rem;
+            margin: 0 0 1rem 0;
+            padding: 0;
+
+            & .Heading-2 {
+                margin: 0;
+                padding: 0;
+                color: #ffffff;
+                letter-spacing: 0.5px;
+            }
+        }
+        & .references-link-container {
+            background-color: #082247;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            border-radius: 0.25rem;
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(2, auto);
+            column-gap: 1.5rem;
+            row-gap: 1.5rem;
+            & .Link-parent-container {
+                margin: 0;
+            }
+        }
+        & .Heading-order-container-div {
+            padding: 1rem 1.5rem;
+            border-radius: 0.25rem;
+            background-color: #082347;
+            margin: 2rem 0;
+            & .Headings-container-div {
+                background-color: #e6e6e6;
+                border-radius: 0.25rem;
+                padding: 0 1.5rem;
             }
         }
     }
