@@ -990,6 +990,17 @@ const App = () => {
                 <LinkContainer className="references-link-container">
                     <InfoLink
                         id="link-1"
+                        href="https://www.w3.org/WAI/test-evaluate/preliminary/"
+                        messageChildren={
+                            'Go to w3.org to learn more about doing a preliminary checklist for accessibility.'
+                        }
+                        title="Go to w3.org to learn more about doing a preliminary checklist for accessibility."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
                         href="https://www.w3.org/WAI/tutorials/forms/"
                         messageChildren={
                             'Go to w3.org to learn more about forms and how you can make them accessible.'
@@ -1050,6 +1061,191 @@ const App = () => {
                             'Go to WebAIM to learn more about how to use color contrast checkers to make your web presence accessible.'
                         }
                         title="Go to WebAIM to learn more about how to use color contrast checkers to make your web presence accessible."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://webaim.org/projects/screenreadersurvey8/"
+                        messageChildren={
+                            'Go to WebAIM to learn more about one of their screen reader surveys.'
+                        }
+                        title="Go to WebAIM to learn more about one of their screen reader surveys."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://plewis.pages.corp.indeed.com/a11y-checklists/"
+                        messageChildren={
+                            "Go to Indeed's accesibility checklist to make your web presence accessible."
+                        }
+                        title="Go to Indeed's accesibility checklist to make your web presence accessible."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://docs.google.com/presentation/d/116f0Up83qDONgrN_62sSxXRNnoE3A-BWCLsR2F2-Aag/edit#slide=id.g80d03e662f_0_175"
+                        messageChildren={
+                            "Go to Indeed's WCAG 2.1 training slide deck to learn more about Indeed's philosophy on accessibility."
+                        }
+                        title="Go to Indeed's WCAG 2.1 training slide deck to learn more about Indeed's philosophy on accessibility."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://wiki.indeed.com/pages/viewpage.action?spaceKey=a11y&title=Accessibility+FAQ"
+                        messageChildren={
+                            "Go to Indeed's Accessibility Frequently Asked Questions wiki page in confluence."
+                        }
+                        title="Go to Indeed's Accessibility Frequently Asked Questions wiki page in confluence."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://wiki.indeed.com/display/a11y/Accessibility+testing+with+axe-core"
+                        messageChildren={
+                            "Go to Indeed's Accessibility testing with axe-core wiki page in confluence."
+                        }
+                        title="Go to Indeed's Accessibility testing with axe-core wiki page in confluence."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://wiki.indeed.com/display/a11y/DEG+Accessibility"
+                        messageChildren={
+                            "Go to Indeed's Delivery Engineering Accessibility Hub wiki page in confluence."
+                        }
+                        title="Go to Indeed's Delivery Engineering Accessibility Hub wiki page in confluence."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://openbase.io/js/cypress-axe/documentation"
+                        messageChildren={
+                            'Go to openbase and read about cypress-axe and axe-core install and implementation docs.'
+                        }
+                        title="Go to openbase and read about cypress-axe and axe-core install and implementation docs."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://blog.sapegin.me/til/testing/detecting-accessibility-issues-on-ci-with-cypress-axe/"
+                        messageChildren={
+                            "Go to Artem Sapegin's blog and read about cypress-axe/ axe-core and how to detect and run the tests within the GUI."
+                        }
+                        title="Go to Artem Sapegin's blog and read about cypress-axe/ axe-core and how to detect and run the tests within the GUI."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://vanslaars.io/blog/introducing-cypress-axe/"
+                        messageChildren={
+                            "Go to Andy Van Slaars's blog and read an introduction to cypress-axe."
+                        }
+                        title="Go to Andy Van Slaars's blog and read an introduction to cypress-axe."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://inclusive-components.design/"
+                        messageChildren={
+                            'Go to the Inclusive Components blog and read more about accessibility and components.'
+                        }
+                        title="Go to the Inclusive Components blog and read more about accessibility and components."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://www.sitepoint.com/automated-accessibility-checking-with-axe/"
+                        messageChildren={
+                            'Go to Sitepoint blog and read more about automated accessibility checking with axe.'
+                        }
+                        title="Go to Sitepoint blog and read more about automated accessibility checking with axe."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://timdeschryver.dev/blog/setting-up-cypress-with-axe-for-accessibility"
+                        messageChildren={
+                            "Go to Tim Deschryver's blog and read more about setting up Cypress with AXE for accessibility."
+                        }
+                        title="Go to Tim Deschryver's blog and read more about setting up Cypress with AXE for accessibility."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://developer.aliyun.com/mirror/npm/package/eslint-plugin-jsx-a11y"
+                        messageChildren={
+                            'Go learn about eslint-plugin-jsx-a11y static AST checker for accessibility rules on JSX elements.'
+                        }
+                        title="Go learn about eslint-plugin-jsx-a11y static AST checker for accessibility rules on JSX elements."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md?spm=a2c6h.14275010.0.0.774e645c3iG0CN&file=aria-role.md"
+                        messageChildren={'Go to the GitHub repo about eslint-plugin-jsx-a11y.'}
+                        title="Go to the GitHub repo about eslint-plugin-jsx-a11y."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://reactjs.org/docs/accessibility.html"
+                        messageChildren={
+                            'Go to the ReactJs website to learn about how they accomodate for accessibility.'
+                        }
+                        title="Go to the ReactJs website to learn about how they accomodate for accessibility."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://github.com/dequelabs/axe-core"
+                        messageChildren={
+                            'Go to the deque labs GitHub repo to learn about axe-core.'
+                        }
+                        title="Go to the deque labs GitHub repo to learn about axe-core."
+                        className="references-link"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell"
+                        messageChildren={
+                            'Go to Cypress.io to learn everything you need to know about Cypress.  The docs are exstensive and always updated with current info. :-)'
+                        }
+                        title="Go to Cypress.io to learn everything you need to know about Cypress.  The docs are exstensive and always updated with current info."
                         className="references-link"
                     >
                         <ResourcesIcon />
