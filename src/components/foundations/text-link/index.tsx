@@ -43,7 +43,7 @@ const LinkContainer = styled.div`
     justify-content: flex-start;
     border-radius: 0.25rem;
     transition: 400ms ease-in-out;
-    width: 5.5rem;
+    width: 5.75rem;
     height: 5rem;
     overflow: hidden;
 
