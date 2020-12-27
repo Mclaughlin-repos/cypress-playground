@@ -62,12 +62,18 @@ const App = () => {
                 className="App-header-container"
                 dataCy="app-header-container"
             >
-                <Div id="logo-container" className="Logo-container" dataCy="logo-container">
-                    <LearnIcon />
+                <Div
+                    id="logo-title-container"
+                    className="Logo-title-container"
+                    dataCy="logo-title-container"
+                >
+                    <Div id="logo-container" className="Logo-container" dataCy="logo-container">
+                        <LearnIcon />
+                    </Div>
+                    <H1 id="app-heading-1" className="App-heading-1" dataCy="app-heading-1">
+                        AXE Testing Playground
+                    </H1>
                 </Div>
-                <H1 id="app-heading-1" className="App-heading-1" dataCy="app-heading-1">
-                    AXE Testing Playground
-                </H1>
                 <NavContainer className="nav-links-container">
                     <TextLink
                         id="link-1"
@@ -160,10 +166,8 @@ const App = () => {
                         <InstructionsParagraph>See Other Resources</InstructionsParagraph>
                     </SectionLogo>
                 </Div>
-                
                 <Target id="intro-target" ref={introRef} />
             </Div>
-            
             <Section
                 id="introduction-section"
                 className="Introduction-section"
@@ -174,42 +178,9 @@ const App = () => {
                     className="section-heading Introduction-heading  heading-2"
                     dataCy="introduction-heading"
                 >
-                    <ButtonIconDropdown
-                        id="form-exercise-learn-button"
-                        className="learn-button form-exercise-learn-button"
-                        headingChildren={'Why is this important?'}
-                    >
-                        <InstructionsContainer>
-                            <InstructionsParagraph className="form-learn-button-instructions">
-                                Forms can be visually and cognitively complex and challenging to
-                                use. Accessible forms are easier to use for everyone, including
-                                people with disabilities.
-                            </InstructionsParagraph>
-                            <InstructionsParagraph className="form-learn-button-instructions">
-                                <strong>People with cognitive disablities: </strong>
-                                can better understand the form and how to complete it, as making
-                                forms accessible improves the layout structure, instructions, and
-                                feedback.
-                            </InstructionsParagraph>
-                            <InstructionsParagraph className="form-learn-button-instructions">
-                                <strong>People using speech input: </strong>
-                                can use the labels via voice commands to activate controls and move
-                                the focus to the fields that they have to complete.
-                            </InstructionsParagraph>
-                            <InstructionsParagraph className="form-learn-button-instructions">
-                                <strong>People with limited dexterity: </strong>
-                                benefit from large clickable areas that include the labels,
-                                especially for smaller controls, such as radio buttons and
-                                checkboxes.
-                            </InstructionsParagraph>
-                            <InstructionsParagraph className="form-learn-button-instructions">
-                                <strong>People using screen readers: </strong>
-                                can identify and understand form controls more easily because they
-                                are associated with labels, field sets, and other structural
-                                elements.
-                            </InstructionsParagraph>
-                        </InstructionsContainer>
-                    </ButtonIconDropdown>{' '}
+                    <Div id="logo-container" className="Logo-container" dataCy="logo-container">
+                        <LearnIcon />
+                    </Div>
                     Introduction
                 </H2>
                 <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
@@ -218,7 +189,7 @@ const App = () => {
                             <pre>Welcome to the AXE Testing Playground!</pre>
                         </strong>
                     </InstructionsParagraph>
-                    <InstructionsParagraph className="section-instructions">
+                    <InstructionsParagraph className="section-instructions section-instructions-paragraph">
                         Internet accessibility has come a long way over the past few years and,
                         should be an ever present necessity for the population who require
                         assistance from other avenues to use for websites, applications and internet
@@ -236,7 +207,7 @@ const App = () => {
                             <pre>Use your imagination to put yourself in someone else's shoes.</pre>
                         </strong>
                     </InstructionsParagraph>
-                    <InstructionsParagraph className="section-instructions">
+                    <InstructionsParagraph className="section-instructions section-instructions-paragraph">
                         <strong>For example</strong>: squinting your eyes so you have a difficult
                         time seeing the screen then...trying to use the internet while your eyes are
                         squinted. It's a much different experience compared to how sighted people
@@ -244,7 +215,7 @@ const App = () => {
                         understanding of what it's like to need visual assistive technologies
                         (screenreaders) by individuals who have sight impairment.
                     </InstructionsParagraph>
-                    <InstructionsParagraph className="section-instructions">
+                    <InstructionsParagraph className="section-instructions section-instructions-paragraph">
                         <strong>Another example:</strong> grab a pencil/pen or straight edge and put
                         it in your <strong>non-dominant hand</strong>. Using the pencil, try to
                         within a website on screen. It's a much different experience compared to how
@@ -257,7 +228,7 @@ const App = () => {
                             <pre>Now imagine what it's like for people with other impairments.</pre>
                         </strong>
                     </InstructionsParagraph>
-                    <InstructionsParagraph className="section-instructions">
+                    <InstructionsParagraph className="section-instructions section-instructions-paragraph">
                         Engineers, developers and quality assurance engineers have to be able to
                         evaluate their current work to assess how accessible their product is. Now,
                         there are new automation and testing technologies that can be used to help
@@ -268,7 +239,7 @@ const App = () => {
                             <pre>Why I created this application repo.</pre>
                         </strong>
                     </InstructionsParagraph>
-                    <InstructionsParagraph>
+                    <InstructionsParagraph className="section-instructions section-instructions-paragraph">
                         To provide an avenue for individuals to learn how to write{' '}
                         <strong>Cypress tests</strong> while learning how to use:{' '}
                         <strong>AXE-CORE</strong>, <strong>a11y-rule</strong> npm package and{' '}
@@ -1258,8 +1229,10 @@ const App = () => {
                     </InfoLink>
                     <InfoLink
                         id="link-1"
-                        href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-role.md?spm=a2c6h.14275010.0.0.774e645c3iG0CN&file=aria-role.md"
-                        messageChildren={'Go to the GitHub repo about eslint-plugin-jsx-a11y.'}
+                        href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y"
+                        messageChildren={
+                            'Go to the GitHub repo about eslint-plugin-jsx-a11y rules and how to use them within an application.'
+                        }
                         title="Go to the GitHub repo about eslint-plugin-jsx-a11y."
                         className="references-link"
                     >
@@ -1346,7 +1319,7 @@ const InstructionsContainer = styled.div`
         & pre {
             font-size: 2rem;
             letter-spacing: 1.5px;
-            padding: 0.5rem 2rem;
+            padding: 0.5rem 0;
             white-space: pre-wrap;
         }
     }
@@ -1378,10 +1351,9 @@ const AppContainer = styled.section`
     margin: 0;
     padding: 10rem 0 0 0;
     background-color: #092347;
-
     & .App-header-container {
         font-size: 1.5rem;
-        background-color: #0643ad;
+        background-color: #051930;
         margin: 0;
         padding: 0;
         display: flex;
@@ -1393,10 +1365,15 @@ const AppContainer = styled.section`
         width: 100%;
         border-bottom: 1px solid black;
         box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.5);
-        & .Logo-container {
+        & .Logo-title-container {
             display: flex;
             flex-flow: row nowrap;
             background-color: #030618;
+            margin: 0;
+        }
+        & .Logo-container {
+            display: flex;
+            flex-flow: row nowrap;
             padding: 1rem 1.5rem;
             margin: 0;
             & > svg {
@@ -1413,6 +1390,13 @@ const AppContainer = styled.section`
             align-items: center;
             width: 100%;
             background-color: #051930;
+        }
+        @media (max-width: 1250px) {
+            font-size: 1.25rem;
+        }
+        @media (max-width: 1195px) {
+            font-size: 1rem;
+            letter-spacing: 0.75px;
         }
     }
     & .Button-container {
@@ -1510,8 +1494,16 @@ const AppContainer = styled.section`
             background-color: #0c2e5e;
             border-radius: 0.25rem;
             margin: 0 0 1.5rem;
-            & .learn-button {
-                margin: 0 0.5rem 0 0;
+
+            & .Logo-container {
+                border-radius: 0.25rem;
+                background-color: #030c18;
+                width: 5rem;
+                height: 5rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 0 1rem 0 0;
             }
         }
     }
@@ -1780,6 +1772,13 @@ const AppContainer = styled.section`
                 letter-spacing: 0.5px;
             }
         }
+        & .Instructions-container {
+            & strong {
+                pre {
+                    padding: 0 1.25rem;
+                }
+            }
+        }
         & .references-link-container {
             background-color: #082247;
             margin: 1.5rem 0;
@@ -1792,6 +1791,14 @@ const AppContainer = styled.section`
             row-gap: 1.5rem;
             & .Link-parent-container {
                 margin: 0;
+            }
+            @media (max-width: 1530px) {
+                grid-template-columns: repeat(2, auto);
+                grid-template-rows: repeat(2, auto);
+            }
+            @media (max-width: 1050px) {
+                grid-template-columns: auto;
+                grid-template-rows: auto;
             }
         }
         & .Heading-order-container-div {
