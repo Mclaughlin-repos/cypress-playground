@@ -160,10 +160,8 @@ const App = () => {
                         <InstructionsParagraph>See Other Resources</InstructionsParagraph>
                     </SectionLogo>
                 </Div>
-                
                 <Target id="intro-target" ref={introRef} />
             </Div>
-            
             <Section
                 id="introduction-section"
                 className="Introduction-section"
