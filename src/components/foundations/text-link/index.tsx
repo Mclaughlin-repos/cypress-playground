@@ -43,9 +43,9 @@ const LinkContainer = styled.div`
     justify-content: flex-start;
     border-radius: 0.25rem;
     transition: 400ms ease-in-out;
-    width: 5.75rem;
-    height: 5rem;
-    overflow: hidden;
+    width: auto;
+    height: 5.5rem;
+    padding: 0 0.35rem;
 
     &:hover {
         border: 2px solid #ff581f;

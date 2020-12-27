@@ -124,7 +124,7 @@ const App = () => {
                         id="link-1"
                         title="link to references"
                         className="references-reference-link"
-                        linkText="Reference"
+                        linkText="References"
                         onClick={handleScrollReference}
                     >
                         <SolutionIcon />
@@ -1291,7 +1291,7 @@ const NavContainer = styled.nav`
     justify-content: space-evenly;
     background-color: #0c2e5e;
     padding: 1rem 0;
-    min-width: 45rem;
+    min-width: 49rem;
 `;
 
 const LinkContainer = styled.div`
