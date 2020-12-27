@@ -125,33 +125,45 @@ const App = () => {
                     </TextLink>
                 </NavContainer>
             </Header>
-            <Div id="svg-div-container" className="Svg-div-container" dataCy="svg-div-container">
-                <SectionLogo id="learn-logo" className="section-logo Learn-logo">
-                    <LearnIcon />
-                    <InstructionsParagraph>Why a Topic is Important</InstructionsParagraph>
-                </SectionLogo>
-                <SectionLogo id="explore-logo" className="section-logo Explore-logo">
-                    <SolutionIcon />
-                    <InstructionsParagraph>Explore a Topic</InstructionsParagraph>
-                </SectionLogo>
-                <SectionLogo id="innovate-logo" className="section-logo Innovate-logo">
-                    <InnovationIcon />
-                    <InstructionsParagraph>Innovate an Idea</InstructionsParagraph>
-                </SectionLogo>
-                <SectionLogo id="understand-logo" className="section-logo Understand-logo">
-                    <IdeaIcon />
-                    <InstructionsParagraph>Understand a Topic</InstructionsParagraph>
-                </SectionLogo>
-                <SectionLogo id="challenge-logo" className="section-logo challenge-logo">
-                    <ChallengeIcon />
-                    <InstructionsParagraph>Complete a Challenge</InstructionsParagraph>
-                </SectionLogo>
-                <SectionLogo id="challenge-logo" className="section-logo challenge-logo">
-                    <ResourcesIcon />
-                    <InstructionsParagraph>See Other Resources</InstructionsParagraph>
-                </SectionLogo>
+            <Div
+                id="svg-div-container-parent"
+                className="Svg-div-container-parent"
+                dataCy="svg-div-container-parent"
+            >
+                <Div
+                    id="svg-div-container"
+                    className="Svg-div-container"
+                    dataCy="svg-div-container"
+                >
+                    <SectionLogo id="learn-logo" className="section-logo Learn-logo">
+                        <LearnIcon />
+                        <InstructionsParagraph>Why a Topic is Important</InstructionsParagraph>
+                    </SectionLogo>
+                    <SectionLogo id="explore-logo" className="section-logo Explore-logo">
+                        <SolutionIcon />
+                        <InstructionsParagraph>Explore a Topic</InstructionsParagraph>
+                    </SectionLogo>
+                    <SectionLogo id="innovate-logo" className="section-logo Innovate-logo">
+                        <InnovationIcon />
+                        <InstructionsParagraph>Innovate an Idea</InstructionsParagraph>
+                    </SectionLogo>
+                    <SectionLogo id="understand-logo" className="section-logo Understand-logo">
+                        <IdeaIcon />
+                        <InstructionsParagraph>Understand a Topic</InstructionsParagraph>
+                    </SectionLogo>
+                    <SectionLogo id="challenge-logo" className="section-logo challenge-logo">
+                        <ChallengeIcon />
+                        <InstructionsParagraph>Complete a Challenge</InstructionsParagraph>
+                    </SectionLogo>
+                    <SectionLogo id="challenge-logo" className="section-logo challenge-logo">
+                        <ResourcesIcon />
+                        <InstructionsParagraph>See Other Resources</InstructionsParagraph>
+                    </SectionLogo>
+                </Div>
+                
+                <Target id="intro-target" ref={introRef} />
             </Div>
-            <Target id="intro-target" ref={introRef} />
+            
             <Section
                 id="introduction-section"
                 className="Introduction-section"
@@ -162,6 +174,42 @@ const App = () => {
                     className="section-heading Introduction-heading  heading-2"
                     dataCy="introduction-heading"
                 >
+                    <ButtonIconDropdown
+                        id="form-exercise-learn-button"
+                        className="learn-button form-exercise-learn-button"
+                        headingChildren={'Why is this important?'}
+                    >
+                        <InstructionsContainer>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                Forms can be visually and cognitively complex and challenging to
+                                use. Accessible forms are easier to use for everyone, including
+                                people with disabilities.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People with cognitive disablities: </strong>
+                                can better understand the form and how to complete it, as making
+                                forms accessible improves the layout structure, instructions, and
+                                feedback.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People using speech input: </strong>
+                                can use the labels via voice commands to activate controls and move
+                                the focus to the fields that they have to complete.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People with limited dexterity: </strong>
+                                benefit from large clickable areas that include the labels,
+                                especially for smaller controls, such as radio buttons and
+                                checkboxes.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People using screen readers: </strong>
+                                can identify and understand form controls more easily because they
+                                are associated with labels, field sets, and other structural
+                                elements.
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
+                    </ButtonIconDropdown>{' '}
                     Introduction
                 </H2>
                 <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
@@ -1419,14 +1467,23 @@ const AppContainer = styled.section`
             }
         }
     }
-    & .Svg-div-container {
+    & .Svg-div-container-parent {
+        padding: 1rem 1.5rem;
+        background-color: #051930;
         width: fit-content;
         margin: 0 auto;
+        border-radius: 0.25rem;
+    }
+    & .Svg-div-container {
+        width: fit-content;
         display: grid;
         grid-template-columns: repeat(3, 20rem);
         grid-template-rows: repeat(2, 13rem);
-        column-gap: 1.5rem;
-        row-gap: 1.5rem;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        padding: 1.5rem;
+        background-color: #0c2e5e;
+        border-radius: 0.25rem;
         & .section-logo {
             width: 17rem;
             height: 10rem;
@@ -1444,8 +1501,6 @@ const AppContainer = styled.section`
         }
     }
     & .Introduction-section {
-        background-color: #051830;
-        box-shadow: none;
         & .section-heading {
             font-size: 1.75rem;
             color: #ffffff;
@@ -1453,8 +1508,11 @@ const AppContainer = styled.section`
             flex-flow: row nowrap;
             align-items: center;
             background-color: #0c2e5e;
-            padding: 1rem 1.5rem;
             border-radius: 0.25rem;
+            margin: 0 0 1.5rem;
+            & .learn-button {
+                margin: 0 0.5rem 0 0;
+            }
         }
     }
     & .Color-contrast-container {
