@@ -1453,7 +1453,7 @@ const AppContainer = styled.section`
     }
     & .Svg-div-container-parent {
         padding: 1rem 1.5rem;
-        background-color: #051930;
+        /* background-color: #051930; */
         width: fit-content;
         margin: 0 auto;
         border-radius: 0.25rem;
