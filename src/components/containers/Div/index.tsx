@@ -7,9 +7,10 @@ const Div: React.FC<{
     id: string;
     children?: React.ReactNode;
     dataCy: string;
-}> = ({ id, dataCy, children, className }) => {
+    onClick?: () => void;
+}> = ({ id, dataCy, children, className, onClick }) => {
     return (
-        <DivContainer id={id} data-cy={dataCy} className={className}>
+        <DivContainer id={id} data-cy={dataCy} onClick={onClick} className={className}>
             {children}
         </DivContainer>
     );
