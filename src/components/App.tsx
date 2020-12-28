@@ -34,6 +34,7 @@ import ComputerWithCap from '-!svg-react-loader?name=Icon!../../Icons/computer-w
 import ButtonIconDropdown from './foundations/button-icon-dropdown/index';
 
 const App = () => {
+    const homeRef = useRef(null);
     const formRef = useRef(null);
     const headingsRef = useRef(null);
     const contrastRef = useRef(null);
@@ -43,6 +44,9 @@ const App = () => {
     const finalChallengeRef = useRef(null);
     const handleScroll = () => {
         formRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+    const handleHomeScroll = () => {
+        homeRef.current.scrollIntoView({ behavior: 'smooth' });
     };
     const handleScrollHeadings = () => {
         headingsRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -74,7 +78,12 @@ const App = () => {
                     className="Logo-title-container"
                     dataCy="logo-title-container"
                 >
-                    <Div id="logo-container" className="Logo-container" dataCy="logo-container">
+                    <Div
+                        id="logo-container"
+                        onClick={handleHomeScroll}
+                        className="Logo-container Home-logo-container"
+                        dataCy="logo-container"
+                    >
                         <LearnIcon />
                     </Div>
                     <H1 id="app-heading-1" className="App-heading-1" dataCy="app-heading-1">
@@ -147,6 +156,9 @@ const App = () => {
                     </TextLink>
                 </NavContainer>
             </Header>
+            <HomeTargetContainer>
+                <Target id="home-target" ref={homeRef} />
+            </HomeTargetContainer>
             <Div
                 id="svg-div-container-parent"
                 className="Svg-div-container-parent"
@@ -167,8 +179,10 @@ const App = () => {
                         allowFullScreen
                     ></iframe>
                 </Div>
-                <Target id="intro-target" ref={introRef} />
             </Div>
+            <IntroTargetContainer>
+                <Target id="intro-target" ref={introRef} />
+            </IntroTargetContainer>
             <Section
                 id="introduction-section"
                 className="Introduction-section"
@@ -1321,7 +1335,7 @@ const App = () => {
                 </Header>
                 <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
                     <strong>
-                        <pre>Here's your Final Challenge...good luck and do your best!</pre>
+                        <pre>Here's your Final Challenge so do your best and...have fun!</pre>
                     </strong>
                 </InstructionsContainer>
 
@@ -1376,6 +1390,12 @@ const App = () => {
         </AppContainer>
     );
 };
+const HomeTargetContainer = styled.div`
+    height: 10rem;
+`;
+const IntroTargetContainer = styled.div`
+    height: 8rem;
+`;
 
 const Target = styled.div`
     width: 0;
@@ -1434,22 +1454,11 @@ const InstructionsParagraph = styled.p`
     line-height: 1.3;
 `;
 
-const SectionLogo = styled.div`
-    margin: 0 1.5rem 0 0;
-    background-color: #030c19;
-    width: 5rem;
-    height: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-radius: 0.25rem;
-`;
-
 const AppContainer = styled.section`
     font-family: Helvetica, sans-serif;
     font-size: 1rem;
     margin: 0;
-    padding: 10rem 0 0 0;
+    padding: 0;
     background-color: #092347;
     & .App-header-container {
         font-size: 1.5rem;
@@ -1479,6 +1488,9 @@ const AppContainer = styled.section`
             & > svg {
                 width: 90px;
                 height: 90px;
+            }
+            &:hover {
+                cursor: pointer;
             }
         }
 
