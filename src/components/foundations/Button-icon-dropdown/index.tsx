@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import ButtonIcon from '../button-icon/index';
-import LearnIcon from '-!svg-react-loader?name=Icon!../../../../Icons/mind.svg';
+// import LearnIcon from '-!svg-react-loader?name=Icon!../../../../Icons/mind.svg';
 import CloseIcon from '-!svg-react-loader?name=Icon!../../../../Icons/cancel.svg';
 
 const ButtonDropdown: React.FC<{
     id: string;
     className?: string;
     children?: React.ReactNode;
+    iconChildren?: React.ReactNode;
     headingChildren: React.ReactNode;
     footerChildren?: React.ReactNode;
-}> = ({ id, className, children, headingChildren, footerChildren }) => {
+}> = ({ id, className, children, headingChildren, footerChildren, iconChildren }) => {
     const [state, setState] = useState(false);
     const openState = () => {
         setState(true);
@@ -29,7 +30,7 @@ const ButtonDropdown: React.FC<{
                 value="Learn more"
                 onClick={openState}
             >
-                <LearnIcon />
+                {iconChildren}
             </ButtonIcon>
             {state && (
                 <DropdownContainer

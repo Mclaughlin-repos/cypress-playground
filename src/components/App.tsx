@@ -27,7 +27,10 @@ import SolutionIcon from '-!svg-react-loader?name=Icon!../../Icons/solution.svg'
 import InnovationIcon from '-!svg-react-loader?name=Icon!../../Icons/lightbulb-gear.svg';
 import IdeaIcon from '-!svg-react-loader?name=Icon!../../Icons/idea-lightbulb.svg';
 import ChallengeIcon from '-!svg-react-loader?name=Icon!../../Icons/book.svg';
+import ChallengeIconLarge from '-!svg-react-loader?name=Icon!../../Icons/book-large.svg';
 import ResourcesIcon from '-!svg-react-loader?name=Icon!../../Icons/closed-book.svg';
+import OpenBookWithBulbIcon from '-!svg-react-loader?name=Icon!../../Icons/open-book-with-bulb.svg';
+import ComputerWithCap from '-!svg-react-loader?name=Icon!../../Icons/computer-with-cap.svg';
 import ButtonIconDropdown from './foundations/button-icon-dropdown/index';
 
 const App = () => {
@@ -37,6 +40,7 @@ const App = () => {
     const fontSizeRef = useRef(null);
     const introRef = useRef(null);
     const referencesRef = useRef(null);
+    const finalChallengeRef = useRef(null);
     const handleScroll = () => {
         formRef.current.scrollIntoView({ behavior: 'smooth' });
     };
@@ -54,6 +58,9 @@ const App = () => {
     };
     const handleScrollReference = () => {
         referencesRef.current.scrollIntoView({ behavior: 'smooth' });
+    };
+    const handleScrollFinalChallenge = () => {
+        finalChallengeRef.current.scrollIntoView({ behavior: 'smooth' });
     };
     return (
         <AppContainer>
@@ -82,7 +89,7 @@ const App = () => {
                         linkText="Intro"
                         onClick={handleScrollIntro}
                     >
-                        <SolutionIcon />
+                        <LearnIcon />
                     </TextLink>
                     <TextLink
                         id="link-1"
@@ -100,7 +107,7 @@ const App = () => {
                         linkText="Headings"
                         onClick={handleScrollHeadings}
                     >
-                        <SolutionIcon />
+                        <OpenBookWithBulbIcon />
                     </TextLink>
                     <TextLink
                         id="link-1"
@@ -109,7 +116,7 @@ const App = () => {
                         linkText="Contrast"
                         onClick={handleScrollContrast}
                     >
-                        <SolutionIcon />
+                        <InnovationIcon />
                     </TextLink>
                     <TextLink
                         id="link-1"
@@ -118,7 +125,7 @@ const App = () => {
                         linkText="Font Size"
                         onClick={handleScrollFontSizeContrast}
                     >
-                        <SolutionIcon />
+                        <IdeaIcon />
                     </TextLink>
                     <TextLink
                         id="link-1"
@@ -127,7 +134,16 @@ const App = () => {
                         linkText="References"
                         onClick={handleScrollReference}
                     >
-                        <SolutionIcon />
+                        <ResourcesIcon />
+                    </TextLink>
+                    <TextLink
+                        id="link-1"
+                        title="link to references"
+                        className="references-reference-link"
+                        linkText="Final Challenge"
+                        onClick={handleScrollFinalChallenge}
+                    >
+                        <ComputerWithCap />
                     </TextLink>
                 </NavContainer>
             </Header>
@@ -138,33 +154,18 @@ const App = () => {
             >
                 <Div
                     id="svg-div-container"
-                    className="Svg-div-container"
+                    className="Svg-div-container video-div-container"
                     dataCy="svg-div-container"
                 >
-                    <SectionLogo id="learn-logo" className="section-logo Learn-logo">
-                        <LearnIcon />
-                        <InstructionsParagraph>Why a Topic is Important</InstructionsParagraph>
-                    </SectionLogo>
-                    <SectionLogo id="explore-logo" className="section-logo Explore-logo">
-                        <SolutionIcon />
-                        <InstructionsParagraph>Explore a Topic</InstructionsParagraph>
-                    </SectionLogo>
-                    <SectionLogo id="innovate-logo" className="section-logo Innovate-logo">
-                        <InnovationIcon />
-                        <InstructionsParagraph>Innovate an Idea</InstructionsParagraph>
-                    </SectionLogo>
-                    <SectionLogo id="understand-logo" className="section-logo Understand-logo">
-                        <IdeaIcon />
-                        <InstructionsParagraph>Understand a Topic</InstructionsParagraph>
-                    </SectionLogo>
-                    <SectionLogo id="challenge-logo" className="section-logo challenge-logo">
-                        <ChallengeIcon />
-                        <InstructionsParagraph>Complete a Challenge</InstructionsParagraph>
-                    </SectionLogo>
-                    <SectionLogo id="challenge-logo" className="section-logo challenge-logo">
-                        <ResourcesIcon />
-                        <InstructionsParagraph>See Other Resources</InstructionsParagraph>
-                    </SectionLogo>
+                    <iframe
+                        src="https://player.vimeo.com/video/478353221"
+                        title="accessibility video by Rebecka W. Fagerberg"
+                        width="800"
+                        height="450"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen"
+                        allowFullScreen
+                    ></iframe>
                 </Div>
                 <Target id="intro-target" ref={introRef} />
             </Div>
@@ -278,15 +279,17 @@ const App = () => {
                     <InstructionsParagraph className="section-instructions">
                         <strong>
                             <pre>
-                                At the end of each section there are links to resources and a
-                                challenge, so don't forget to take a look.
+                                Hint: pay attention to the resource links and try the section
+                                challenges...
                             </pre>
                         </strong>
                     </InstructionsParagraph>
                     <Target id="forms-target" ref={formRef} />
                     <InstructionsParagraph className="section-instructions">
                         <strong>
-                            <pre>Follow the instructions within each section and...Get to It!</pre>
+                            <pre>
+                                Follow the instructions within each section and...Do your best!
+                            </pre>
                         </strong>
                     </InstructionsParagraph>
                 </InstructionsContainer>
@@ -306,6 +309,7 @@ const App = () => {
                             id="form-exercise-learn-button"
                             className="learn-button form-exercise-learn-button"
                             headingChildren={'Why is this important?'}
+                            iconChildren={<SolutionIcon />}
                         >
                             <InstructionsContainer>
                                 <InstructionsParagraph className="form-learn-button-instructions">
@@ -570,6 +574,7 @@ const App = () => {
                             id="heading-order-exercise-learn-button"
                             className="learn-button form-exercise-learn-button"
                             headingChildren={'Why is this important?'}
+                            iconChildren={<OpenBookWithBulbIcon />}
                         >
                             <InstructionsContainer>
                                 <InstructionsParagraph className="heading-order-learn-button-instructions">
@@ -698,6 +703,7 @@ const App = () => {
                             id="form-exercise-learn-button"
                             className="learn-button form-exercise-learn-button"
                             headingChildren={'Why is this important'}
+                            iconChildren={<InnovationIcon />}
                         >
                             <InstructionsContainer>
                                 <InstructionsParagraph className="heading-order-learn-button-instructions">
@@ -814,6 +820,7 @@ const App = () => {
                             id="color-contrast-exercise-learn-button"
                             className="learn-button color-contrast-exercise-learn-button"
                             headingChildren={'Why is this important?'}
+                            iconChildren={<IdeaIcon />}
                         >
                             <InstructionsContainer>
                                 <InstructionsParagraph className="heading-order-learn-button-instructions">
@@ -921,7 +928,7 @@ const App = () => {
                         </H6>
                     </ColorPickerAuroraText>
                 </ColorPickerDynamic>
-                <Target id="reference-target" ref={referencesRef} />
+                {/* <Target id="reference-target" ref={referencesRef} /> */}
                 <LinkContainer className="font-color-contrast-ratio-link-container">
                     <Link
                         id="link-1"
@@ -961,6 +968,7 @@ const App = () => {
                     >
                         <ChallengeIcon />
                     </Link>
+                    <Target id="reference-target" ref={referencesRef} />
                 </LinkContainer>
             </Section>
             <Section
@@ -978,6 +986,7 @@ const App = () => {
                             id="form-exercise-learn-button"
                             className="learn-button form-exercise-learn-button"
                             headingChildren={'Why is this important'}
+                            iconChildren={<ResourcesIcon />}
                         >
                             <InstructionsContainer>
                                 <InstructionsParagraph className="heading-order-learn-button-instructions">
@@ -1001,7 +1010,7 @@ const App = () => {
                 <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
                     <strong>
                         <pre>
-                            Take a look at the references below...then look at the final challenge.
+                            All of the references below were used to create this repo...take a look!
                         </pre>
                     </strong>
                 </InstructionsContainer>
@@ -1271,7 +1280,98 @@ const App = () => {
                     >
                         <ResourcesIcon />
                     </InfoLink>
+                    <Target id="final-challenge-target" ref={finalChallengeRef} />
                 </LinkContainer>
+            </Section>
+            <Section
+                id="final-challenge-section"
+                className="Final-challenge-section"
+                dataCy="final-challenge-section"
+            >
+                <Header
+                    id="header-final-challenge-section"
+                    className="Header-final-challenge-section"
+                    dataCy="header-final-challenge-section"
+                >
+                    <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
+                        <ButtonIconDropdown
+                            id="form-exercise-learn-button"
+                            className="learn-button form-exercise-learn-button"
+                            headingChildren={'Why is this important'}
+                            iconChildren={<ComputerWithCap />}
+                        >
+                            <InstructionsContainer>
+                                <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                    Designing and developing for an <strong>accessible web</strong>{' '}
+                                    presence is an extremely important philosophy for creating web
+                                    and mobile experiences that everyone can use. This list of
+                                    references can give you a good introduction into the world of
+                                    accessible web.
+                                </InstructionsParagraph>
+                                <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                    This list consists of all of the reference links I used to
+                                    create this repo AND extra links for your own research. Use this
+                                    research to embark on the final challenge listed below if you so
+                                    choose.
+                                </InstructionsParagraph>
+                            </InstructionsContainer>
+                        </ButtonIconDropdown>
+                        Final Challenge
+                    </H1>
+                </Header>
+                <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
+                    <strong>
+                        <pre>Here's your Final Challenge...good luck and do your best!</pre>
+                    </strong>
+                </InstructionsContainer>
+
+                <Div
+                    id="challenge-div-parent-container"
+                    className="Challenge-div-parent-container"
+                    dataCy="challenge-div-parent-container"
+                >
+                    <Div
+                        id="challenge-div-container"
+                        className="Challenge-div-container"
+                        dataCy="challenge-div-container"
+                    >
+                        <Div
+                            id="challenge-div-icons-container"
+                            className="Challenge-div-icons-container"
+                            dataCy="challenge-div-icons-container"
+                        >
+                            <ChallengeIconLarge />
+                        </Div>
+
+                        <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
+                            <InstructionsParagraph className="final-challenge-instructions">
+                                Throught your journey through this repo you have leared a deeper
+                                understanding of <strong>Accessible Web</strong> through learning
+                                about each section topic. You worked on section topic challenges to
+                                gain understanding related to how to create, and test components and
+                                websites using <strong>Cypress</strong>, <strong>AXE-Core</strong>,{' '}
+                                <strong>pa11y</strong> and <strong>pa11y-axe</strong>.{' '}
+                                <strong>Now</strong> that you have gained more insight into what it
+                                takes to create an <strong>Accessible Web</strong> presence on the
+                                internet, here is your challenge...should you choose to accept it.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="final-challenge-instructions">
+                                <strong>
+                                    <pre>Fix this Application...</pre>
+                                </strong>
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="final-challenge-instructions">
+                                This application was designed and developed to <strong>NOT</strong>{' '}
+                                satisfy <strong>Accessible Web</strong> compliance. I challenge you
+                                to take what you have learned and use your creativity to re-design
+                                and develop this application to make it successfully tested for an{' '}
+                                <strong>Accessible Web</strong>. I can't wait to see what you
+                                accomplish...<strong>do your best</strong> and...
+                                <strong>have fun</strong>!
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
+                    </Div>
+                </Div>
             </Section>
         </AppContainer>
     );
@@ -1291,7 +1391,7 @@ const NavContainer = styled.nav`
     justify-content: space-evenly;
     background-color: #0c2e5e;
     padding: 1rem 0;
-    min-width: 49rem;
+    min-width: 60rem;
 `;
 
 const LinkContainer = styled.div`
@@ -1429,6 +1529,7 @@ const AppContainer = styled.section`
     .Form-section,
     .Introduction-section,
     .Color-contrast-font-size-section,
+    .Final-challenge-section,
     .References-section {
         border: 2px solid #061831;
         background-color: #0c2e5e;
@@ -1453,36 +1554,15 @@ const AppContainer = styled.section`
     }
     & .Svg-div-container-parent {
         padding: 1rem 1.5rem;
-        /* background-color: #051930; */
         width: fit-content;
         margin: 0 auto;
         border-radius: 0.25rem;
     }
     & .Svg-div-container {
         width: fit-content;
-        display: grid;
-        grid-template-columns: repeat(3, 20rem);
-        grid-template-rows: repeat(2, 13rem);
-        column-gap: 1rem;
-        row-gap: 1rem;
         padding: 1.5rem;
         background-color: #0c2e5e;
         border-radius: 0.25rem;
-        & .section-logo {
-            width: 17rem;
-            height: 10rem;
-            margin: auto;
-            display: flex;
-            flex-flow: column;
-            padding: 1rem;
-            & > svg {
-                width: 80px;
-                height: 80px;
-            }
-            & > p {
-                color: #ff581f;
-            }
-        }
     }
     & .Introduction-section {
         & .section-heading {
@@ -1810,6 +1890,69 @@ const AppContainer = styled.section`
                 background-color: #e6e6e6;
                 border-radius: 0.25rem;
                 padding: 0 1.5rem;
+            }
+        }
+    }
+    & .Final-challenge-section {
+        & .Header-final-challenge-section {
+            font-size: 1.75rem;
+            margin: 0 0 1rem 0;
+            padding: 0;
+
+            & .Heading-1 {
+                margin: 0;
+                padding: 0;
+                color: #ffffff;
+                letter-spacing: 0.5px;
+            }
+        }
+        & .references-link-container {
+            background-color: #082247;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            border-radius: 0.25rem;
+            & .Link-parent-container {
+                margin: 0;
+            }
+            @media (max-width: 1530px) {
+            }
+            @media (max-width: 1050px) {
+            }
+        }
+        & .Challenge-div-parent-container {
+            background-color: #092247;
+            padding: 0 1.5rem;
+        }
+        & .Challenge-div-container {
+            background-color: #0c2e5e;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            border: 2px solid #061831;
+            border-radius: 0.25rem;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
+            & .Challenge-div-icons-container {
+                background-color: #030c18;
+                border-radius: 0.25rem;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-around;
+                height: 10rem;
+                width: 35rem;
+                margin: 0 2rem 0 0.5rem;
+                & svg {
+                    padding: 1.5rem;
+                }
+            }
+        }
+        & .Instructions-container {
+            & strong {
+                pre {
+                    padding: 0 1.25rem;
+                }
             }
         }
     }
