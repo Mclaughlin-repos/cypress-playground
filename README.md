@@ -82,7 +82,7 @@ cd <directory where you stored the repo>/cypress-playground
 ```
 
 ```
-npm install
+sudo npm install      (tempororary...will update)
 ```
 
 ## NPM script Commands - (After following the above steps...)
