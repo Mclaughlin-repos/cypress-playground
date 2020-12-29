@@ -19,9 +19,11 @@ import H3 from './foundations/h3/index';
 import H4 from './foundations/h4/index';
 import H5 from './foundations/h5/index';
 import H6 from './foundations/h6/index';
-import Link from './foundations/link/index';
+import DynamicLink from './foundations/link-dynamic/index';
+import DynamicLinkText from './foundations/link-dynamic-text/index';
 import TextLink from './foundations/text-link/index';
 import InfoLink from './foundations/info-link/index';
+import VisibleInfoLink from './foundations/link-visible-info/index';
 import LearnIcon from '-!svg-react-loader?name=Icon!../../Icons/mind.svg';
 import SolutionIcon from '-!svg-react-loader?name=Icon!../../Icons/solution.svg';
 import InnovationIcon from '-!svg-react-loader?name=Icon!../../Icons/lightbulb-gear.svg';
@@ -172,8 +174,17 @@ const App = () => {
                     <iframe
                         src="https://player.vimeo.com/video/478353221"
                         title="accessibility video by Rebecka W. Fagerberg"
-                        width="800"
-                        height="450"
+                        width="500"
+                        height="351"
+                        frameBorder="0"
+                        allow="autoplay; fullscreen"
+                        allowFullScreen
+                    ></iframe>
+                    <iframe
+                        src="https://player.vimeo.com/video/416950233"
+                        title="accessibility video by Nadeen Da'na"
+                        width="500"
+                        height="351"
                         frameBorder="0"
                         allow="autoplay; fullscreen"
                         allowFullScreen
@@ -400,7 +411,7 @@ const App = () => {
                                 id="name-label-container"
                                 className="Name-label-container"
                                 dataCy="name-label-container"
-                                htmlFor="name-input"
+                                htmlFor=""
                             >
                                 Name
                             </LabelContainer>
@@ -416,7 +427,7 @@ const App = () => {
                                 id="address-label-container"
                                 className="Address-label-container"
                                 dataCy="address-label-container"
-                                htmlFor="address-input"
+                                htmlFor=""
                             >
                                 Address
                             </LabelContainer>
@@ -448,7 +459,7 @@ const App = () => {
                                 id="city-label-container"
                                 className="city-label-container"
                                 dataCy="city-label-container"
-                                htmlFor="city-input"
+                                htmlFor=""
                             >
                                 City
                             </LabelContainer>
@@ -468,19 +479,14 @@ const App = () => {
                             >
                                 State
                             </LabelContainer>
-                            <Input
-                                id="state-input"
-                                className="state-input"
-                                type="text"
-                                dataCy="state-input"
-                            />
+                            <Input id="" className="state-input" type="text" dataCy="state-input" />
                         </Div>
                         <Div id="zip-div" className="Div Zip-div" dataCy="zip-div">
                             <LabelContainer
                                 id="zip-label-container"
                                 className="zip-label-container"
                                 dataCy="zip-label-container"
-                                htmlFor="zip-input"
+                                htmlFor=""
                             >
                                 Zip Code
                             </LabelContainer>
@@ -517,7 +523,7 @@ const App = () => {
                                 Email
                             </LabelContainer>
                             <Input
-                                id="email-input"
+                                id=""
                                 className="Email-input"
                                 type="email"
                                 dataCy="email-input"
@@ -553,25 +559,30 @@ const App = () => {
                 </Form>
                 <Target id="headings-target" ref={headingsRef} />
                 <LinkContainer className="forms-link-container">
-                    <Link
+                    <VisibleInfoLink
                         id="link-1"
                         href="https://www.w3.org/WAI/tutorials/forms/"
-                        messageChildren={'Go to w3.org to learn more about accessible forms'}
-                        title="link to accessible forms references"
+                        messageChildren={
+                            'Go to w3.org to learn more about accessible forms and how to create a form that is usable for all individuals.'
+                        }
+                        title="Click this link to go to w3.org to learn more about accessible forms and how to create a form that is usable for all individuals."
                         className="form-reference-link"
                     >
                         <SolutionIcon />
-                    </Link>
-                    <Link
-                        id="link-1"
-                        href="https://www.w3.org/WAI/tutorials/forms/"
-                        messageChildren={'Challenge: Try and fix this form to make it accessible'}
-                        title="link to accessible forms challenge practice"
-                        className="forms-challenge-link"
-                    >
-                        <ChallengeIcon />
-                    </Link>
+                    </VisibleInfoLink>
                 </LinkContainer>
+                <DynamicLinkText
+                    id="link-1"
+                    href="javascript:void(0)"
+                    messageChildren={
+                        'This form does NOT pass WCAG 2.1 AA compliance. There are multiple issues that are related to this form that need to be addressed. Fix this form and make it pass WCAG 2.1 AA guidelines.'
+                    }
+                    title="Challenge: This form does NOT pass WCAG 2.1 AA compliance. There are multiple issues that are related to this form that need to be addressed. Fix this form and make it pass WCAG 2.1 AA guidelines."
+                    className="forms-challenge-link"
+                    linkText="Challenge"
+                >
+                    <ChallengeIcon />
+                </DynamicLinkText>
             </Section>
             <Section
                 id="heading-order-section"
@@ -682,25 +693,41 @@ const App = () => {
                 </Div>
                 <Target id="contrast-target" ref={contrastRef} />
                 <LinkContainer className="heading-order-link-container">
-                    <Link
+                    <VisibleInfoLink
                         id="link-1"
                         href="https://webaim.org/techniques/semanticstructure/#nature"
-                        messageChildren={'Go to w3.org to learn more about semantic DOM structure'}
-                        title="link to webaim semantic structure docs"
+                        messageChildren={
+                            'Go to WebAIM to learn more about semantic DOM structure and how correct DOM structure can mitigate accessibility errors.'
+                        }
+                        title="Click this link to go to WebAIM to learn more about semantic DOM structure and how correct DOM structure can mitigate accessibility errors."
                         className="heading-order-reference-link"
                     >
                         <SolutionIcon />
-                    </Link>
-                    <Link
+                    </VisibleInfoLink>
+                    <VisibleInfoLink
                         id="link-1"
                         href="https://webaim.org/techniques/semanticstructure/#headings"
-                        messageChildren={'Challenge: Try to make the heading order accessible'}
-                        title="link to accessible heading order challenge practice"
-                        className="heading-order-challenge-link"
+                        messageChildren={
+                            'Go to WebAIM to learn more about semantic DOM structure and how that relates to Heading Order.'
+                        }
+                        title="Click this link to go to WebAIM to learn more about semantic DOM structure and how that relates to Heading Order."
+                        className="heading-order-reference-link"
                     >
-                        <ChallengeIcon />
-                    </Link>
+                        <InnovationIcon />
+                    </VisibleInfoLink>
                 </LinkContainer>
+                <DynamicLinkText
+                    id="link-1"
+                    href="javascript:void(0)"
+                    messageChildren={
+                        'These headings are out of order and need to be placed back into the correct order to pass WCAG 2.1 AA compliance.  Fix the headings to make them WCAG 2.1 AA compliant.'
+                    }
+                    title="Challenge: These headings are out of order and need to be placed back into the correct order to pass WCAG 2.1 AA compliance.  Fix the headings to make them WCAG 2.1 AA compliant."
+                    className="heading-order-challenge-link"
+                    linkText="Challenge"
+                >
+                    <ChallengeIcon />
+                </DynamicLinkText>
             </Section>
             <Section
                 id="color-contrast-section"
@@ -799,25 +826,41 @@ const App = () => {
                 </ColorPickerDynamic>
                 <Target id="font-size-target" ref={fontSizeRef} />
                 <LinkContainer className="contrast-ratio-link-container">
-                    <Link
+                    <VisibleInfoLink
                         id="link-1"
                         href="https://webaim.org/articles/contrast/"
-                        messageChildren={'Go to w3.org to learn more about contrast ratio'}
-                        title="link to accessible contrast ratio references"
-                        className="form-reference-link"
+                        messageChildren={
+                            'Go to WebAIM to learn more about contrast and how having a non WCAG 2.1 AA compliant contrast can negatively effect users.'
+                        }
+                        title="Click this link to go to WebAIM to learn more about Contrast and how having a non WCAG 2.1 AA compliant contrast can negatively effect users."
+                        className="contrast-ratio-reference-link"
                     >
                         <SolutionIcon />
-                    </Link>
-                    <Link
+                    </VisibleInfoLink>
+                    <VisibleInfoLink
                         id="link-1"
                         href="https://webaim.org/articles/contrast/#ratio"
-                        messageChildren={'Challenge: Try and find colors that pass contrast ratio'}
-                        title="link to accessible contrast ratio documents"
-                        className="contrast-ratio-challenge-link"
+                        messageChildren={
+                            'Go to WebAIM to learn more about Contrast Ratio and how use accessible contrast ratio guidelines to create a better web application.'
+                        }
+                        title="Click this link to go to WebAIM to learn more about Contrast Ratio and how use accessible contrast ratio guidelines to create a better web application."
+                        className="contrast-ratio-reference-link"
                     >
-                        <ChallengeIcon />
-                    </Link>
+                        <InnovationIcon />
+                    </VisibleInfoLink>
                 </LinkContainer>
+                <DynamicLinkText
+                    id="link-1"
+                    href="javascript:void(0)"
+                    messageChildren={
+                        'Using the Aurora swatch palette provided in the swatches section, find 10 sets of contrast ratios that pass WCGAC 2.1 AA for background color to font color.'
+                    }
+                    title="Challenge: Using the Aurora swatch palette provided in the swatches section, find 10 sets of contrast ratios that pass WCGAC 2.1 AA for background color to font color."
+                    className="font-color-contrast-ratio-challenge-link"
+                    linkText="Challenge"
+                >
+                    <ChallengeIcon />
+                </DynamicLinkText>
             </Section>
             <Section
                 id="color-contrast-font-size-section"
@@ -942,48 +985,50 @@ const App = () => {
                         </H6>
                     </ColorPickerAuroraText>
                 </ColorPickerDynamic>
-                {/* <Target id="reference-target" ref={referencesRef} /> */}
                 <LinkContainer className="font-color-contrast-ratio-link-container">
-                    <Link
+                    <VisibleInfoLink
                         id="link-1"
                         href="https://webaim.org/techniques/fonts/"
-                        messageChildren={'Go to WebAIM to learn more about Typefaces and Fonts'}
-                        title="link to learn more about Typefaces and Fonts"
+                        messageChildren={'Go to WebAIM to learn more about Typefaces and Fonts.'}
+                        title="Click this link to go to WebAIM to learn more about Typefaces and Fonts."
                         className="font-color-contrast-ratio-reference-link"
                     >
                         <SolutionIcon />
-                    </Link>
-                    <Link
+                    </VisibleInfoLink>
+                    <VisibleInfoLink
                         id="link-1"
                         href="https://webaim.org/techniques/textlayout/"
-                        messageChildren={'Go to WebAIM to learn more about Text Layout'}
-                        title="link to learn more about text leayout"
+                        messageChildren={
+                            'Go to WebAIM to learn more about Text Layout combined with Typefaces and Fonts.'
+                        }
+                        title="Click this link to go to WebAIM to learn more about Text Layout combined with Typefaces and Fonts."
                         className="font-color-contrast-ratio-reference-link"
                     >
                         <InnovationIcon />
-                    </Link>
-                    <Link
+                    </VisibleInfoLink>
+                    <VisibleInfoLink
                         id="link-1"
                         href="https://webaim.org/resources/contrastchecker/"
-                        messageChildren={'Go to WebAIM to learn more about Contrast Checking'}
-                        title="link to learn more about constrast checking"
+                        messageChildren={'Go to WebAIM to learn more about Contrast Checking.'}
+                        title="Click this link to go to WebAIM to learn more about Contrast Checking."
                         className="font-color-contrast-ratio-reference-link"
                     >
                         <IdeaIcon />
-                    </Link>
-                    <Link
-                        id="link-1"
-                        href="https://webaim.org/articles/contrast/#ratio"
-                        messageChildren={
-                            'Challenge: Explore how font sizes work with contrast ratio'
-                        }
-                        title="link to accessible contrast ratio documents"
-                        className="font-color-contrast-ratio-challenge-link"
-                    >
-                        <ChallengeIcon />
-                    </Link>
+                    </VisibleInfoLink>
                     <Target id="reference-target" ref={referencesRef} />
                 </LinkContainer>
+                <DynamicLinkText
+                    id="link-1"
+                    href="javascript:void(0)"
+                    messageChildren={
+                        'Using the Aurora swatch palette, find 5 sets of contrast ratios that pass WCGAC 2.1 AA for all font sizes.'
+                    }
+                    title="Challenge: Using the Aurora swatch palette, find 5 sets of contrast ratios that pass WCGAC 2.1 AA for all font sizes."
+                    className="font-color-contrast-ratio-challenge-link"
+                    linkText="Challenge"
+                >
+                    <ChallengeIcon />
+                </DynamicLinkText>
             </Section>
             <Section
                 id="references-section"
@@ -1036,7 +1081,7 @@ const App = () => {
                         messageChildren={
                             'Go to w3.org to learn more about doing a preliminary checklist for accessibility.'
                         }
-                        title="Go to w3.org to learn more about doing a preliminary checklist for accessibility."
+                        title="Click this link to go to w3.org to learn more about doing a preliminary checklist for accessibility."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1047,7 +1092,7 @@ const App = () => {
                         messageChildren={
                             'Go to w3.org to learn more about forms and how you can make them accessible.'
                         }
-                        title="Go to w3.org to learn more about forms and how you can make them accessible."
+                        title="Click this link to go to w3.org to learn more about forms and how you can make them accessible."
                         className="references-reference-link"
                     >
                         <ResourcesIcon />
@@ -1058,7 +1103,7 @@ const App = () => {
                         messageChildren={
                             'Go to WebAIM to learn more about how to use correct DOM structure to make your web presence accessible.'
                         }
-                        title="Go to WebAIM to learn more about how to use correct DOM structure to make your web presence accessible."
+                        title="Click this link to go to WebAIM to learn more about how to use correct DOM structure to make your web presence accessible."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1069,7 +1114,7 @@ const App = () => {
                         messageChildren={
                             'Go to WebAIM to learn more about how proper color contrast ratio to make your web presence accessible.'
                         }
-                        title="Go to WebAIM to learn more about how proper color contrast ratio to make your web presence accessible."
+                        title="Click this link to go to WebAIM to learn more about how proper color contrast ratio to make your web presence accessible."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1080,7 +1125,7 @@ const App = () => {
                         messageChildren={
                             'Go to WebAIM to learn more about how Typefaces and Fonts can be used to make your web presence accessible.'
                         }
-                        title="Go to WebAIM to learn more about how Typefaces and Fonts can be used to make your web presence accessible."
+                        title="Click this link to go to WebAIM to learn more about how Typefaces and Fonts can be used to make your web presence accessible."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1091,7 +1136,7 @@ const App = () => {
                         messageChildren={
                             'Go to WebAIM to learn more about how Text Layout can be used to make your web presence accessible.'
                         }
-                        title="Go to WebAIM to learn more about how Text Layout can be used to make your web presence accessible."
+                        title="Click this link to go to WebAIM to learn more about how Text Layout can be used to make your web presence accessible."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1102,7 +1147,7 @@ const App = () => {
                         messageChildren={
                             'Go to WebAIM to learn more about how to use color contrast checkers to make your web presence accessible.'
                         }
-                        title="Go to WebAIM to learn more about how to use color contrast checkers to make your web presence accessible."
+                        title="Click this link to go to WebAIM to learn more about how to use color contrast checkers to make your web presence accessible."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1113,7 +1158,7 @@ const App = () => {
                         messageChildren={
                             'Go to WebAIM to learn more about one of their screen reader surveys.'
                         }
-                        title="Go to WebAIM to learn more about one of their screen reader surveys."
+                        title="Click this link to go to WebAIM to learn more about one of their screen reader surveys."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1124,7 +1169,7 @@ const App = () => {
                         messageChildren={
                             "Go to Indeed's accesibility checklist to make your web presence accessible."
                         }
-                        title="Go to Indeed's accesibility checklist to make your web presence accessible."
+                        title="Click this link to go to Indeed's accesibility checklist to make your web presence accessible."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1135,7 +1180,7 @@ const App = () => {
                         messageChildren={
                             "Go to Indeed's WCAG 2.1 training slide deck to learn more about Indeed's philosophy on accessibility."
                         }
-                        title="Go to Indeed's WCAG 2.1 training slide deck to learn more about Indeed's philosophy on accessibility."
+                        title="Click this link to go to Indeed's WCAG 2.1 training slide deck to learn more about Indeed's philosophy on accessibility."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1146,7 +1191,7 @@ const App = () => {
                         messageChildren={
                             "Go to Indeed's Accessibility Frequently Asked Questions wiki page in confluence."
                         }
-                        title="Go to Indeed's Accessibility Frequently Asked Questions wiki page in confluence."
+                        title="Click this link to go to Indeed's Accessibility Frequently Asked Questions wiki page in confluence."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1157,7 +1202,7 @@ const App = () => {
                         messageChildren={
                             "Go to Indeed's Accessibility testing with axe-core wiki page in confluence."
                         }
-                        title="Go to Indeed's Accessibility testing with axe-core wiki page in confluence."
+                        title="Click this link to go to Indeed's Accessibility testing with axe-core wiki page in confluence."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1168,7 +1213,7 @@ const App = () => {
                         messageChildren={
                             "Go to Indeed's Delivery Engineering Accessibility Hub wiki page in confluence."
                         }
-                        title="Go to Indeed's Delivery Engineering Accessibility Hub wiki page in confluence."
+                        title="Click this link to go to Indeed's Delivery Engineering Accessibility Hub wiki page in confluence."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1179,7 +1224,7 @@ const App = () => {
                         messageChildren={
                             'Go to openbase and read about cypress-axe and axe-core install and implementation docs.'
                         }
-                        title="Go to openbase and read about cypress-axe and axe-core install and implementation docs."
+                        title="Click this link to go to openbase and read about cypress-axe and axe-core install and implementation docs."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1190,7 +1235,7 @@ const App = () => {
                         messageChildren={
                             "Go to Artem Sapegin's blog and read about cypress-axe/ axe-core and how to detect and run the tests within the GUI."
                         }
-                        title="Go to Artem Sapegin's blog and read about cypress-axe/ axe-core and how to detect and run the tests within the GUI."
+                        title="Click this link to go to Artem Sapegin's blog and read about cypress-axe/ axe-core and how to detect and run the tests within the GUI."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1201,7 +1246,7 @@ const App = () => {
                         messageChildren={
                             "Go to Andy Van Slaars's blog and read an introduction to cypress-axe."
                         }
-                        title="Go to Andy Van Slaars's blog and read an introduction to cypress-axe."
+                        title="Click this link to go to Andy Van Slaars's blog and read an introduction to cypress-axe."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1212,7 +1257,7 @@ const App = () => {
                         messageChildren={
                             'Go to the Inclusive Components blog and read more about accessibility and components.'
                         }
-                        title="Go to the Inclusive Components blog and read more about accessibility and components."
+                        title="Click this link to go to the Inclusive Components blog and read more about accessibility and components."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1223,7 +1268,7 @@ const App = () => {
                         messageChildren={
                             'Go to Sitepoint blog and read more about automated accessibility checking with axe.'
                         }
-                        title="Go to Sitepoint blog and read more about automated accessibility checking with axe."
+                        title="Click this link to go to Sitepoint blog and read more about automated accessibility checking with axe."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1234,7 +1279,7 @@ const App = () => {
                         messageChildren={
                             "Go to Tim Deschryver's blog and read more about setting up Cypress with AXE for accessibility."
                         }
-                        title="Go to Tim Deschryver's blog and read more about setting up Cypress with AXE for accessibility."
+                        title="Click this link to go to Tim Deschryver's blog and read more about setting up Cypress with AXE for accessibility."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1245,7 +1290,7 @@ const App = () => {
                         messageChildren={
                             'Go learn about eslint-plugin-jsx-a11y static AST checker for accessibility rules on JSX elements.'
                         }
-                        title="Go learn about eslint-plugin-jsx-a11y static AST checker for accessibility rules on JSX elements."
+                        title="Click this link to go learn about eslint-plugin-jsx-a11y static AST checker for accessibility rules on JSX elements."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1256,7 +1301,7 @@ const App = () => {
                         messageChildren={
                             'Go to the GitHub repo about eslint-plugin-jsx-a11y rules and how to use them within an application.'
                         }
-                        title="Go to the GitHub repo about eslint-plugin-jsx-a11y."
+                        title="Click this link to go to the GitHub repo about eslint-plugin-jsx-a11y rules and how to use them within an application."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1267,7 +1312,7 @@ const App = () => {
                         messageChildren={
                             'Go to the ReactJs website to learn about how they accomodate for accessibility.'
                         }
-                        title="Go to the ReactJs website to learn about how they accomodate for accessibility."
+                        title="Click this link to go to the ReactJs website to learn about how they accomodate for accessibility."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1278,7 +1323,7 @@ const App = () => {
                         messageChildren={
                             'Go to the deque labs GitHub repo to learn about axe-core.'
                         }
-                        title="Go to the deque labs GitHub repo to learn about axe-core."
+                        title="Click this link to go to the deque labs GitHub repo to learn about axe-core."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1287,9 +1332,9 @@ const App = () => {
                         id="link-1"
                         href="https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell"
                         messageChildren={
-                            'Go to Cypress.io to learn everything you need to know about Cypress.  The docs are exstensive and always updated with current info. :-)'
+                            'Go to Cypress.io to learn everything you need to know about Cypress.  The docs are exstensive and always updated with current info.'
                         }
-                        title="Go to Cypress.io to learn everything you need to know about Cypress.  The docs are exstensive and always updated with current info."
+                        title="Click this link to go to Cypress.io to learn everything you need to know about Cypress.  The docs are exstensive and always updated with current info."
                         className="references-link"
                     >
                         <ResourcesIcon />
@@ -1359,12 +1404,14 @@ const App = () => {
 
                         <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
                             <InstructionsParagraph className="final-challenge-instructions">
-                                Throught your journey through this repo you have leared a deeper
+                                Throught your journey through this repo you have learned a better
                                 understanding of <strong>Accessible Web</strong> through learning
                                 about each section topic. You worked on section topic challenges to
                                 gain understanding related to how to create, and test components and
                                 websites using <strong>Cypress</strong>, <strong>AXE-Core</strong>,{' '}
                                 <strong>pa11y</strong> and <strong>pa11y-axe</strong>.{' '}
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="final-challenge-instructions">
                                 <strong>Now</strong> that you have gained more insight into what it
                                 takes to create an <strong>Accessible Web</strong> presence on the
                                 internet, here is your challenge...should you choose to accept it.
@@ -1376,11 +1423,14 @@ const App = () => {
                             </InstructionsParagraph>
                             <InstructionsParagraph className="final-challenge-instructions">
                                 This application was designed and developed to <strong>NOT</strong>{' '}
-                                satisfy <strong>Accessible Web</strong> compliance. I challenge you
-                                to take what you have learned and use your creativity to re-design
-                                and develop this application to make it successfully tested for an{' '}
-                                <strong>Accessible Web</strong>. I can't wait to see what you
-                                accomplish...<strong>do your best</strong> and...
+                                fully satisfy <strong>Accessible Web</strong> compliance. It's
+                                navigable and usable from an Individual's perspective but needs more
+                                work to make it WCAG 2.1 AA compliant. I challenge you to take what
+                                you have learned and use your creativity to re-design and develop
+                                this application to make it successfully tested for an{' '}
+                                <strong>Accessible Web</strong> from your perspective. I can't wait
+                                to see what you accomplish while using your creativity.{' '}
+                                <strong>Do your best</strong> and...
                                 <strong>have fun</strong>!
                             </InstructionsParagraph>
                         </InstructionsContainer>
@@ -1416,7 +1466,7 @@ const NavContainer = styled.nav`
 
 const LinkContainer = styled.div`
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     & .Link-parent-container {
         margin-right: 1.5rem;
     }
@@ -1565,16 +1615,19 @@ const AppContainer = styled.section`
         }
     }
     & .Svg-div-container-parent {
-        padding: 1rem 1.5rem;
+        padding: 1rem 1.5rem 0;
         width: fit-content;
-        margin: 0 auto;
+        margin: auto;
         border-radius: 0.25rem;
     }
     & .Svg-div-container {
         width: fit-content;
-        padding: 1.5rem;
         background-color: #0c2e5e;
         border-radius: 0.25rem;
+        flex-flow: row-reverse wrap;
+        & iframe {
+            margin: 0 1rem;
+        }
     }
     & .Introduction-section {
         & .section-heading {
@@ -1618,6 +1671,9 @@ const AppContainer = styled.section`
                 letter-spacing: 0.5px;
             }
         }
+        & .forms-link-container {
+            margin: 0 0 1.5rem 0;
+        }
     }
     & .Color-contrast-section {
         & .Header-color-contrast-section {
@@ -1630,6 +1686,21 @@ const AppContainer = styled.section`
                 padding: 0;
                 color: #ffffff;
                 letter-spacing: 0.5px;
+            }
+        }
+        & .contrast-ratio-link-container {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(1, auto);
+            column-gap: 1.5rem;
+            row-gap: 1.5rem;
+            margin: 0 0 1.5rem 0;
+            & .Link-parent-container {
+                margin: 0;
+            }
+            @media (max-width: 1500px) {
+                grid-template-columns: repeat(1, auto);
+                grid-template-rows: repeat(2, auto);
             }
         }
         & .Color-picker-dynamic-parent-container {
@@ -1756,6 +1827,21 @@ const AppContainer = styled.section`
                 padding: 0 1.5rem;
             }
         }
+        & .heading-order-link-container {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(1, auto);
+            column-gap: 1.5rem;
+            row-gap: 1.5rem;
+            margin: 0 0 1.5rem 0;
+            & .Link-parent-container {
+                margin: 0;
+            }
+            @media (max-width: 1330px) {
+                grid-template-columns: repeat(1, auto);
+                grid-template-rows: repeat(2, auto);
+            }
+        }
     }
     & .Color-contrast-font-size-section {
         & .Header-color-contrast-font-size-section {
@@ -1850,6 +1936,20 @@ const AppContainer = styled.section`
                 box-shadow: 0px 3px 10px -3px rgba(0, 0, 0, 0.5);
             }
         }
+        & .font-color-contrast-ratio-link-container {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: repeat(1, auto);
+            column-gap: 1.5rem;
+            row-gap: 1.5rem;
+            & .Link-parent-container {
+                margin: 0;
+            }
+            @media (max-width: 1500px) {
+                grid-template-columns: repeat(1, auto);
+                grid-template-rows: repeat(3, auto);
+            }
+        }
     }
     & .References-section {
         & .Header-references-section {
@@ -1925,10 +2025,6 @@ const AppContainer = styled.section`
             border-radius: 0.25rem;
             & .Link-parent-container {
                 margin: 0;
-            }
-            @media (max-width: 1530px) {
-            }
-            @media (max-width: 1050px) {
             }
         }
         & .Challenge-div-parent-container {
