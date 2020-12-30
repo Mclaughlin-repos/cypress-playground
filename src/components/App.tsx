@@ -332,6 +332,7 @@ const App = () => {
                     }
                     title="Click this link to go to w3.org to learn more about doing a preliminary checklist for accessibility."
                     className="references-link"
+                    target="_blank"
                 >
                     <ResourcesIcon />
                 </InfoLink>
@@ -615,6 +616,7 @@ const App = () => {
                     }
                     title="Click this link to go to w3.org to learn more about navigation mechanisms including Heading Order."
                     className="references-link"
+                    target="_blank"
                 >
                     <ResourcesIcon />
                 </InfoLink>
@@ -779,6 +781,7 @@ const App = () => {
                     title="Click this link to go to w3.org to learn more about success criterion for
                                 contrast."
                     className="references-link"
+                    target="_blank"
                 >
                     <ResourcesIcon />
                 </InfoLink>
@@ -930,6 +933,7 @@ const App = () => {
                     }
                     title="Click this link to go to w3.org to learn more about page structure as it relates to styling and Font Sizes."
                     className="references-link"
+                    target="_blank"
                 >
                     <ResourcesIcon />
                 </InfoLink>
@@ -1171,6 +1175,7 @@ const App = () => {
                         }
                         title="Click this link to go to w3.org to learn more about doing a preliminary checklist for accessibility."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1182,6 +1187,7 @@ const App = () => {
                         }
                         title="Click this link to go to w3.org to learn more about forms and how you can make them accessible."
                         className="references-reference-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1193,6 +1199,7 @@ const App = () => {
                         }
                         title="Click this link to go to WebAIM to learn more about how to use correct DOM structure to make your web presence accessible."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1204,6 +1211,7 @@ const App = () => {
                         }
                         title="Click this link to go to WebAIM to learn more about how proper color contrast ratio to make your web presence accessible."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1215,6 +1223,7 @@ const App = () => {
                         }
                         title="Click this link to go to WebAIM to learn more about how Typefaces and Fonts can be used to make your web presence accessible."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1226,6 +1235,7 @@ const App = () => {
                         }
                         title="Click this link to go to WebAIM to learn more about how Text Layout can be used to make your web presence accessible."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1237,6 +1247,7 @@ const App = () => {
                         }
                         title="Click this link to go to WebAIM to learn more about how to use color contrast checkers to make your web presence accessible."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1248,6 +1259,7 @@ const App = () => {
                         }
                         title="Click this link to go to WebAIM to learn more about one of their screen reader surveys."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1259,6 +1271,7 @@ const App = () => {
                         }
                         title="Click this link to go to Indeed's accesibility checklist to make your web presence accessible."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1270,6 +1283,7 @@ const App = () => {
                         }
                         title="Click this link to go to Indeed's WCAG 2.1 training slide deck to learn more about Indeed's philosophy on accessibility."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1281,6 +1295,7 @@ const App = () => {
                         }
                         title="Click this link to go to Indeed's Accessibility Frequently Asked Questions wiki page in confluence."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1292,6 +1307,7 @@ const App = () => {
                         }
                         title="Click this link to go to Indeed's Accessibility testing with axe-core wiki page in confluence."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1303,6 +1319,7 @@ const App = () => {
                         }
                         title="Click this link to go to Indeed's Delivery Engineering Accessibility Hub wiki page in confluence."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1314,6 +1331,7 @@ const App = () => {
                         }
                         title="Click this link to go to openbase and read about cypress-axe and axe-core install and implementation docs."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1325,6 +1343,7 @@ const App = () => {
                         }
                         title="Click this link to go to Artem Sapegin's blog and read about cypress-axe/ axe-core and how to detect and run the tests within the GUI."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1336,6 +1355,7 @@ const App = () => {
                         }
                         title="Click this link to go to Andy Van Slaars's blog and read an introduction to cypress-axe."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1347,6 +1367,7 @@ const App = () => {
                         }
                         title="Click this link to go to the Inclusive Components blog and read more about accessibility and components."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1358,6 +1379,7 @@ const App = () => {
                         }
                         title="Click this link to go to Sitepoint blog and read more about automated accessibility checking with axe."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1369,6 +1391,7 @@ const App = () => {
                         }
                         title="Click this link to go to Tim Deschryver's blog and read more about setting up Cypress with AXE for accessibility."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1380,6 +1403,7 @@ const App = () => {
                         }
                         title="Click this link to go learn about eslint-plugin-jsx-a11y static AST checker for accessibility rules on JSX elements."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1391,6 +1415,7 @@ const App = () => {
                         }
                         title="Click this link to go to the GitHub repo about eslint-plugin-jsx-a11y rules and how to use them within an application."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1402,6 +1427,7 @@ const App = () => {
                         }
                         title="Click this link to go to the ReactJs website to learn about how they accomodate for accessibility."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1413,6 +1439,7 @@ const App = () => {
                         }
                         title="Click this link to go to the deque labs GitHub repo to learn about axe-core."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>
@@ -1424,6 +1451,7 @@ const App = () => {
                         }
                         title="Click this link to go to Cypress.io to learn everything you need to know about Cypress.  The docs are exstensive and always updated with current info."
                         className="references-link"
+                        target="_blank"
                     >
                         <ResourcesIcon />
                     </InfoLink>

@@ -10,7 +10,8 @@ const Link: React.FC<{
     onClick?: () => void;
     onChange?: () => void;
     messageChildren?: React.ReactNode;
-}> = ({ id, className, children, href, onChange, onClick, messageChildren, title }) => {
+    target?: string;
+}> = ({ id, className, children, href, onChange, onClick, messageChildren, title, target }) => {
     return (
         <LinkContainer id={id} className={`Link-parent-container ${className}`}>
             <LinkElement
@@ -20,7 +21,7 @@ const Link: React.FC<{
                 href={href}
                 onClick={onClick}
                 onChange={onChange}
-                target="_blank"
+                target={target}
                 title={title}
             >
                 <SvgContainer>{children}</SvgContainer>
