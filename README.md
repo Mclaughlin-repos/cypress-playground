@@ -66,7 +66,7 @@ Clone the repo...then, save it somewhere on your computer where you'll remember 
 git clone https://github.com/Mclaughlin-repos/cypress-playground.git
 ```
 
-After cloning the repo, you will be asked for your username and password when running the `npm install`
+After cloning the repo, you will be asked for your username and password 
 
 ```
 username = the username you used to be granted access to the repo
@@ -102,9 +102,9 @@ After starting the application, you should see logs that look similar to this:
 
 ℹ ｢wds｣: Project is running at http://localhost:8080/
 ℹ ｢wds｣: webpack output is served from undefined
-ℹ ｢wds｣: Content not from webpack is served from /Users/nmarshall/indeed/cypress-playground/dist
+ℹ ｢wds｣: Content not from webpack is served from /Users/<username>/indeed/cypress-playground/dist
 ℹ ｢atl｣: Using typescript@4.1.2 from typescript
-ℹ ｢atl｣: Using tsconfig.json from /Users/nmarshall/indeed/cypress-playground/tsconfig.json
+ℹ ｢atl｣: Using tsconfig.json from /Users/<username>/indeed/cypress-playground/tsconfig.json
 ℹ ｢atl｣: Checking started in a separate process...
 ℹ ｢atl｣: Time: 27ms
 
@@ -116,8 +116,7 @@ After starting the application, you should see logs that look similar to this:
 You should see this message on the screen with the below text:
 
 ```
-Hi Ya'll! Welcome to the Cypress Playground now using Cypress, AXE-CORE, PA11Y, Typescript and React!
-This is where you will learn how to use AXE-CORE and PA11Y to work with components.
+Cypress Axe Playground
 ```
 
 Now you are ready to start playing with Cypress/ AXE-Core/ PA11Y!
