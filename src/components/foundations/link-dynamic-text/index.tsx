@@ -77,7 +77,7 @@ const LinkContainer = styled.div`
             width: 0;
             transition: 0.25s ease-in 1s ease-out;
             opacity: 0;
-            padding: 0.25rem 1rem;
+            padding: 1rem;
             background-color: #051930;
             border-radius: 0.25rem;
             margin: 0 1rem 0 0;
