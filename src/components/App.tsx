@@ -19,7 +19,6 @@ import H3 from './foundations/h3/index';
 import H4 from './foundations/h4/index';
 import H5 from './foundations/h5/index';
 import H6 from './foundations/h6/index';
-import DynamicLink from './foundations/link-dynamic/index';
 import DynamicLinkText from './foundations/link-dynamic-text/index';
 import TextLink from './foundations/text-link/index';
 import InfoLink from './foundations/info-link/index';
@@ -86,7 +85,7 @@ const App = () => {
                         className="Logo-container Home-logo-container"
                         dataCy="logo-container"
                     >
-                        <LearnIcon />
+                        <ChallengeIcon />
                     </Div>
                     <H1 id="app-heading-1" className="App-heading-1" dataCy="app-heading-1">
                         AXE Testing Playground
@@ -309,7 +308,6 @@ const App = () => {
                             </pre>
                         </strong>
                     </InstructionsParagraph>
-                    <Target id="forms-target" ref={formRef} />
                     <InstructionsParagraph className="section-instructions">
                         <strong>
                             <pre>
@@ -319,6 +317,25 @@ const App = () => {
                     </InstructionsParagraph>
                 </InstructionsContainer>
             </Section>
+            <FormsTargetContainer>
+                <Target id="forms-target" ref={formRef} />
+                <InfoLink
+                    id="link-1"
+                    href="https://www.w3.org/WAI/test-evaluate/preliminary/"
+                    messageChildren={
+                        <strong>
+                            <pre>
+                                HINT: Go to w3.org to learn more about doing a preliminary checklist
+                                for accessibility...
+                            </pre>
+                        </strong>
+                    }
+                    title="Click this link to go to w3.org to learn more about doing a preliminary checklist for accessibility."
+                    className="references-link"
+                >
+                    <ResourcesIcon />
+                </InfoLink>
+            </FormsTargetContainer>
             <Section id="form-section" className="Form-section" dataCy="form-section-section">
                 <Header
                     id="header-form-section"
@@ -557,7 +574,6 @@ const App = () => {
                         </Div>
                     </Fieldset>
                 </Form>
-                <Target id="headings-target" ref={headingsRef} />
                 <LinkContainer className="forms-link-container">
                     <VisibleInfoLink
                         id="link-1"
@@ -584,6 +600,25 @@ const App = () => {
                     <ChallengeIcon />
                 </DynamicLinkText>
             </Section>
+            <HeadingsTargetContainer>
+                <Target id="headings-target" ref={headingsRef} />
+                <InfoLink
+                    id="link-1"
+                    href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-descriptive.html"
+                    messageChildren={
+                        <strong>
+                            <pre>
+                                HINT: Go to w3.org to learn more about navigation mechanisms
+                                including Heading Order...
+                            </pre>
+                        </strong>
+                    }
+                    title="Click this link to go to w3.org to learn more about navigation mechanisms including Heading Order."
+                    className="references-link"
+                >
+                    <ResourcesIcon />
+                </InfoLink>
+            </HeadingsTargetContainer>
             <Section
                 id="heading-order-section"
                 className="Heading-order-section"
@@ -691,7 +726,6 @@ const App = () => {
                         </H1>
                     </Div>
                 </Div>
-                <Target id="contrast-target" ref={contrastRef} />
                 <LinkContainer className="heading-order-link-container">
                     <VisibleInfoLink
                         id="link-1"
@@ -729,6 +763,26 @@ const App = () => {
                     <ChallengeIcon />
                 </DynamicLinkText>
             </Section>
+            <ContrastTargetContainer>
+                <Target id="contrast-target" ref={contrastRef} />
+                <InfoLink
+                    id="link-1"
+                    href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html"
+                    messageChildren={
+                        <strong>
+                            <pre>
+                                HINT: Go to w3.org to learn more about success criterion for
+                                contrast...
+                            </pre>
+                        </strong>
+                    }
+                    title="Click this link to go to w3.org to learn more about success criterion for
+                                contrast."
+                    className="references-link"
+                >
+                    <ResourcesIcon />
+                </InfoLink>
+            </ContrastTargetContainer>
             <Section
                 id="color-contrast-section"
                 className="Color-contrast-section"
@@ -824,7 +878,6 @@ const App = () => {
                         </Div>
                     </ColorPickerAuroraText>
                 </ColorPickerDynamic>
-                <Target id="font-size-target" ref={fontSizeRef} />
                 <LinkContainer className="contrast-ratio-link-container">
                     <VisibleInfoLink
                         id="link-1"
@@ -862,6 +915,25 @@ const App = () => {
                     <ChallengeIcon />
                 </DynamicLinkText>
             </Section>
+            <FontSizeTargetContainer>
+                <Target id="font-size-target" ref={fontSizeRef} />
+                <InfoLink
+                    id="link-1"
+                    href="https://www.w3.org/WAI/tutorials/page-structure/styling/"
+                    messageChildren={
+                        <strong>
+                            <pre>
+                                HINT: Go to w3.org to learn more about page structure as it relates
+                                to styling and Font Sizes...
+                            </pre>
+                        </strong>
+                    }
+                    title="Click this link to go to w3.org to learn more about page structure as it relates to styling and Font Sizes."
+                    className="references-link"
+                >
+                    <ResourcesIcon />
+                </InfoLink>
+            </FontSizeTargetContainer>
             <Section
                 id="color-contrast-font-size-section"
                 className="Color-contrast-font-size-section"
@@ -1015,7 +1087,6 @@ const App = () => {
                     >
                         <IdeaIcon />
                     </VisibleInfoLink>
-                    <Target id="reference-target" ref={referencesRef} />
                 </LinkContainer>
                 <DynamicLinkText
                     id="link-1"
@@ -1030,6 +1101,25 @@ const App = () => {
                     <ChallengeIcon />
                 </DynamicLinkText>
             </Section>
+            <ReferencesTargetContainer>
+                <Target id="reference-target" ref={referencesRef} />
+                <InfoLink
+                    id="link-1"
+                    href="javascript:void(0)"
+                    messageChildren={
+                        <strong>
+                            <pre>
+                                HINT: There are a good amount of resource links below supplied to
+                                you for use as references. Don't forget to take a look...
+                            </pre>
+                        </strong>
+                    }
+                    title="There are a good amount of resource links below supplied to you for use as references.  Click the References link within the header to be taken to the Extra References section OR scroll down to the Extra References section."
+                    className="references-link"
+                >
+                    <ResourcesIcon />
+                </InfoLink>
+            </ReferencesTargetContainer>
             <Section
                 id="references-section"
                 className="References-section"
@@ -1068,9 +1158,7 @@ const App = () => {
                 </Header>
                 <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
                     <strong>
-                        <pre>
-                            All of the references below were used to create this repo...take a look!
-                        </pre>
+                        <pre>All of the references below were used to create this repo...</pre>
                     </strong>
                 </InstructionsContainer>
 
@@ -1339,9 +1427,27 @@ const App = () => {
                     >
                         <ResourcesIcon />
                     </InfoLink>
-                    <Target id="final-challenge-target" ref={finalChallengeRef} />
                 </LinkContainer>
             </Section>
+            <FinalChallengeTargetContainer>
+                <Target id="final-challenge-target" ref={finalChallengeRef} />
+                <InfoLink
+                    id="link-1"
+                    href="javascript:void(0)"
+                    messageChildren={
+                        <strong>
+                            <pre>
+                                HINT: There is a Final Challenge below for you to test what you have
+                                learned so far. Test your new skills...
+                            </pre>
+                        </strong>
+                    }
+                    title="There is a Final Challenge below for you to test the skills that you have learned so far. Challenge yourself and test your new skills.  Click the Final Challenge link within the header to be taken to the Final Challenge section OR scroll down to the Final Challenge section."
+                    className="references-link"
+                >
+                    <ResourcesIcon />
+                </InfoLink>
+            </FinalChallengeTargetContainer>
             <Section
                 id="final-challenge-section"
                 className="Final-challenge-section"
@@ -1441,12 +1547,182 @@ const App = () => {
     );
 };
 const HomeTargetContainer = styled.div`
-    height: 10rem;
+    height: 14rem;
 `;
 const IntroTargetContainer = styled.div`
     height: 8rem;
+    @media (max-width: 1300px) {
+        height: 12rem;
+    }
 `;
-
+const FormsTargetContainer = styled.div`
+    height: 15rem;
+    padding: 0 6rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1300px) {
+        height: 24rem;
+    }
+    & .references-link {
+        height: 10rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        & strong {
+            color: #eeeeee;
+            & pre {
+                font-size: 1.5rem;
+                letter-spacing: 1.5px;
+                padding: 0.5rem 0;
+                white-space: pre-wrap;
+            }
+        }
+        & .Link-message-container {
+            width: inherit;
+        }
+    }
+`;
+const HeadingsTargetContainer = styled.div`
+    height: 15rem;
+    padding: 0 6rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1300px) {
+        height: 24rem;
+    }
+    & .references-link {
+        height: 10rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        & strong {
+            color: #eeeeee;
+            & pre {
+                font-size: 1.5rem;
+                letter-spacing: 1.5px;
+                padding: 0.5rem 0;
+                white-space: pre-wrap;
+            }
+        }
+        & .Link-message-container {
+            width: inherit;
+        }
+    }
+`;
+const ContrastTargetContainer = styled.div`
+    height: 15rem;
+    padding: 0 6rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1300px) {
+        height: 24rem;
+    }
+    & .references-link {
+        height: 10rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        & strong {
+            color: #eeeeee;
+            & pre {
+                font-size: 1.5rem;
+                letter-spacing: 1.5px;
+                padding: 0.5rem 0;
+                white-space: pre-wrap;
+            }
+        }
+        & .Link-message-container {
+            width: inherit;
+        }
+    }
+`;
+const FontSizeTargetContainer = styled.div`
+    height: 15rem;
+    padding: 0 6rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1300px) {
+        height: 24rem;
+    }
+    & .references-link {
+        height: 10rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        & strong {
+            color: #eeeeee;
+            & pre {
+                font-size: 1.5rem;
+                letter-spacing: 1.5px;
+                padding: 0.5rem 0;
+                white-space: pre-wrap;
+            }
+        }
+        & .Link-message-container {
+            width: inherit;
+        }
+    }
+`;
+const ReferencesTargetContainer = styled.div`
+    height: 15rem;
+    padding: 0 6rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1300px) {
+        height: 24rem;
+    }
+    & .references-link {
+        height: 10rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        & strong {
+            color: #eeeeee;
+            & pre {
+                font-size: 1.5rem;
+                letter-spacing: 1.5px;
+                padding: 0.5rem 0;
+                white-space: pre-wrap;
+            }
+        }
+        & .Link-message-container {
+            width: inherit;
+        }
+    }
+`;
+const FinalChallengeTargetContainer = styled.div`
+    height: 15rem;
+    padding: 0 6rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1300px) {
+        height: 24rem;
+    }
+    & .references-link {
+        height: 10rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        & strong {
+            color: #eeeeee;
+            & pre {
+                font-size: 1.5rem;
+                letter-spacing: 1.5px;
+                padding: 0.5rem 0;
+                white-space: pre-wrap;
+            }
+        }
+        & .Link-message-container {
+            width: inherit;
+        }
+    }
+`;
 const Target = styled.div`
     width: 0;
     height: 0;
@@ -1542,6 +1818,12 @@ const AppContainer = styled.section`
             &:hover {
                 cursor: pointer;
             }
+            @media (max-width: 1300px) {
+                & > svg {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
         }
 
         & .App-heading-1 {
@@ -1553,13 +1835,17 @@ const AppContainer = styled.section`
             width: 100%;
             background-color: #051930;
         }
-        @media (max-width: 1250px) {
-            font-size: 1.25rem;
-        }
-        @media (max-width: 1195px) {
+        @media (max-width: 1300px) {
             font-size: 1rem;
             letter-spacing: 0.75px;
+            flex-flow: column;
+            & .nav-links-container {
+                justify-content: space-around;
+            }
         }
+    }
+    @media (max-width: 1300px) {
+        padding: 4rem 0 0 0;
     }
     & .Button-container {
         flex-flow: row nowrap;
@@ -1622,6 +1908,7 @@ const AppContainer = styled.section`
     }
     & .Svg-div-container {
         width: fit-content;
+        padding: 0 1rem;
         background-color: #0c2e5e;
         border-radius: 0.25rem;
         flex-flow: row-reverse wrap;
@@ -1942,6 +2229,7 @@ const AppContainer = styled.section`
             grid-template-rows: repeat(1, auto);
             column-gap: 1.5rem;
             row-gap: 1.5rem;
+            margin: 0 0 1.5rem 0;
             & .Link-parent-container {
                 margin: 0;
             }
