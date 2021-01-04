@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "playground for learning cypress and acessibility technologies",
   "main": "src/index.tsx",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "start": "webpack serve --config ./webpack.config.js --mode development & open http://localhost:8080",
     "build": "webpack --config ./webpack.config.js --mode production",
@@ -78,7 +78,7 @@
     "mochawesome-merge": "^4.1.0",
     "mochawesome-report-generator": "^5.1.0",
     "nodemon": "^2.0.6",
-    "onchange": "^6.1.0",
+    "onchange": "6.1.0",
     "pa11y-lint-config": "^1.3.0",
     "prettier": "2.1.2",
     "prop-types": "^15.7.2",

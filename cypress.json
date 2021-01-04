@@ -1,7 +1,7 @@
 {
   "baseUrl": "http://localhost:8080",
-  "viewportHeight": 12000,
-  "viewportWidth": 1600,
+  "viewportHeight": 1000,
+  "viewportWidth": 2600,
   "env": {
     "devServer": false
   },
