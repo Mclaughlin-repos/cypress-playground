@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button: React.FC<{
+const ButtonIcon: React.FC<{
     className?: string;
     id: string;
     children?: React.ReactNode;
@@ -15,6 +15,7 @@ const Button: React.FC<{
     formTarget?: string;
     name: string;
     value: string;
+    text?: string;
     buttonType?: 'button' | 'submit' | 'reset';
     onClick?: () => void;
     onChange?: () => void;
@@ -34,6 +35,7 @@ const Button: React.FC<{
     formTarget,
     name,
     value,
+    text,
     buttonType,
     onClick,
     onChange,
@@ -61,18 +63,21 @@ const Button: React.FC<{
             onBlur={onBlur}
         >
             {children}
+            <Text>{text}</Text>
         </ButtonContainer>
     );
 };
 
 const ButtonContainer = styled.button`
+    display: flex;
+    flex-flow: column;
     background-color: #030c19;
     padding: 1rem;
     font-size: 1.25rem;
     letter-spacing: 0.5px;
     border-radius: 0.25rem;
     width: 5rem;
-    height: 5rem;
+    /* height: 5rem; */
     display: flex;
     align-items: center;
     border: none;
@@ -86,4 +91,12 @@ const ButtonContainer = styled.button`
     }
 `;
 
-export default Button;
+const Text = styled.p`
+    color: #ffffff;
+    font-size: 1rem;
+    /* border: 1px solid red; */
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+`;
+
+export default ButtonIcon;
