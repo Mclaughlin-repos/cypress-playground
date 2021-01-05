@@ -1924,6 +1924,9 @@ const AppContainer = styled.section`
                 letter-spacing: 0.5px;
                 & .Button-icon-button-dropdown {
                     margin: 0 1.25rem 0 0;
+                    height: 6rem;
+                    min-width: 6rem;
+                    width: auto;
                 }
             }
         }
@@ -1941,7 +1944,8 @@ const AppContainer = styled.section`
         border-radius: 0.25rem;
         flex-flow: row-reverse wrap;
         & iframe {
-            margin: 0 1rem;
+            margin: auto;
+            padding: 0 1rem;
         }
     }
     & .Introduction-section {
