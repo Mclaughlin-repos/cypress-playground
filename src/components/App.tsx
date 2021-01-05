@@ -839,21 +839,30 @@ const App = () => {
                         <strong>font color</strong> the same way.
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
-                        Once you have chosen your colors, in your terminal change directories into
-                        the <strong>cypress folder</strong> then, run this command in your terminal:{' '}
+                        Once you have chosen your colors, open a{' '}
+                        <strong>second terminal window</strong>, make sure you are{' '}
+                        <strong>still within</strong> the cypress-playground root folder then, run
+                        this command within the <strong>second terminal window</strong>:{' '}
                     </InstructionsParagraph>
                     <strong>
                         <code>
-                            <pre>npm run start:test</pre>
+                            <pre>npm run pa11y:axe</pre>
                         </code>
                     </strong>
                     <InstructionsParagraph className="section-instructions">
-                        This will open a new browser window, open the <strong>cypress GUI</strong>{' '}
-                        while running the <strong>pa11y</strong> tests all at once. You will be able
-                        to see the readout <strong>both</strong> within the{' '}
-                        <strong>cypress GUI</strong> and within the <strong>terminal window</strong>
-                        . (You may need to scroll up within the terminal window to see the{' '}
-                        <strong>pa11y</strong> errors)
+                        This will keep you on the current localhost:8080 window while running the{' '}
+                        <strong>pa11y</strong> tests. Pa11y runs on the current browser window and
+                        runs accessibility tests directly within that page's UI. You will be able to
+                        see the readout within that <strong>second terminal window</strong>. (You
+                        may need to scroll up within the terminal window to see the{' '}
+                        <strong>pa11y</strong> errors).
+                    </InstructionsParagraph>
+                    <InstructionsParagraph className="section-instructions">
+                        Continue to change the <strong>background color</strong> and the{' '}
+                        <strong>font color</strong> and then run the{' '}
+                        <strong>npm run pa11y:axe</strong> command a few different times. You will
+                        be able to see the results of each color change combinations within that{' '}
+                        <strong>second terminal window</strong> each time.
                     </InstructionsParagraph>
                 </InstructionsContainer>
                 <ColorPickerDynamic
@@ -1008,21 +1017,30 @@ const App = () => {
                         color contrast combined with the <strong>Aurora font sizes</strong>.
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
-                        Once you have chosen your colors, in your terminal change directories into
-                        the <strong>cypress folder</strong> then, run this command in your terminal:{' '}
+                        Once you have chosen your colors, open a{' '}
+                        <strong>second terminal window</strong>, make sure you are{' '}
+                        <strong>still within</strong> the cypress-playground root folder then, run
+                        this command within the <strong>second terminal window</strong>:{' '}
                     </InstructionsParagraph>
                     <strong>
                         <code>
-                            <pre>npm run start:test</pre>
+                            <pre>npm run pa11y:axe</pre>
                         </code>
                     </strong>
                     <InstructionsParagraph className="section-instructions">
-                        This will open a new browser window, open the <strong>cypress GUI</strong>{' '}
-                        while running the <strong>pa11y</strong> tests all at once. You will be able
-                        to see the readout <strong>both</strong> within the{' '}
-                        <strong>cypress GUI</strong> and within the <strong>terminal window</strong>
-                        . (You may need to scroll up within the terminal window to see the{' '}
-                        <strong>pa11y</strong> errors)
+                        This will keep you on the current localhost:8080 window while running the{' '}
+                        <strong>pa11y</strong> tests. Pa11y runs on the current browser window and
+                        runs accessibility tests directly within that page's UI. You will be able to
+                        see the readout within that <strong>second terminal window</strong>. (You
+                        may need to scroll up within the terminal window to see the{' '}
+                        <strong>pa11y</strong> errors).
+                    </InstructionsParagraph>
+                    <InstructionsParagraph className="section-instructions">
+                        Continue to change the <strong>background color</strong> and the{' '}
+                        <strong>font color</strong> and then run the{' '}
+                        <strong>npm run pa11y:axe</strong> command a few different times. You will
+                        be able to see the results of each color change combinations within that{' '}
+                        <strong>second terminal window</strong> each time.
                     </InstructionsParagraph>
                 </InstructionsContainer>
                 <ColorPickerDynamic
@@ -1538,7 +1556,7 @@ const App = () => {
 
                         <InstructionsContainer className="Instructions-container color-contrast-instructions-container">
                             <InstructionsParagraph className="final-challenge-instructions">
-                                Throught your journey through this repo you have learned a better
+                                Through out your journey using this repo, you have learned a better
                                 understanding of <strong>Accessible Web</strong> through learning
                                 about each section topic. You worked on section topic challenges to
                                 gain understanding related to how to create, and test components and
@@ -1559,13 +1577,23 @@ const App = () => {
                                 This application was designed and developed to <strong>NOT</strong>{' '}
                                 fully satisfy <strong>Accessible Web</strong> compliance. It's
                                 navigable and usable from an Individual's perspective but needs more
-                                work to make it WCAG 2.1 AA compliant. I challenge you to take what
-                                you have learned and use your creativity to re-design and develop
+                                work to make it WCAG 2.1 AA compliant. I challenge you... take what
+                                you have learned and use your creativity to re-design and re-develop
                                 this application to make it successfully tested for an{' '}
-                                <strong>Accessible Web</strong> from your perspective. I can't wait
-                                to see what you accomplish while using your creativity.{' '}
-                                <strong>Do your best</strong> and...
-                                <strong>have fun</strong>!
+                                <strong>Accessible Web</strong> from your perspective.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                Once you have completed your work, contact me with the contact-info
+                                provided within the <strong>README.md</strong> so we can look at
+                                what you have worked on together.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="final-challenge-instructions">
+                                <strong>
+                                    <pre>
+                                        I can't wait to see what you accomplish while using your
+                                        creativity, ingenuity and new found skills :-)
+                                    </pre>
+                                </strong>
                             </InstructionsParagraph>
                         </InstructionsContainer>
                     </Div>
