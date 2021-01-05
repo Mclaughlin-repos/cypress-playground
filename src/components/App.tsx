@@ -242,11 +242,12 @@ const App = () => {
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions section-instructions-paragraph">
                         <strong>Another example:</strong> grab a pencil/pen or straight edge and put
-                        it in your <strong>non-dominant hand</strong>. Using the pencil, try to
-                        within a website on screen. It's a much different experience compared to how
-                        non impaired people have to use the internet. You have now gained crude
-                        insight into how an individual with physical impairments may need to use the
-                        internet.
+                        it in your <strong>non-dominant hand</strong>. Using the pencil, try to type
+                        into a website form within a website on screen OR try to navigate through an
+                        online presence using the keyboard. It's a much different experience
+                        compared to how non impaired people have to use the internet. You have now
+                        gained crude insight into how an individual with physical impairments may
+                        need to use the internet.
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
                         <strong>
@@ -291,8 +292,9 @@ const App = () => {
                             </ListItem>
                             <ListItem id="" className="" dataCy="">
                                 Create new <strong>mini-webapps</strong> and{' '}
-                                <strong>micro-sites</strong> from the provided components to test
-                                for whole <strong>application accessibility.</strong>
+                                <strong>micro-sites</strong> from the provided components AND/OR
+                                with custom created styled components to test for whole{' '}
+                                <strong>application accessibility.</strong>
                             </ListItem>
                             <ListItem id="" className="" dataCy="">
                                 Finally, to <strong>challenge yourself</strong> by doing{' '}
@@ -650,7 +652,7 @@ const App = () => {
                                     Headings create an outline for the page, similar to a term paper
                                     outline or table of contents. The <strong>h1</strong> describes
                                     the page as a whole, and should be similar to the page{' '}
-                                    <strong>title</strong>).
+                                    <strong>title</strong>.
                                 </InstructionsParagraph>
                                 <InstructionsParagraph>
                                     A page should typically have only one <strong>h1</strong>.
@@ -679,7 +681,7 @@ const App = () => {
                         errors when you first run the script comands.
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
-                        In your terminal change directories into the <strong>cypress folder</strong>{' '}
+                        In your terminal change directories into the <strong>cypress</strong> folder{' '}
                         then, run this command within your terminal window:{' '}
                     </InstructionsParagraph>
                     <strong>
@@ -810,19 +812,19 @@ const App = () => {
                                     perceive content on the page. There is a great deal of fine
                                     print and complexity within the Web Content Accessibility
                                     Guidelines (WCAG) 2 that can easily confuse web content creators
-                                    and web accessibility evaluators. This article pulls together
-                                    the terms and principles needed to understand WCAG 2
-                                    requirements for contrast and color.
+                                    and web accessibility evaluators. Here are some terms and
+                                    principles needed to understand WCAG 2 requirements for contrast
+                                    and color.
                                 </InstructionsParagraph>
                                 <InstructionsParagraph className="heading-order-learn-button-instructions">
-                                    In WCAG 2, contrast is a measure of the difference in perceived
+                                    In WCAG 2, contrast is a measure of the difference in perceived{' '}
                                     <strong>luminance or brightness</strong> between two colors (the
                                     phrase "color contrast" is never used).
                                 </InstructionsParagraph>
                                 <InstructionsParagraph>
                                     This brightness difference is expressed as a ratio ranging from{' '}
                                     <strong>1:1</strong> (e.g.{' '}
-                                    <strong>white text on a white background</strong> ) to
+                                    <strong>white text on a white background</strong> ) to{' '}
                                     <strong>21:1</strong> (e.g.,{' '}
                                     <strong>black text on a white background</strong>).
                                 </InstructionsParagraph>
@@ -918,9 +920,9 @@ const App = () => {
                     id="link-1"
                     href="javascript:void(0)"
                     messageChildren={
-                        'Using the Aurora swatch palette provided in the swatches section, find 10 sets of contrast ratios that pass WCGAC 2.1 AA for background color to font color.'
+                        'Using the Aurora swatch palette provided in the swatches section of the color pickers, find 10 sets of contrast ratios that pass WCAG 2.1 AA for background color to font color.'
                     }
-                    title="Challenge: Using the Aurora swatch palette provided in the swatches section, find 10 sets of contrast ratios that pass WCGAC 2.1 AA for background color to font color."
+                    title="Challenge: Using the Aurora swatch palette provided in the swatches section of the color pickers, find 10 sets of contrast ratios that pass WCAG 2.1 AA for background color to font color."
                     className="font-color-contrast-ratio-challenge-link"
                     linkText="Challenge"
                 >
@@ -1008,13 +1010,13 @@ const App = () => {
                 <InstructionsContainer className="Instructions-container color-contrast-font-size-instructions-container">
                     <InstructionsParagraph className="section-instructions">
                         Below you will see the official <strong>Aurora font sizes</strong> within
-                        each card starting from largest to smallest.
+                        this section starting from largest to smallest.
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
                         Choose a swatch from the <strong>Aurora swatch collection</strong> OR use
                         the inputs to search for a custom color for <strong>font color</strong>{' '}
                         then, change the <strong>background color</strong> to see differences with
-                        color contrast combined with the <strong>Aurora font sizes</strong>.
+                        contrast ratio combined with the <strong>Aurora font sizes</strong>.
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
                         Once you have chosen your colors, open a{' '}
@@ -1114,9 +1116,9 @@ const App = () => {
                     id="link-1"
                     href="javascript:void(0)"
                     messageChildren={
-                        'Using the Aurora swatch palette, find 5 sets of contrast ratios that pass WCGAC 2.1 AA for all font sizes.'
+                        'Using the Aurora swatch palette, find 5 sets of contrast ratios that pass WCAG 2.1 AA for all font sizes.'
                     }
-                    title="Challenge: Using the Aurora swatch palette, find 5 sets of contrast ratios that pass WCGAC 2.1 AA for all font sizes."
+                    title="Challenge: Using the Aurora swatch palette, find 5 sets of contrast ratios that pass WCAG 2.1 AA for all font sizes."
                     className="font-color-contrast-ratio-challenge-link"
                     linkText="Challenge"
                 >
