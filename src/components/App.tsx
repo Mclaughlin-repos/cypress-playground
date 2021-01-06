@@ -400,7 +400,7 @@ const App = () => {
                         initially to surface errors for you to learn from.
                     </InstructionsParagraph>
                     <InstructionsParagraph className="section-instructions">
-                        In your terminal change directories into the <strong>cypress folder</strong>{' '}
+                        In your terminal change directories into the <strong>cypress</strong> folder{' '}
                         then, run this command in your terminal:{' '}
                     </InstructionsParagraph>
                     <strong>
