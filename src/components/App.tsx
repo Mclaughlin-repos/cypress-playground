@@ -1465,6 +1465,42 @@ const App = () => {
                     </InfoLink>
                     <InfoLink
                         id="link-1"
+                        href="https://www.deque.com/axe/core-documentation/api-documentation/#parameters-axerun"
+                        messageChildren={
+                            'Go to the deque labs API documentation to learn more about AXE technologies and how to configure them.'
+                        }
+                        title="Click this link to go to the deque labs API documentation to learn more about AXE technologies and how to configure them."
+                        className="references-link"
+                        target="_blank"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://www.deque.com/blog/how-to-test-for-accessibility-with-cypress/"
+                        messageChildren={
+                            "Go to the deque labs blog to learn more about how to test for accessibility with Cypress while intergating axe-core into your project. Chrome is buggy with this site currently and they are working on it...try another browser if Chrome doesn't work."
+                        }
+                        title="Click this link to go to the deque labs blog to learn more about how to test for accessibility with Cypress while intergating axe-core into your project. Chrome is buggy with this site currently and they are working on it...try another browser if Chrome doesn't work."
+                        className="references-link"
+                        target="_blank"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
+                        href="https://www.deque.com/blog/introducing-axe-linter/"
+                        messageChildren={
+                            "Go to the deque labs blog to learn more about their new Automated Source Code Accessibility Checker. Chrome is buggy with this site currently and they are working on it...try another browser if Chrome doesn't work."
+                        }
+                        title="Click this link to go to the deque labs blog to learn more about their new Automated Source Code Accessibility Checker. Chrome is buggy with this site currently and they are working on it...try another browser if Chrome doesn't work."
+                        className="references-link"
+                        target="_blank"
+                    >
+                        <ResourcesIcon />
+                    </InfoLink>
+                    <InfoLink
+                        id="link-1"
                         href="https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell"
                         messageChildren={
                             'Go to Cypress.io to learn everything you need to know about Cypress.  The docs are exstensive and always updated with current info.'
@@ -1625,6 +1661,7 @@ const FormsTargetContainer = styled.div`
     }
     & .references-link {
         height: 10rem;
+        padding: 2rem 0.75rem;
         width: 100%;
         border-radius: 0.5rem;
         & strong {
@@ -1653,6 +1690,7 @@ const HeadingsTargetContainer = styled.div`
     }
     & .references-link {
         height: 10rem;
+        padding: 2rem 0.75rem;
         width: 100%;
         border-radius: 0.5rem;
         & strong {
@@ -1681,6 +1719,7 @@ const ContrastTargetContainer = styled.div`
     }
     & .references-link {
         height: 10rem;
+        padding: 2rem 0.75rem;
         width: 100%;
         border-radius: 0.5rem;
         & strong {
@@ -1709,6 +1748,7 @@ const FontSizeTargetContainer = styled.div`
     }
     & .references-link {
         height: 10rem;
+        padding: 2rem 0.75rem;
         width: 100%;
         border-radius: 0.5rem;
         & strong {
@@ -1737,6 +1777,7 @@ const ReferencesTargetContainer = styled.div`
     }
     & .references-link {
         height: 10rem;
+        padding: 2rem 0.75rem;
         width: 100%;
         border-radius: 0.5rem;
         & strong {
@@ -1765,6 +1806,7 @@ const FinalChallengeTargetContainer = styled.div`
     }
     & .references-link {
         height: 10rem;
+        padding: 2rem 0.75rem;
         width: 100%;
         border-radius: 0.5rem;
         & strong {
