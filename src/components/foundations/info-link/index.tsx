@@ -41,15 +41,16 @@ const LinkContainer = styled.div`
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
-    height: 8rem;
-    padding: 1.25rem 1.5rem;
+    height: auto;
+    padding: 1rem 1.5rem;
     border-radius: 0.25rem;
     transition: 400ms ease-in-out;
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.25);
     & .Link-message-container {
         letter-spacing: 0.5px;
         line-height: 1.25;
-        padding: 0 1.5rem;
+        padding: 1rem 1.5rem;
+        min-height: 8rem;
         height: inherit;
     }
     &:hover {
