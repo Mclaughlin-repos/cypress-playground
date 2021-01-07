@@ -42,10 +42,10 @@ const LinkContainer = styled.div`
     justify-content: flex-start;
     border-radius: 0.25rem;
     transition: 400ms ease-in-out;
-    padding: 0 0.5rem 0 0;
     & .Link-message-container {
         letter-spacing: 0.5px;
         line-height: 1.25;
+        margin-right: 1rem;
     }
     &:hover {
         border: 2px solid #ff581f;
@@ -59,13 +59,19 @@ const MessageContainer = styled.p`
     padding: 1rem;
     background-color: #051930;
     border-radius: 0.25rem;
+    width: inherit;
+    min-height: 3.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
 `;
 
 const LinkElement = styled.a`
     display: flex;
     align-items: center;
     text-decoration: none;
-    height: 5rem;
+    width: 100%;
+    height: 100%;
     & svg {
         padding: 0 0.75rem;
         width: 5rem;
