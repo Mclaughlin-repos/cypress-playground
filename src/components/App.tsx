@@ -2228,7 +2228,7 @@ const AppContainer = styled.section`
             & .Link-parent-container {
                 margin: 0;
             }
-            @media (max-width: 1330px) {
+            @media (max-width: 1500px) {
                 grid-template-columns: repeat(1, auto);
                 grid-template-rows: repeat(2, auto);
             }
