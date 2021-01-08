@@ -1,4 +1,4 @@
 dist/
-cypress
+cypress/
 node_modules
 webpack.config.*

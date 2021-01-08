@@ -40,7 +40,7 @@ class ColorPickerDynamic extends React.Component<Props> {
             default: {
                 color: {
                     borderRadius: '0.25rem',
-                    background: `rgba(${this.state.color.r}, ${this.state.color.g}, ${this.state.color.b}, ${this.state.color.a})`,
+                    backgroundColor: `rgba(${this.state.color.r}, ${this.state.color.g}, ${this.state.color.b}, ${this.state.color.a})`,
                 },
             },
         });
@@ -57,6 +57,7 @@ class ColorPickerDynamic extends React.Component<Props> {
                     {this.state.displayColorPicker ? (
                         <CloseButton
                             className="Color-picker-button color-picker-dynamic-close-button"
+                            data-cy={`${dataCy}-background-close-button`}
                             onClick={this.handleClose}
                         >
                             Close Background Color
@@ -64,13 +65,17 @@ class ColorPickerDynamic extends React.Component<Props> {
                     ) : (
                         <OpenButton
                             className="Color-picker-button color-picker-dynamic-open-button"
+                            data-cy={`${dataCy}-background-open-button`}
                             onClick={this.handleClick}
                         >
                             Change Background Color
                         </OpenButton>
                     )}
                     {this.state.displayColorPicker ? (
-                        <Popover className="color-picker-popover color-picker-dynamic-popover">
+                        <Popover
+                            className="color-picker-popover color-picker-dynamic-popover"
+                            data-cy={`color-picker-dynamic-popover`}
+                        >
                             <Cover className="color-picker-aurora-text-cover">
                                 <SketchPicker
                                     color={this.state.color}
@@ -84,6 +89,7 @@ class ColorPickerDynamic extends React.Component<Props> {
                     ) : null}
                     <ChildContainer
                         className="color-picker-dynamic-child-container"
+                        data-cy={`${dataCy}-child-container`}
                         style={styles.color}
                     >
                         {children}

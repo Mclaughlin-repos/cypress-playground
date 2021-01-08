@@ -55,6 +55,7 @@ class ColorPickerAuroraText extends React.Component<Props> {
                     {this.state.displayColorPicker ? (
                         <CloseButton
                             className="Color-picker-button color-picker-aurora-text-button color-picker-aurora-text-close-button"
+                            data-cy={`${dataCy}-font-close-button`}
                             onClick={this.handleClose}
                         >
                             Close Font Color
@@ -62,13 +63,17 @@ class ColorPickerAuroraText extends React.Component<Props> {
                     ) : (
                         <OpenButton
                             className="Color-picker-button color-picker-aurora-text-button color-picker-aurora-text-open-button"
+                            data-cy={`${dataCy}-font-open-button`}
                             onClick={this.handleClick}
                         >
                             Change Font Color
                         </OpenButton>
                     )}
                     {this.state.displayColorPicker ? (
-                        <Popover className="color-picker-popover color-picker-aurora-text-popover">
+                        <Popover
+                            className="color-picker-popover color-picker-aurora-text-popover"
+                            data-cy="color-picker-aurora-text-popover"
+                        >
                             <Cover className="color-picker-aurora-text-cover">
                                 <SketchPicker
                                     color={this.state.color}
@@ -83,6 +88,7 @@ class ColorPickerAuroraText extends React.Component<Props> {
                 </Container>
                 <ChildContainer
                     className="color-picker-aurora-text-child-container"
+                    data-cy={`${dataCy}-child-container`}
                     style={styles.color}
                 >
                     {children}
