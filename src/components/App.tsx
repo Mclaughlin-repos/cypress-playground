@@ -870,7 +870,7 @@ const App = () => {
                 <ColorPickerDynamic
                     id="color-contrast-dynamic-picker"
                     className="Color-contrast-dynamic-picker"
-                    dataCy="color-contrast-dynamic-picker"
+                    dataCy="color-contrast-dynamic-background-picker"
                 >
                     <ColorPickerAuroraText
                         id="color-contrast-aurora-text-picker"

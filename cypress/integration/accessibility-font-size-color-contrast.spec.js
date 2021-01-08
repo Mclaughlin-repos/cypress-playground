@@ -1,6 +1,6 @@
 beforeEach(() => {
     cy.visit('http://localhost:8080');
-    cy.addAxeCode(); // overwrite of injectAxe() by using axe.min.js, which fixes axe-core which has a require.resolve error
+    cy.addAxeCode(); // overwrite of injectAxe() by using axe-core, which fixes cypress-axe which has a require.resolve error
 });
 const colorContrastSection = '[data-cy="color-contrast-font-size-section"]';
 const colorContrastSectionHeader = '[data-cy="header-color-contrast-font-size-section"]';
