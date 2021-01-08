@@ -51,7 +51,15 @@ context('Color Contrast Accessibility (A11Y)', () => {
         });
         cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
-
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    /** The next tests below can be duplicated with different color values added (from the color-picker-dropdowns)...
+        * to compare and test different colors (background color <> font color) 
+    */
+    /** Just copy and paste the test, change the `it` to something different than where you copied it from...
+        * append it to the end then of the tests, change the hex values within the .type() method and re-run the tests 
+     */
+    /** The axe-core accessiblity erros will show up with the changed values and check for contrast ratio on the new values */
     it('has a different "Background-color" when typing into input', () => {
         cy.get(colorContrastDynamicBackgroundPickerBackgroundOpenButton).should('be.visible').and('have.text', 'Change Background Color').click();
         cy.get(colorPickerDynamicPopover).should('be.visible');
