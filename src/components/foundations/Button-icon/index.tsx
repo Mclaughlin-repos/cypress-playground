@@ -71,13 +71,15 @@ const ButtonIcon: React.FC<{
 const ButtonContainer = styled.button`
     display: flex;
     flex-flow: column;
+    align-items: center;
+    justify-content: center;
     background-color: #030c19;
-    padding: 1rem;
     font-size: 1.25rem;
     letter-spacing: 0.5px;
     border-radius: 0.25rem;
-    width: 5rem;
-    /* height: 5rem; */
+    height: 6rem;
+    min-width: 6.5rem;
+    width: auto;
     display: flex;
     align-items: center;
     border: none;
@@ -89,12 +91,15 @@ const ButtonContainer = styled.button`
         background-color: black;
         border-color: #ff5a15;
     }
+    & > svg {
+        width: 36px;
+        height: 36px;
+    }
 `;
 
 const Text = styled.p`
     color: #ffffff;
     font-size: 1rem;
-    /* border: 1px solid red; */
     margin: 0.5rem 0 0 0;
     padding: 0;
 `;
