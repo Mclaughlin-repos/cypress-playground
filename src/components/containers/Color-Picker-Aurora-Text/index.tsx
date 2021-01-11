@@ -46,7 +46,11 @@ class ColorPickerAuroraText extends React.Component<Props> {
         });
         const { children, id, className, dataCy } = this.props;
         return (
-            <ParentContainer className="color-picker-parent-container">
+            <ParentContainer
+                className="color-picker-parent-container"
+                style={styles.color}
+                data-cy="text-color-picker-parent-container"
+            >
                 <Container
                     className={`text-color-picker-container ${className}`}
                     id={id}
@@ -74,7 +78,10 @@ class ColorPickerAuroraText extends React.Component<Props> {
                             className="color-picker-popover color-picker-aurora-text-popover"
                             data-cy="color-picker-aurora-text-popover"
                         >
-                            <Cover className="color-picker-aurora-text-cover">
+                            <Cover
+                                className="color-picker-aurora-text-cover"
+                                data-cy="color-picker-aurora-text-cover"
+                            >
                                 <SketchPicker
                                     color={this.state.color}
                                     onChange={this.handleChange}

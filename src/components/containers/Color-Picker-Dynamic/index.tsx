@@ -47,7 +47,10 @@ class ColorPickerDynamic extends React.Component<Props> {
 
         const { children, id, className, dataCy } = this.props;
         return (
-            <ParentContainer className="Color-picker-dynamic-parent-container">
+            <ParentContainer
+                className="Color-picker-dynamic-parent-container"
+                data-cy="color-picker-dynamic-parent-container"
+            >
                 <Container
                     className={`color-picker-container ${className}`}
                     id={id}
@@ -76,7 +79,7 @@ class ColorPickerDynamic extends React.Component<Props> {
                             className="color-picker-popover color-picker-dynamic-popover"
                             data-cy={`color-picker-dynamic-popover`}
                         >
-                            <Cover className="color-picker-aurora-text-cover">
+                            <Cover className="color-picker-dynamic-cover">
                                 <SketchPicker
                                     color={this.state.color}
                                     onChange={this.handleChange}

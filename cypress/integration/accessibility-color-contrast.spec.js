@@ -1,5 +1,4 @@
 context('Color Contrast Accessibility (A11Y)', () => {
-    const colorContrastDynamicBackgroundPicker = '[data-cy="color-contrast-dynamic-background-picker"]';
     const colorContrastAuroraTextPickerChildContainer = '[data-cy="color-contrast-aurora-text-picker-child-container"]';
     const colorContrastDynamicBackgroundPickerChildContainer = '[data-cy="color-contrast-dynamic-background-picker-child-container"]';
     const colorPickerDynamicPopover = '[data-cy="color-picker-dynamic-popover"]';
@@ -14,7 +13,6 @@ context('Color Contrast Accessibility (A11Y)', () => {
     });
 
     it('has the "conditional rendering of buttons" for the background color picker', () => {
-        // cy.get(colorContrastDynamicBackgroundPicker).should('be.visible');
         cy.get(colorContrastDynamicBackgroundPickerBackgroundOpenButton).should('be.visible').and('have.text', 'Change Background Color').click();
         cy.get(colorContrastDynamicBackgroundPickerBackgroundCloseButton).should('be.visible').and('have.text', 'Close Background Color').click();
         cy.get(colorContrastDynamicBackgroundPickerBackgroundOpenButton).should('be.visible').and('have.text', 'Change Background Color');
@@ -92,5 +90,4 @@ context('Color Contrast Accessibility (A11Y)', () => {
         
         cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
-
 });
