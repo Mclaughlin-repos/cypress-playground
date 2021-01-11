@@ -345,48 +345,49 @@ const App = () => {
                     className="Header-form-section"
                     dataCy="header-form-section"
                 >
+                    <ButtonIconDropdown
+                        id="form-exercise-learn-button"
+                        className="learn-button form-exercise-learn-button"
+                        headingChildren={'Why is this important?'}
+                        iconChildren={<SolutionIcon />}
+                        dataCy="form-exercise-learn-button"
+                    >
+                        <InstructionsContainer>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                Forms can be visually and cognitively complex and challenging to
+                                use. Accessible forms are easier to use for everyone, including
+                                people with disabilities.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People with cognitive disablities: </strong>
+                                can better understand the form and how to complete it, as making
+                                forms accessible improves the layout structure, instructions, and
+                                feedback.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People using speech input: </strong>
+                                can use the labels via voice commands to activate controls and move
+                                the focus to the fields that they have to complete.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People with limited dexterity: </strong>
+                                benefit from large clickable areas that include the labels,
+                                especially for smaller controls, such as radio buttons and
+                                checkboxes.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="form-learn-button-instructions">
+                                <strong>People using screen readers: </strong>
+                                can identify and understand form controls more easily because they
+                                are associated with labels, field sets, and other structural
+                                elements.
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
+                    </ButtonIconDropdown>{' '}
                     <H1
                         id="form-section-heading-1"
                         className="Heading-1"
                         dataCy="form-section-heading-1"
                     >
-                        <ButtonIconDropdown
-                            id="form-exercise-learn-button"
-                            className="learn-button form-exercise-learn-button"
-                            headingChildren={'Why is this important?'}
-                            iconChildren={<SolutionIcon />}
-                        >
-                            <InstructionsContainer>
-                                <InstructionsParagraph className="form-learn-button-instructions">
-                                    Forms can be visually and cognitively complex and challenging to
-                                    use. Accessible forms are easier to use for everyone, including
-                                    people with disabilities.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph className="form-learn-button-instructions">
-                                    <strong>People with cognitive disablities: </strong>
-                                    can better understand the form and how to complete it, as making
-                                    forms accessible improves the layout structure, instructions,
-                                    and feedback.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph className="form-learn-button-instructions">
-                                    <strong>People using speech input: </strong>
-                                    can use the labels via voice commands to activate controls and
-                                    move the focus to the fields that they have to complete.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph className="form-learn-button-instructions">
-                                    <strong>People with limited dexterity: </strong>
-                                    benefit from large clickable areas that include the labels,
-                                    especially for smaller controls, such as radio buttons and
-                                    checkboxes.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph className="form-learn-button-instructions">
-                                    <strong>People using screen readers: </strong>
-                                    can identify and understand form controls more easily because
-                                    they are associated with labels, field sets, and other
-                                    structural elements.
-                                </InstructionsParagraph>
-                            </InstructionsContainer>
-                        </ButtonIconDropdown>{' '}
                         Accessibility with Forms Exercise
                     </H1>
                 </Header>
@@ -633,40 +634,42 @@ const App = () => {
                     className="Header-heading-order-section"
                     dataCy="header-heading-order-section"
                 >
+                    <ButtonIconDropdown
+                        id="heading-order-exercise-learn-button"
+                        className="learn-button form-exercise-learn-button"
+                        headingChildren={'Why is this important?'}
+                        iconChildren={<OpenBookWithBulbIcon />}
+                        dataCy="heading-order-exercise-learn-button"
+                    >
+                        <InstructionsContainer>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                A heading describes the content that follows it, much like a news
+                                headline. When arriving at a new page, sighted users gravitate
+                                toward headings to quickly find what they want on the page. Screen
+                                reader and other assistive technology users can also skip from
+                                heading to heading.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                Headings create an outline for the page, similar to a term paper
+                                outline or table of contents. The <strong>h1</strong> describes the
+                                page as a whole, and should be similar to the page{' '}
+                                <strong>title</strong>.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                A page should typically have only one <strong>h1</strong>. Headings{' '}
+                                <strong>h2</strong> through <strong>h6</strong> represent increasing
+                                degrees of <strong>"indentation"</strong> in our conceptual{' '}
+                                <strong>"outline"</strong>.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                Because of this, it does not make sense to skip heading levels, such
+                                as from <strong>h2</strong> to <strong>h4</strong>, going down the
+                                page.
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
+                    </ButtonIconDropdown>
+
                     <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                        <ButtonIconDropdown
-                            id="heading-order-exercise-learn-button"
-                            className="learn-button form-exercise-learn-button"
-                            headingChildren={'Why is this important?'}
-                            iconChildren={<OpenBookWithBulbIcon />}
-                        >
-                            <InstructionsContainer>
-                                <InstructionsParagraph className="heading-order-learn-button-instructions">
-                                    A heading describes the content that follows it, much like a
-                                    news headline. When arriving at a new page, sighted users
-                                    gravitate toward headings to quickly find what they want on the
-                                    page. Screen reader and other assistive technology users can
-                                    also skip from heading to heading.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph className="heading-order-learn-button-instructions">
-                                    Headings create an outline for the page, similar to a term paper
-                                    outline or table of contents. The <strong>h1</strong> describes
-                                    the page as a whole, and should be similar to the page{' '}
-                                    <strong>title</strong>.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph>
-                                    A page should typically have only one <strong>h1</strong>.
-                                    Headings <strong>h2</strong> through <strong>h6</strong>{' '}
-                                    represent increasing degrees of <strong>"indentation"</strong>{' '}
-                                    in our conceptual <strong>"outline"</strong>.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph>
-                                    Because of this, it does not make sense to skip heading levels,
-                                    such as from <strong>h2</strong> to <strong>h4</strong>, going
-                                    down the page.
-                                </InstructionsParagraph>
-                            </InstructionsContainer>
-                        </ButtonIconDropdown>
                         Accessibility with Heading Order Exercise
                     </H1>
                 </Header>
@@ -798,38 +801,39 @@ const App = () => {
                     className="Header-color-contrast-section"
                     dataCy="header-color-contrast-section"
                 >
+                    <ButtonIconDropdown
+                        id="color-contrast-exercise-learn-button"
+                        className="learn-button Color-contrast-exercise-learn-button"
+                        headingChildren={'Why is this important'}
+                        iconChildren={<InnovationIcon />}
+                        dataCy="color-contrast-exercise-learn-button"
+                    >
+                        <InstructionsContainer>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                Contrast and color use are vital to accessibility. Users, including
+                                users with visual disabilities, must be able to perceive content on
+                                the page. There is a great deal of fine print and complexity within
+                                the Web Content Accessibility Guidelines (WCAG) 2 that can easily
+                                confuse web content creators and web accessibility evaluators. Here
+                                are some terms and principles needed to understand WCAG 2
+                                requirements for contrast and color.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                In WCAG 2, contrast is a measure of the difference in perceived{' '}
+                                <strong>luminance or brightness</strong> between two colors (the
+                                phrase "color contrast" is never used).
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                This brightness difference is expressed as a ratio ranging from{' '}
+                                <strong>1:1</strong> (e.g.{' '}
+                                <strong>white text on a white background</strong> ) to{' '}
+                                <strong>21:1</strong> (e.g.,{' '}
+                                <strong>black text on a white background</strong>).
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
+                    </ButtonIconDropdown>
+
                     <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                        <ButtonIconDropdown
-                            id="form-exercise-learn-button"
-                            className="learn-button form-exercise-learn-button"
-                            headingChildren={'Why is this important'}
-                            iconChildren={<InnovationIcon />}
-                        >
-                            <InstructionsContainer>
-                                <InstructionsParagraph className="heading-order-learn-button-instructions">
-                                    Contrast and color use are vital to accessibility. Users,
-                                    including users with visual disabilities, must be able to
-                                    perceive content on the page. There is a great deal of fine
-                                    print and complexity within the Web Content Accessibility
-                                    Guidelines (WCAG) 2 that can easily confuse web content creators
-                                    and web accessibility evaluators. Here are some terms and
-                                    principles needed to understand WCAG 2 requirements for contrast
-                                    and color.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph className="heading-order-learn-button-instructions">
-                                    In WCAG 2, contrast is a measure of the difference in perceived{' '}
-                                    <strong>luminance or brightness</strong> between two colors (the
-                                    phrase "color contrast" is never used).
-                                </InstructionsParagraph>
-                                <InstructionsParagraph>
-                                    This brightness difference is expressed as a ratio ranging from{' '}
-                                    <strong>1:1</strong> (e.g.{' '}
-                                    <strong>white text on a white background</strong> ) to{' '}
-                                    <strong>21:1</strong> (e.g.,{' '}
-                                    <strong>black text on a white background</strong>).
-                                </InstructionsParagraph>
-                            </InstructionsContainer>
-                        </ButtonIconDropdown>
                         Accessibility with Contrast Ratio
                     </H1>
                 </Header>
@@ -959,51 +963,52 @@ const App = () => {
                     className="Header-color-contrast-font-size-section"
                     dataCy="header-color-contrast-font-size-section"
                 >
+                    <ButtonIconDropdown
+                        id="color-contrast-font-exercise-learn-button"
+                        className="learn-button color-contrast-font-exercise-learn-button"
+                        headingChildren={'Why is this important?'}
+                        iconChildren={<IdeaIcon />}
+                        dataCy="color-contrast-font-exercise-learn-button"
+                    >
+                        <InstructionsContainer>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                <strong>Typefaces</strong> are groups of designed text characters,
+                                such as <strong>Arial, Helvetica</strong>, and{' '}
+                                <strong>Times New Roman</strong>.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                <strong>Fonts</strong> are <strong>sub-sets</strong> of typefaces
+                                that have a consistent appearance, such as a 14 point and bold font
+                                in the Arial typeface. Typography—how typefaces and fonts present
+                                text—is very impactful on reading, which is a core component of
+                                visual accessibility.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                <strong>WCAG 2.0 AA</strong> requires a contrast ratio of at least{' '}
+                                <strong>4.5:1</strong> for <strong>normal text</strong> and{' '}
+                                <strong>3:1</strong> for <strong>large text</strong>.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                <strong>WCAG 2.1</strong> requires a contrast ratio of at least{' '}
+                                <strong>3:1</strong> for{' '}
+                                <strong>graphics and user interface components</strong> (such as
+                                form input borders).
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                <strong>WCAG 2.1 AAA</strong> Level requires a contrast ratio of at
+                                least <strong>7:1</strong> for <strong>normal text</strong> and
+                                <strong>4.5:1</strong> for <strong>large text</strong>.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph>
+                                <strong>Colorzilla</strong> is an excellent tool for extracting the
+                                color value from any page element. Additionally,{' '}
+                                <strong>WAVE</strong> can analyze contrast ratios for all page text
+                                elements at once.
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
+                    </ButtonIconDropdown>
+
                     <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                        <ButtonIconDropdown
-                            id="color-contrast-exercise-learn-button"
-                            className="learn-button color-contrast-exercise-learn-button"
-                            headingChildren={'Why is this important?'}
-                            iconChildren={<IdeaIcon />}
-                        >
-                            <InstructionsContainer>
-                                <InstructionsParagraph className="heading-order-learn-button-instructions">
-                                    <strong>Typefaces</strong> are groups of designed text
-                                    characters, such as <strong>Arial, Helvetica</strong>, and{' '}
-                                    <strong>Times New Roman</strong>.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph>
-                                    <strong>Fonts</strong> are <strong>sub-sets</strong> of
-                                    typefaces that have a consistent appearance, such as a 14 point
-                                    and bold font in the Arial typeface. Typography—how typefaces
-                                    and fonts present text—is very impactful on reading, which is a
-                                    core component of visual accessibility.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph className="heading-order-learn-button-instructions">
-                                    <strong>WCAG 2.0 AA</strong> requires a contrast ratio of at
-                                    least <strong>4.5:1</strong> for <strong>normal text</strong>{' '}
-                                    and <strong>3:1</strong> for <strong>large text</strong>.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph>
-                                    <strong>WCAG 2.1</strong> requires a contrast ratio of at least{' '}
-                                    <strong>3:1</strong> for{' '}
-                                    <strong>graphics and user interface components</strong> (such as
-                                    form input borders).
-                                </InstructionsParagraph>
-                                <InstructionsParagraph>
-                                    <strong>WCAG 2.1 AAA</strong> Level requires a contrast ratio of
-                                    at least <strong>7:1</strong> for <strong>normal text</strong>{' '}
-                                    and
-                                    <strong>4.5:1</strong> for <strong>large text</strong>.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph>
-                                    <strong>Colorzilla</strong> is an excellent tool for extracting
-                                    the color value from any page element. Additionally,{' '}
-                                    <strong>WAVE</strong> can analyze contrast ratios for all page
-                                    text elements at once.
-                                </InstructionsParagraph>
-                            </InstructionsContainer>
-                        </ButtonIconDropdown>
                         Accessibility with Contrast Ratio and Font Size Exercise
                     </H1>
                 </Header>
@@ -1154,29 +1159,28 @@ const App = () => {
                     className="Header-references-section"
                     dataCy="header-references-section"
                 >
+                    <ButtonIconDropdown
+                        id="references-learn-button"
+                        className="learn-button references-learn-button"
+                        headingChildren={'Why is this important'}
+                        iconChildren={<ResourcesIcon />}
+                        dataCy="references-learn-button"
+                    >
+                        <InstructionsContainer>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                Designing and developing for an <strong>accessible web</strong>{' '}
+                                presence is an extremely important philosophy for creating web and
+                                mobile experiences that everyone can use. This list of references
+                                can give you a good introduction into the world of accessible web.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                This list consists of all of the reference links I used to create
+                                this repo AND extra links for your own research. Use this research
+                                to embark on the final challenge listed below if you so choose.
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
+                    </ButtonIconDropdown>
                     <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                        <ButtonIconDropdown
-                            id="form-exercise-learn-button"
-                            className="learn-button form-exercise-learn-button"
-                            headingChildren={'Why is this important'}
-                            iconChildren={<ResourcesIcon />}
-                        >
-                            <InstructionsContainer>
-                                <InstructionsParagraph className="heading-order-learn-button-instructions">
-                                    Designing and developing for an <strong>accessible web</strong>{' '}
-                                    presence is an extremely important philosophy for creating web
-                                    and mobile experiences that everyone can use. This list of
-                                    references can give you a good introduction into the world of
-                                    accessible web.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph className="heading-order-learn-button-instructions">
-                                    This list consists of all of the reference links I used to
-                                    create this repo AND extra links for your own research. Use this
-                                    research to embark on the final challenge listed below if you so
-                                    choose.
-                                </InstructionsParagraph>
-                            </InstructionsContainer>
-                        </ButtonIconDropdown>
                         Extra References
                     </H1>
                 </Header>
@@ -1542,29 +1546,28 @@ const App = () => {
                     className="Header-final-challenge-section"
                     dataCy="header-final-challenge-section"
                 >
+                    <ButtonIconDropdown
+                        id="final-challenge-learn-button"
+                        className="learn-button form-exercise-learn-button"
+                        headingChildren={'Why is this important'}
+                        iconChildren={<ComputerWithCap />}
+                        dataCy="final-challenge-learn-button"
+                    >
+                        <InstructionsContainer>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                Designing and developing for an <strong>accessible web</strong>{' '}
+                                presence is an extremely important philosophy for creating web and
+                                mobile experiences that everyone can use. This list of references
+                                can give you a good introduction into the world of accessible web.
+                            </InstructionsParagraph>
+                            <InstructionsParagraph className="heading-order-learn-button-instructions">
+                                This list consists of all of the reference links I used to create
+                                this repo AND extra links for your own research. Use this research
+                                to embark on the final challenge listed below if you so choose.
+                            </InstructionsParagraph>
+                        </InstructionsContainer>
+                    </ButtonIconDropdown>
                     <H1 id="heading-1" className="Heading-1" dataCy="heading-1">
-                        <ButtonIconDropdown
-                            id="form-exercise-learn-button"
-                            className="learn-button form-exercise-learn-button"
-                            headingChildren={'Why is this important'}
-                            iconChildren={<ComputerWithCap />}
-                        >
-                            <InstructionsContainer>
-                                <InstructionsParagraph className="heading-order-learn-button-instructions">
-                                    Designing and developing for an <strong>accessible web</strong>{' '}
-                                    presence is an extremely important philosophy for creating web
-                                    and mobile experiences that everyone can use. This list of
-                                    references can give you a good introduction into the world of
-                                    accessible web.
-                                </InstructionsParagraph>
-                                <InstructionsParagraph className="heading-order-learn-button-instructions">
-                                    This list consists of all of the reference links I used to
-                                    create this repo AND extra links for your own research. Use this
-                                    research to embark on the final challenge listed below if you so
-                                    choose.
-                                </InstructionsParagraph>
-                            </InstructionsContainer>
-                        </ButtonIconDropdown>
                         Final Challenge
                     </H1>
                 </Header>
@@ -2054,9 +2057,8 @@ const AppContainer = styled.section`
             font-size: 1.75rem;
             margin: 0 0 1rem 0;
             padding: 0;
-
-            & .Form-section-heading-1 {
-                margin: 0;
+            & .Heading-1 {
+                margin: 0 0 0 1.5rem;
                 padding: 0;
                 color: #ffffff;
                 letter-spacing: 0.5px;
@@ -2073,7 +2075,7 @@ const AppContainer = styled.section`
 
             & .Heading-1 {
                 font-size: 1.75rem;
-                margin: 0;
+                margin: 0 0 0 1.5rem;
                 padding: 0;
                 color: #ffffff;
                 letter-spacing: 0.5px;
@@ -2198,7 +2200,7 @@ const AppContainer = styled.section`
             padding: 0;
 
             & .Heading-1 {
-                margin: 0;
+                margin: 0 0 0 1.5rem;
                 padding: 0;
                 color: #ffffff;
                 letter-spacing: 0.5px;
@@ -2241,7 +2243,7 @@ const AppContainer = styled.section`
             padding: 0;
 
             & .Heading-1 {
-                margin: 0;
+                margin: 0 0 0 1.5rem;
                 padding: 0;
                 color: #ffffff;
                 letter-spacing: 0.5px;
@@ -2349,8 +2351,8 @@ const AppContainer = styled.section`
             margin: 0 0 1rem 0;
             padding: 0;
 
-            & .Heading-2 {
-                margin: 0;
+            & .Heading-1 {
+                margin: 0 0 0 1.5rem;
                 padding: 0;
                 color: #ffffff;
                 letter-spacing: 0.5px;
@@ -2404,7 +2406,7 @@ const AppContainer = styled.section`
             padding: 0;
 
             & .Heading-1 {
-                margin: 0;
+                margin: 0 0 0 1.5rem;
                 padding: 0;
                 color: #ffffff;
                 letter-spacing: 0.5px;

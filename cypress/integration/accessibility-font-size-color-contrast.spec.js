@@ -4,6 +4,7 @@ beforeEach(() => {
 });
 const colorContrastSection = '[data-cy="color-contrast-font-size-section"]';
 const colorContrastSectionHeader = '[data-cy="header-color-contrast-font-size-section"]';
+const whyHeaderButtonDropdown = '[data-cy="button-icon-button-dropdown-color-contrast-exercise-learn-button"]'
 const colorContrastContainerDivH1 = '[data-cy="h1-color-contrast-div"]';
 const colorContrastContainerDivH2 = '[data-cy="h2-color-contrast-div"]';
 const colorContrastContainerDivH3 = '[data-cy="h3-color-contrast-div"]';
@@ -18,56 +19,34 @@ const colorContrastSectionHeadingH5 = '[data-cy="heading-5"]';
 const colorContrastSectionHeadingH6 = '[data-cy="heading-6"]';
 
 context('Font Size with Color Contrast Accessibility (A11Y)', () => {
-    it('passes the "Font Size with Color Contrast Accessiblity A11Y" tests', () => {
-        cy.get(colorContrastSection)
-            .should('be.visible').within(() => {
-                cy.get(colorContrastSectionHeader).within(() => {
-                    cy.get(colorContrastSectionHeadingH1)
-                        .should('be.visible')
-                        .and('have.text', 'Accessibility with Color Contrast and Font Size Exercise');
-                });
-                cy.get(colorContrastContainerDivH1)
-                    .should('be.visible').within(() => {
-                        cy.get(colorContrastSectionHeadingH1)
-                            .should('be.visible')
-                            .and('have.text', 'Color Contrast with font size H1');
-                });
-                
-                cy.get(colorContrastContainerDivH2)
-                    .should('be.visible').within(() => {
-                        cy.get(colorContrastSectionHeadingH2)
-                            .should('be.visible')
-                            .and('have.text', 'Color Contrast with font size H2');
-                });
-                    
-                cy.get(colorContrastContainerDivH3)
-                    .should('be.visible').within(() => {
-                        cy.get(colorContrastSectionHeadingH3)
-                            .should('be.visible')
-                            .and('have.text', 'Color Contrast with font size H3');
-                });
-                cy.get(colorContrastContainerDivH4)
-                    .should('be.visible').within(() => {
-                        cy.get(colorContrastSectionHeadingH4)
-                            .should('be.visible')
-                            .and('have.text', 'Color Contrast with font size H4');
-                });
-                
-                cy.get(colorContrastContainerDivH5)
-                    .should('be.visible').within(() => {
-                        cy.get(colorContrastSectionHeadingH5)
-                            .should('be.visible')
-                            .and('have.text', 'Color Contrast with font size H5');
-                });
-                    
-                cy.get(colorContrastContainerDivH6)
-                    .should('be.visible').within(() => {
-                        cy.get(colorContrastSectionHeadingH6)
-                            .should('be.visible')
-                            .and('have.text', 'Color Contrast with font size H6');
-                });    
-            });
+    it('has the "correct section heading" on page load', () => {
+      
+        /** Solution 1 (not ideal for this use case): using .within() to scope the mounting of the component to within the header.  .within() creates a function that you can alias the object with that will scope tests within */
+        /** .within() is NOT the most correct use case for this test here...this is just an example... */
+        cy.get(colorContrastSectionHeader).within(() => { // mounts the component and scopes for functional testing
+            cy.get(colorContrastSectionHeadingH1)
+                .should('be.visible')
+                .and('have.text', 'Accessibility with Contrast Ratio and Font Size Exercise');
+        });
 
+        /** Solution 2 (preferred for this use case): using .find() to use method chaining to find the heading.  No scoping to the parent component because we don't need to scope for this use case */
+        cy.get(colorContrastSectionHeader).find(colorContrastSectionHeadingH1) // mounts the component for static testing
+            .should('be.visible')
+            .and('have.text', 'Accessibility with Contrast Ratio and Font Size Exercise');
+        cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
+    });
+
+    it('has the "Why button dropdown"', () => {
+        /** Solution (preferred for this use case): using .get() to target element */
+        cy.get(whyHeaderButtonDropdown)
+                .should('be.visible')
+                .and('have.text', 'Why?');
+        cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
+    });
+
+    it('shows the "Why button dropdown" content on click', () => {
+        /** Solution (preferred for this use case): using .get() to target element */
+        cy.get(whyHeaderButtonDropdown).should('be.visible').click();
         cy.checkA11y(); // checks for A11Y rules - configurations can be used to modify this
     });
 });

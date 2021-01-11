@@ -10,8 +10,8 @@ const ButtonDropdown: React.FC<{
     iconChildren?: React.ReactNode;
     headingChildren: React.ReactNode;
     footerChildren?: React.ReactNode;
-    text?: string;
-}> = ({ id, className, children, headingChildren, footerChildren, iconChildren, text }) => {
+    dataCy: string;
+}> = ({ id, className, children, headingChildren, footerChildren, iconChildren, dataCy }) => {
     const [state, setState] = useState(false);
     const openState = () => {
         setState(true);
@@ -21,11 +21,15 @@ const ButtonDropdown: React.FC<{
     };
 
     return (
-        <ButtonDropdownContainer id={id} className={className}>
+        <ButtonDropdownContainer
+            id={id}
+            className={className}
+            data-cy={`button-dropdown-container-${dataCy}`}
+        >
             <ButtonIcon
                 id={`button-icon-button-dropdown-${id}`}
                 className={`Button-icon-button-dropdown ${className}`}
-                dataCy={`button-icon-button-dropdown-${id}`}
+                dataCy={`${dataCy}-button-icon-button-dropdown`}
                 name={`button-icon-button-dropdown-${id}`}
                 value="Learn more"
                 onClick={openState}
@@ -37,13 +41,20 @@ const ButtonDropdown: React.FC<{
                 <DropdownContainer
                     id={`button-dropdown-button-container-${id}`}
                     className={`Button-dropdown-button-container ${className}`}
+                    data-cy={`${dataCy}-button-dropdown-container`}
                 >
                     <CloseButtonContainer className="Close-button-container" onClick={closeState}>
-                        <Heading2>{headingChildren}</Heading2>
+                        <Heading2 data-cy={`${dataCy}-button-dropdown-heading`}>
+                            {headingChildren}
+                        </Heading2>
                         <CloseIcon />
                     </CloseButtonContainer>
-                    <MessageContainer>{children}</MessageContainer>
-                    <FooterContainer>{footerChildren}</FooterContainer>
+                    <MessageContainer data-cy={`${dataCy}-dropdown-message-container`}>
+                        {children}
+                    </MessageContainer>
+                    <FooterContainer data-cy={`${dataCy}-footer-dropdown-message-container`}>
+                        {footerChildren}
+                    </FooterContainer>
                 </DropdownContainer>
             )}
         </ButtonDropdownContainer>
