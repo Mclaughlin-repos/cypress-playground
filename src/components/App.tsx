@@ -595,9 +595,9 @@ const App = () => {
                     id="link-1"
                     href="javascript:void(0)"
                     messageChildren={
-                        'This form does NOT pass WCAG 2.1 AA compliance. There are multiple issues that are related to this form that need to be addressed. Fix this form and make it pass WCAG 2.1 AA guidelines.'
+                        'This form does NOT pass WCAG 2.1 AA compliance. There are multiple issues that are related to this form that need to be addressed. Fix this form and make it pass WCAG 2.1 AA guidelines. Use the accessibility-form.spec.js cypress test to write your new test.'
                     }
-                    title="Challenge: This form does NOT pass WCAG 2.1 AA compliance. There are multiple issues that are related to this form that need to be addressed. Fix this form and make it pass WCAG 2.1 AA guidelines."
+                    title="Challenge: This form does NOT pass WCAG 2.1 AA compliance. There are multiple issues that are related to this form that need to be addressed. Fix this form and make it pass WCAG 2.1 AA guidelines. Use the accessibility-form.spec.js cypress test to write your new test."
                     className="forms-challenge-link"
                     linkText="Challenge"
                 >
@@ -761,9 +761,9 @@ const App = () => {
                     id="link-1"
                     href="javascript:void(0)"
                     messageChildren={
-                        'These headings are out of order and need to be placed back into the correct order to pass WCAG 2.1 AA compliance.  Fix the headings to make them WCAG 2.1 AA compliant.'
+                        'These headings are out of order and need to be placed back into the correct order to pass WCAG 2.1 AA compliance.  Fix the headings to make them WCAG 2.1 AA compliant.  Use the accessibility-heading-order.spec.js file to create your new test.'
                     }
-                    title="Challenge: These headings are out of order and need to be placed back into the correct order to pass WCAG 2.1 AA compliance.  Fix the headings to make them WCAG 2.1 AA compliant."
+                    title="Challenge: These headings are out of order and need to be placed back into the correct order to pass WCAG 2.1 AA compliance.  Fix the headings to make them WCAG 2.1 AA compliant. Use the accessibility-heading-order.spec.js file to create your new test."
                     className="heading-order-challenge-link"
                     linkText="Challenge"
                 >
@@ -924,9 +924,9 @@ const App = () => {
                     id="link-1"
                     href="javascript:void(0)"
                     messageChildren={
-                        'Using the Aurora swatch palette provided in the swatches section of the color pickers, find 10 sets of contrast ratios that pass WCAG 2.1 AA for background color to font color.'
+                        'Using the Aurora swatch palette provided in the swatches section of the color pickers, find 10 sets of contrast ratios that pass WCAG 2.1 AA for background color to font color. Use the accessibility-color-contrast.spec.js to write your new test.'
                     }
-                    title="Challenge: Using the Aurora swatch palette provided in the swatches section of the color pickers, find 10 sets of contrast ratios that pass WCAG 2.1 AA for background color to font color."
+                    title="Challenge: Using the Aurora swatch palette provided in the swatches section of the color pickers, find 10 sets of contrast ratios that pass WCAG 2.1 AA for background color to font color. Use the accessibility-color-contrast.spec.js to write your new test."
                     className="font-color-contrast-ratio-challenge-link"
                     linkText="Challenge"
                 >
@@ -1121,9 +1121,9 @@ const App = () => {
                     id="link-1"
                     href="javascript:void(0)"
                     messageChildren={
-                        'Using the Aurora swatch palette, find 5 sets of contrast ratios that pass WCAG 2.1 AA for all font sizes.'
+                        'Using the Aurora swatch palette, find 5 sets of contrast ratios that pass WCAG 2.1 AA for all font sizes. Use the accessibility-font-size-color-contrast.spec.js to write your new tests.'
                     }
-                    title="Challenge: Using the Aurora swatch palette, find 5 sets of contrast ratios that pass WCAG 2.1 AA for all font sizes."
+                    title="Challenge: Using the Aurora swatch palette, find 5 sets of contrast ratios that pass WCAG 2.1 AA for all font sizes. Use the accessibility-font-size-color-contrast.spec.js to write your new tests."
                     className="font-color-contrast-ratio-challenge-link"
                     linkText="Challenge"
                 >
