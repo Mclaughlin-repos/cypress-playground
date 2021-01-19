@@ -139,7 +139,6 @@ const CloseButton = styled.button`
     font-size: 1.5rem;
     font-weight: 500;
     border-radius: 2rem;
-    /* padding: 0.5rem 1.5rem; */
     margin: 0 0 1rem;
     transition: 120ms ease-in-out;
     &:hover {

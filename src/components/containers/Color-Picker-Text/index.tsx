@@ -50,7 +50,8 @@ class ColorPickerText extends React.Component<Props> {
                 <Container
                     className={`text-color-picker-container ${className}`}
                     id={id}
-                    data-cy={dataCy}>
+                    data-cy={dataCy}
+                >
                     <ChildContainer style={styles.color}>{children}</ChildContainer>
                     <SketchPicker
                         color={this.state.color}
